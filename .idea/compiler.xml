@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="readwei" target="1.5" />
+      <module name="readwei" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
