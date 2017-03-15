@@ -63,8 +63,8 @@ public class UserController extends BaseController {
 			if ( user.getId() != null ) {
 				rlt = userService.updateById(user);
 			} else {
-				user.setCrTime(new Date());
-				user.setLastTime(user.getCrTime());
+				user.setCreateTime(new Date());
+				user.setLastTime(user.getCreateTime());
 				rlt = userService.insert(user);
 			}
 		}

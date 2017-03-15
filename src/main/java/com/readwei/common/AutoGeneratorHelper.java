@@ -62,13 +62,13 @@ public class AutoGeneratorHelper {
 		strategy.setNaming(NamingStrategy.remove_prefix_and_camel);// 表名生成策略
 		// 字段名生成策略
 		strategy.setFieldNaming(NamingStrategy.underline_to_camel);
-		strategy.setSuperServiceImplClass("cn.org.xingwu.service.support.BaseServiceImpl");
+		strategy.setSuperServiceImplClass("com.readwei.service.support.BaseServiceImpl");
 		mpg.setStrategy(strategy);
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
 //		pc.setModuleName("test");
-		pc.setParent("cn.org.xingwu");// 自定义包路径
+		pc.setParent("com.readwei");// 自定义包路径
 		pc.setController("controller");// 这里是控制器包名，默认 web
 		mpg.setPackageInfo(pc);
 		// 执行生成

@@ -4,7 +4,7 @@
 
 	<!-- 通用查询结果列-->
 	<sql id="Base_Column_List">
-		 id, uid, content, operation, crTime
+		 id, uid, content, operation, create_time AS createTime
 	</sql>
 
 </mapper>

@@ -41,7 +41,7 @@ public class SysLogServiceImpl extends BaseServiceImpl<SysLogMapper, SysLog> imp
 		}
 		sl.setContent(operateContent(joinPoint, methodName, request));
 		sl.setOperation(operate);
-		sl.setCrTime(new Date());
+		sl.setCreateTime(new Date());
 		baseMapper.insert(sl);
 	}
 

@@ -23,6 +23,7 @@ public class User implements Serializable {
 	private Long id;
 
 	/** 登录名称 */
+	@TableField(value = "login_name")
 	private String loginName;
 
 	/** 密码 */
@@ -38,9 +39,11 @@ public class User implements Serializable {
 	private Integer status;
 
 	/** 创建时间 */
-	private Date crTime;
+	@TableField(value = "create_time")
+	private Date createTime;
 
 	/** 最后登录时间 */
+	@TableField(value = "last_time")
 	private Date lastTime;
 
 	public Long getId() {
@@ -91,12 +94,12 @@ public class User implements Serializable {
 		this.status = status;
 	}
 
-	public Date getCrTime() {
-		return this.crTime;
+	public Date getCreateTime() {
+		return this.createTime;
 	}
 
-	public void setCrTime(Date crTime) {
-		this.crTime = crTime;
+	public void setCreateTime(Date crTime) {
+		this.createTime = crTime;
 	}
 
 	public Date getLastTime() {
