@@ -3,7 +3,7 @@
 	<tool>
 		<key>SSOPermission</key>
 		<scope>application</scope>
-		<class>cn.org.xingwu.common.SSOPermissionTool</class>
+		<class>com.readwei.common.SSOPermissionTool</class>
 	</tool>
 	<tool>
 		<key>date</key>
