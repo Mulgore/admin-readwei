@@ -1,5 +1,5 @@
 #override("title")
-XingWu - 操作日志
+操作日志
 #end
 #override("css")
 <link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
@@ -26,12 +26,6 @@ XingWu - 操作日志
 <script type="text/javascript">
 var dataUrl="#springUrl('/log/getLogList.html')";
 var dataColumns = [{
-    field: 'id',
-    title: '序号'
-}, {
-    field: 'uid',
-    title: '用户ID'
-}, {
     field: 'content',
     title: '日志内容'
 },{
