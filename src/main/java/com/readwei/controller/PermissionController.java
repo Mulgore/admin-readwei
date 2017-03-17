@@ -139,21 +139,17 @@ public class PermissionController extends BaseController {
             return callbackFail("权限编码已存在！！！");
         }
         perm.setId(permission.getPid());
-        Integer perTotal = permissionService.selectCount(wrapper);
+        Integer perTotal = permissionService.selectCount(wrapper)+1;
         permission.setState(0);
-        Integer id = null;
-        if (perTotal == 1) {
-            id = perTotal;
-            Permission per = permissionService.selectById((permission.getPid() * 10) + id);
-            if (per != null) {
-                id = perTotal + 1;
-            }
+        Permission per = permissionService.selectById((permission.getPid() * 10) + perTotal);
+        if (per != null) {
+            perTotal = perTotal + 1;
         }
-        permission.setSort(id);
-        permission.setId(((permission.getPid() * 10) + id) * 1L);
+        permission.setSort(perTotal);
+        permission.setId(((permission.getPid() * 10) + perTotal) * 1L);
         rlt = permissionService.insert(permission);
         if (!rlt) {
-            return  callbackFail("权限添加失败！！！");
+            return callbackFail("权限添加失败！！！");
         }
         return callbackSuccess(rlt);
     }

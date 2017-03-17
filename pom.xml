@@ -157,7 +157,7 @@
     </profiles>
 
     <build>
-        <finalName>readwei</finalName>
+        <finalName>readWei</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -186,11 +186,11 @@
                 <configuration>
                     <webApp>
                         <contextPath>/</contextPath>
-                        <descriptor>${basedir}/src/main/web/WEB-INF/web.xml</descriptor>
+                        <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
                     </webApp>
                     <stopKey>exit</stopKey>
                     <stopPort>9091</stopPort>
-                    <webAppSourceDirectory>${project.basedir}/src/main/web</webAppSourceDirectory>
+                    <webAppSourceDirectory>${project.basedir}/src/main/webapp</webAppSourceDirectory>
                     <scanIntervalSeconds>0</scanIntervalSeconds>
                     <httpConnector>
                         <port>8088</port>

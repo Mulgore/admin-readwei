@@ -141,7 +141,7 @@ public class RoleController extends BaseController {
     }
 
     /**
-     * 更新权限列表
+     * 添加权限
      *
      * @return
      */
@@ -157,7 +157,7 @@ public class RoleController extends BaseController {
     }
 
     /**
-     * 更新权限列表
+     * 删除权限
      *
      * @return
      */
@@ -172,49 +172,4 @@ public class RoleController extends BaseController {
         return callbackSuccess(rlt);
     }
 
-    /**
-     * 更新权限列表
-     *
-     * @return
-     * @throws IOException
-     */
-    @Permission("2003")
-    @RequestMapping("updateRoleRight")
-    @ResponseBody
-    public String updateRoleRight(HttpServletResponse response, HttpServletRequest request,
-                                  @RequestParam(value = "roleId", required = false) Long roleId,
-                                  @RequestParam(value = "rights", required = false) String rights) throws Exception {
-        try {
-            //查询出本角色已经分配了的权限
-            RolePermission rolePermission = new RolePermission();
-            rolePermission.setRid(roleId);
-            EntityWrapper<RolePermission> ew = new EntityWrapper<RolePermission>();
-            ew.setEntity(rolePermission);
-            List<RolePermission> roleRightList = rolePermissionService.selectList(ew);
-
-            //如果存在权限，先进行删除
-            if (roleRightList.size() > 0) {
-                for (RolePermission rp : roleRightList) {
-                    rolePermissionService.delete(new EntityWrapper<RolePermission>(rp));
-                }
-            }
-
-            String[] rightIds = rights.split(",");
-            if (StringUtils.isNotBlank(rights) && rightIds != null) {
-                //添加新分配的权限
-                List<RolePermission> permissions = new ArrayList<RolePermission>();
-                RolePermission e = null;
-                for (String pid : rightIds) {
-                    e = new RolePermission();
-                    e.setPid(Long.valueOf(pid));
-                    e.setRid(roleId);
-                    permissions.add(e);
-                }
-                rolePermissionService.insertBatch(permissions);
-            }
-            return "true";
-        } catch (Exception e) {
-            return "false";
-        }
-    }
 }
