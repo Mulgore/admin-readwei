@@ -31,6 +31,7 @@
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/controller/product/ProductGoodsController.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/controller/CacheController.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/common/HttpHelper.java
+/Users/xingwu/workspace/readwei/src/main/java/com/readwei/common/utils/MathExtend.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/mapper/UserMapper.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/service/impl/SysLogServiceImpl.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/controller/CaptchaController.java
@@ -44,8 +45,8 @@
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/mapper/RoleMapper.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/entity/UserRole.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/service/IRolePermissionService.java
-/Users/xingwu/workspace/readwei/src/main/java/com/readwei/service/ISysLogService.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/controller/MonitorController.java
+/Users/xingwu/workspace/readwei/src/main/java/com/readwei/service/ISysLogService.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/common/MyCaptcha.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/service/impl/RolePermissionServiceImpl.java
 /Users/xingwu/workspace/readwei/src/main/java/com/readwei/service/impl/ProductServiceImpl.java

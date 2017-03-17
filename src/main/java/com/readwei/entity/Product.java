@@ -93,7 +93,7 @@ public class Product implements Serializable {
 	 * 销售价格
 	 */
 	@TableField(exist = false)
-	private Number prices;
+	private Double prices;
 
 	/**
 	 * 类目名称
@@ -101,9 +101,9 @@ public class Product implements Serializable {
 	@TableField(exist = false)
 	private String cName;
 
-	public Number getPrices() { return prices; }
+	public Double getPrices() { return prices; }
 
-	public void setPrices(Number prices) { this.prices = prices; }
+	public void setPrices(Double prices) { this.prices = prices; }
 
 	public String getcName() { return cName; }
 

@@ -5,7 +5,8 @@ ReadWei - 宝贝管理
 <link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
 #end
 #override("breadcrumb")
-<li><a>商品管理</a></li><li class="active"><strong>宝贝管理</strong></li>
+<li><a>商品管理</a></li>
+<li class="active"><strong>宝贝管理</strong></li>
 #end
 #override("content")
 <div class="row">
@@ -17,7 +18,8 @@ ReadWei - 宝贝管理
 			</span>
         </div>
         <button class="btn btn-primary" onclick="editUser(null)" type="button">
-            <i class="fa fa-pencil"></i>&nbsp;添加宝贝</button>
+            <i class="fa fa-pencil"></i>&nbsp;添加宝贝
+        </button>
     </div>
 </div>
 <div class="row">
@@ -43,13 +45,22 @@ ReadWei - 宝贝管理
         title: '类目名称'
     }, {
         field: 'prices',
-        title: '价格'
+        title: '价格',
+        formatter: function (value, row, index) {
+            return row.prices + " 元";
+        }
     }, {
         field: 'amount',
-        title: '库存'
+        title: '库存',
+        formatter: function (value, row, index) {
+            return '<a class="btn btn-xs btn-danger">' + row.amount + "本" + '</a>';
+        }
     }, {
         field: 'soldAmount',
-        title: '销售库存'
+        title: '销售库存',
+        formatter: function (value, row, index) {
+            return '<a class="btn btn-xs btn-danger">' + row.soldAmount + "本" + '</a>';
+        }
     }, {
         field: 'createTime',
         title: '创建时间',
