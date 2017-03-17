@@ -40,8 +40,8 @@ public class RolePermissionServiceImpl extends BaseServiceImpl<RolePermissionMap
 
     @Log("角色关联菜单查询")
     @Override
-    public List<Long> selecPermissionIdsByRoleId(Long id) {
-        return rolePermissionMapper.selecPermissionIdsByRoleId(id);
+    public List<Long> selectPermissionIdsByRoleId(Long id) {
+        return rolePermissionMapper.selectPermissionIdsByRoleId(id);
     }
 
 }

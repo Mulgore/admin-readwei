@@ -29,6 +29,6 @@ public interface IRolePermissionService extends IService<RolePermission> {
      * @param id
      * @return
      */
-    List<Long> selecPermissionIdsByRoleId(Long id);
+    List<Long> selectPermissionIdsByRoleId(Long id);
 
 }
