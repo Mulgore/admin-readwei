@@ -41,8 +41,8 @@ public class AutoGeneratorHelper {
 //		gc.setActiveRecord(true);// 开启 activeRecord 模式
 		gc.setActiveRecord(false);
 		gc.setEnableCache(false);// XML 二级缓存
-		gc.setBaseResultMap(true);// XML ResultMap
-		gc.setBaseColumnList(false);// XML columList
+		gc.setBaseResultMap(false);// XML ResultMap
+		gc.setBaseColumnList(true);// XML columList
 		gc.setAuthor("xingwu");
 		mpg.setGlobalConfig(gc);
 
@@ -53,7 +53,7 @@ public class AutoGeneratorHelper {
 		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername("root");
 		dsc.setPassword("aa11*bb22!");
-		dsc.setUrl("jdbc:mysql://123.56.42.127:3306/xingwu?characterEncoding=utf8");
+		dsc.setUrl("jdbc:mysql://123.56.42.127:3306/readwei?characterEncoding=utf8");
 		mpg.setDataSource(dsc);
 
 		// 策略配置

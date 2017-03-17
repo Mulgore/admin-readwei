@@ -16,6 +16,16 @@ function formatDate(time) {
     return year + "年" + month + "月" + date + "日 " + hour + ":" + minute + ":" + second;
 }
 
+function formatDateOfDay(time) {
+    if (time == '' || time == null || time == undefined) return '';
+    var datetime = new Date();
+    datetime.setTime(time);
+    var year = datetime.getFullYear();
+    var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+    var date = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+    return year + "年" + month + "月" + date + "日 ";
+}
+
 function alertSuccess(text){
     toastr.options = {
         closeButton: true,

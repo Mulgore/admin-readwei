@@ -1,60 +1,55 @@
 #override("title")
-用户管理
+ReadWei - 分类管理
 #end
-#override("body")
-<body class="gray-bg">
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-sm-4">
-        <h2>标题</h2>
-        <ol class="breadcrumb">
-            <li>
-                <a href="index-2.html">权限管理</a>
-            </li>
-            <li>
-                <strong>用户管理</strong>
-            </li>
-        </ol>
-    </div>
-    <div class="col-sm-8">
-        <div class="title-action">
-            <a href="empty_page.html" class="btn btn-primary">活动区域</a>
+#override("css")
+<link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
+#end
+#override("breadcrumb")
+<li><a>商品管理</a></li><li class="active"><strong>分类管理</strong></li>
+#end
+#override("content")
+<div class="row">
+    <div class="ibox-content text-right form-inline" style="background: #F3F3F4;">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+				<button type="button" class="btn btn-info">搜索</button>
+			</span>
         </div>
+        <button class="btn btn-primary" onclick="editUser(null)" type="button">
+            <i class="fa fa-pencil"></i>&nbsp;添加分类</button>
     </div>
 </div>
-
-<div class="wrapper wrapper-content">
-    <div class="row">
-        <div class="col-sm-12">
-            <table id="dataTable"></table>
-        </div>
+<div class="row">
+    <div class="col-sm-12">
+        <table id="dataTable"></table>
     </div>
 </div>
-</body>
 #end
 #override("js")
+<script src="#springUrl('/static/js/plugins/bootstrap-table/bootstrap-table.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js')"></script>
+<script src="#springUrl('/static/plugins/layer-v2.2/layer/layer.js')"></script>
+<script src="#springUrl('/static/js/base_list.js')"></script>
+<script src="#springUrl('/static/js/common.js')"></script>
 <script type="text/javascript">
-    var dataUrl = "#springUrl('/user/getUserList.html')";
+    var dataUrl = "#springUrl('/product/category/getList.html')";
     var dataColumns = [{
-        field: 'id',
-        title: '序号'
+        field: 'name',
+        title: '类目'
     }, {
-        field: 'loginName',
-        title: '登录名'
+        field: 'createTime',
+        title: '创建时间',
+        formatter: function (value, row, index) {
+            return formatDateOfDay(row.createTime);
+        }
     }, {
-        field: 'email',
-        title: '邮箱'
-    }, {
-        field: 'type',
-        title: '用户类型'
-    }, {
-        field: 'status',
-        title: '状态̬'
-    }, {
-        field: 'crTime',
-        title: '创建时间'
-    }, {
-        field: 'lastTime',
-        title: '最后更新时间'
+        field: 'modifyTime',
+        title: '修改时间',
+        formatter: function (value, row, index) {
+            return formatDateOfDay(row.modifyTime);
+        }
     }];
     function dataQueryParams(params) {
         return {
@@ -64,4 +59,4 @@
     }
 </script>
 #end
-#extends("/common/base_list.html")
+#extends("/common/framework.html")
