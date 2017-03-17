@@ -42,13 +42,13 @@ ReadWei - 分类管理
         field: 'createTime',
         title: '创建时间',
         formatter: function (value, row, index) {
-            return formatDateOfDay(row.createTime);
+            return formatDate(row.createTime);
         }
     }, {
         field: 'modifyTime',
         title: '修改时间',
         formatter: function (value, row, index) {
-            return formatDateOfDay(row.modifyTime);
+            return formatDate(row.modifyTime);
         }
     }];
     function dataQueryParams(params) {

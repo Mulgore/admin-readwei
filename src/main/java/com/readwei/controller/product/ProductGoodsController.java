@@ -8,11 +8,14 @@ import com.readwei.entity.Product;
 import com.readwei.entity.ProductCategory;
 import com.readwei.service.IProductCategoryService;
 import com.readwei.service.IProductService;
+import org.apache.velocity.runtime.parser.node.MathUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.math.MathContext;
 
 
 /**
@@ -57,6 +60,7 @@ public class ProductGoodsController extends BaseController {
         page = productService.selectPage(page, wrapper);
         for (Product pro : page.getRecords()) {
             pro.setcName(productCategoryService.selectById(pro.getCategoryId()).getName());
+            pro.setPrices(MathUtils.divide(pro.getPrice(),100));
         }
         return jsonPage(page);
     }

@@ -42,7 +42,7 @@ ReadWei - 宝贝管理
         field: 'cName',
         title: '类目名称'
     }, {
-        field: 'price',
+        field: 'prices',
         title: '价格'
     }, {
         field: 'amount',
@@ -54,7 +54,7 @@ ReadWei - 宝贝管理
         field: 'createTime',
         title: '创建时间',
         formatter: function (value, row, index) {
-            return formatDateOfDay(row.createTime);
+            return formatDate(row.createTime);
         }
     }];
     function dataQueryParams(params) {
