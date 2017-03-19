@@ -1,7 +1,10 @@
 package com.readwei.controller.address;
 
+import com.baomidou.kisso.annotation.Permission;
+import com.readwei.controller.sys.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
@@ -13,6 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/address")
-public class AddressController {
-	
+public class AddressController extends BaseController{
+
+    @Permission("9001")
+    @RequestMapping("/list")
+    public String listView(){
+        return "address/list";
+    }
+
+    @Permission("9001")
+    @RequestMapping("/getList")
+    @ResponseBody
+    public String getList(){
+        return jsonPage(null);
+    }
 }

@@ -1,7 +1,10 @@
 package com.readwei.controller.express;
 
+import com.baomidou.kisso.annotation.Permission;
+import com.readwei.controller.sys.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
@@ -13,6 +16,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/express")
-public class ExpressController {
+public class ExpressController extends BaseController {
+
+    @Permission("8001")
+    @RequestMapping("/list")
+    public String listView(){
+        return "/express/list";
+    }
+
+    @Permission("8001")
+    @RequestMapping("/getList")
+    @ResponseBody
+    public String getList(){
+        return jsonPage(null);
+    }
 	
 }

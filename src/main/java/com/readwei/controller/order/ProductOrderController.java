@@ -1,7 +1,10 @@
 package com.readwei.controller.order;
 
+import com.baomidou.kisso.annotation.Permission;
+import com.readwei.controller.sys.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>
@@ -12,7 +15,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 2017-03-19
  */
 @Controller
-@RequestMapping("/productOrder")
-public class ProductOrderController {
-	
+@RequestMapping("/order")
+public class ProductOrderController extends BaseController{
+
+    @Permission("6001")
+    @RequestMapping("/list")
+    public String listView(){
+        return "order/list";
+    }
+
+    @Permission("6001")
+    @RequestMapping("/getList")
+    @ResponseBody
+    public String getList(){
+        return jsonPage(null);
+    }
 }
