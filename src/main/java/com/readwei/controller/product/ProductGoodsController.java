@@ -4,7 +4,7 @@ import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.readwei.common.utils.MathExtend;
-import com.readwei.controller.BaseController;
+import com.readwei.controller.sys.BaseController;
 import com.readwei.entity.Product;
 import com.readwei.service.IProductCategoryService;
 import com.readwei.service.IProductService;

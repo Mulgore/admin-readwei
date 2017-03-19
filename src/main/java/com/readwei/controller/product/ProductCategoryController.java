@@ -3,7 +3,7 @@ package com.readwei.controller.product;
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.readwei.controller.BaseController;
+import com.readwei.controller.sys.BaseController;
 import com.readwei.entity.ProductCategory;
 import com.readwei.service.IProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
