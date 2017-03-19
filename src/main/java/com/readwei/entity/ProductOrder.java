@@ -48,6 +48,11 @@ public class ProductOrder implements Serializable {
 	@TableField("address_id")
 	private Integer addressId;
     /**
+     * 快递id
+     */
+	@TableField("express_id")
+	private Integer expressId;
+    /**
      * 销售价格
      */
 	private Integer amount;
@@ -113,6 +118,14 @@ public class ProductOrder implements Serializable {
 
 	public void setAddressId(Integer addressId) {
 		this.addressId = addressId;
+	}
+
+	public Integer getExpressId() {
+		return expressId;
+	}
+
+	public void setExpressId(Integer expressId) {
+		this.expressId = expressId;
 	}
 
 	public Integer getAmount() {

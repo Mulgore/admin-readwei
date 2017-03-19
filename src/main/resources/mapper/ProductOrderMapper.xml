@@ -5,6 +5,6 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, order_id AS orderId, status, member_id AS memberId, product_id AS productId, address_id AS addressId, amount, description, create_time AS createTime, modify_time AS modifyTime
+        id, order_id AS orderId, status, member_id AS memberId, product_id AS productId, address_id AS addressId, express_id AS expressId, amount, description, create_time AS createTime, modify_time AS modifyTime
     </sql>
 </mapper>
