@@ -1,5 +1,6 @@
 package com.readwei.controller.product;
 
+import com.alibaba.druid.sql.visitor.functions.Char;
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
@@ -14,6 +15,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -56,7 +59,11 @@ public class ProductGoodsController extends BaseController {
         page.setOrderByField("create_time");
         page.setAsc(false);
         page = productService.selectPage(page, wrapper);
-        for (Product pro : page.getRecords()) {
+//        String[] arr =new String[]{"1","2"};
+//        for(String a: arr){ // 迭代遍历
+//            System.out.println(a.toString());
+//        }
+        for (Product pro : page.getRecords()) { // 迭代遍历
             pro.setcName(productCategoryService.selectById(pro.getCategoryId()).getName());
             pro.setPrices(MathExtend.divide(pro.getPrice(), 100, 2));
         }

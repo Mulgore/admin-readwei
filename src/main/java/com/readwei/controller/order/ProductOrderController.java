@@ -1,10 +1,16 @@
 package com.readwei.controller.order;
 
 import com.baomidou.kisso.annotation.Permission;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.readwei.controller.sys.BaseController;
+import com.readwei.entity.ProductOrder;
+import com.readwei.service.IProductOrderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -18,6 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/order")
 public class ProductOrderController extends BaseController{
 
+    @Resource
+    private IProductOrderService  productOrderService;
+
     @Permission("6001")
     @RequestMapping("/list")
     public String listView(){
@@ -28,6 +37,12 @@ public class ProductOrderController extends BaseController{
     @RequestMapping("/getList")
     @ResponseBody
     public String getList(){
-        return jsonPage(null);
+        Page<ProductOrder> page = getPage();
+        EntityWrapper<ProductOrder> wrapper = new EntityWrapper<ProductOrder>();
+        ProductOrder order = new ProductOrder();
+        wrapper.setEntity(order);
+        page.setOrderByField("create_time");
+        page.setAsc(false);
+        return jsonPage(productOrderService.selectPage(page, wrapper));
     }
 }
