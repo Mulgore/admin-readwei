@@ -141,7 +141,7 @@ public class ProductCategoryController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/info", method = RequestMethod.POST)
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
     @ResponseBody
     public String categoryInfo(Integer id) {
         return toJson(productCategoryService.selectById(id));

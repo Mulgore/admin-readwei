@@ -107,7 +107,7 @@ ReadWei - 分类管理
             content: url,
             success:function () {
                 $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "#springUrl('/product/category/info.html')",
                     data: {id: id},
                     datatype: "text",
