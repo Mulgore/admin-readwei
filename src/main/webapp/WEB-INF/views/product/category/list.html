@@ -5,7 +5,8 @@ ReadWei - 分类管理
 <link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
 #end
 #override("breadcrumb")
-<li><a>商品管理</a></li><li class="active"><strong>分类管理</strong></li>
+<li><a>商品管理</a></li>
+<li class="active"><strong>分类管理</strong></li>
 #end
 #override("content")
 <div class="row">
@@ -17,7 +18,8 @@ ReadWei - 分类管理
 			</span>
         </div>
         <button class="btn btn-primary" onclick="editUser(null)" type="button">
-            <i class="fa fa-pencil"></i>&nbsp;添加分类</button>
+            <i class="fa fa-pencil"></i>&nbsp;添加分类
+        </button>
     </div>
 </div>
 <div class="row">
@@ -50,12 +52,72 @@ ReadWei - 分类管理
         formatter: function (value, row, index) {
             return formatDate(row.modifyTime);
         }
+    }, {
+        title: '操作',
+        formatter: function (value, row, index) {
+            var id = row.id;
+             return '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> '+
+                 '<a class="btn btn-xs btn-danger" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>修改</a> ';
+        }
     }];
     function dataQueryParams(params) {
         return {
             _size: params.limit,  //页面大小
             _index: params.offset, //页码
         };
+    }
+
+    function delItem(id) {
+        //询问框
+        layer.confirm('确定删除吗？', {
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $.ajax({
+                type: "POST",
+                url: "#springUrl('/product/category/del.html')",
+                data: {id: id},
+                datatype: "text",
+                success: function (data) {
+                    var d = JSON.parse(data);
+                    if (d.success && d.data) {
+                        $('#dataTable').bootstrapTable('refresh', {url: dataUrl});
+                    }else {
+                        alert(d.message)
+                    }
+                    layer.closeAll();
+                }
+            });
+        }, function () {
+            return;
+        });
+    }
+
+    function editItem(id) {
+        var title = "修改商品分类";
+        var url = "#springUrl('/product/category/edit.html')";
+
+        layer.open({
+            type: 2,
+            title: title,
+            shadeClose: true,
+            shade: 0.8,
+            area: ['550px', '430px'],
+            fix: false,
+            maxmin: true,
+            content: url,
+            success:function () {
+                $.ajax({
+                    type: "POST",
+                    url: "#springUrl('/product/category/info.html')",
+                    data: {id: id},
+                    datatype: "text",
+                    success: function (data) {
+                        var d = JSON.parse(data);
+                        console.log(d);
+                    }
+                });
+            }
+        });
     }
 </script>
 #end
