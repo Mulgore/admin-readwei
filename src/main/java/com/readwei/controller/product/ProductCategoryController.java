@@ -137,7 +137,7 @@ public class ProductCategoryController extends BaseController {
     /**
      * 查询商品分类详情
      *
-     * @param id
+     * @param id 商品分类Id
      * @return
      */
     @Permission("5002")
@@ -147,4 +147,22 @@ public class ProductCategoryController extends BaseController {
         return toJson(productCategoryService.selectById(id));
     }
 
+    /**
+     * 商品分类修改实现方法
+     *
+     * @param category 商品分类修改
+     * @return
+     */
+    @Permission("5002")
+    @RequestMapping(value = "/edit/do", method = RequestMethod.POST)
+    @ResponseBody
+    public String categoryEditDo(ProductCategory category) {
+        boolean rlt = false;
+        category.setModifyTime(new Date());
+        rlt = productCategoryService.updateById(category);
+        if (!rlt){
+            return callbackFail("商品分类修改失败！！！");
+        }
+        return callbackSuccess(rlt);
+    }
 }
