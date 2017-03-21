@@ -17,7 +17,7 @@ ReadWei - 分类管理
 				<button type="button" class="btn btn-info">搜索</button>
 			</span>
         </div>
-        <button class="btn btn-primary" onclick="editUser(null)" type="button">
+        <button class="btn btn-primary" onclick="addItem()" type="button">
             <i class="fa fa-pencil"></i>&nbsp;添加分类
         </button>
     </div>
@@ -57,7 +57,7 @@ ReadWei - 分类管理
         formatter: function (value, row, index) {
             var id = row.id;
              return '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> '+
-                 '<a class="btn btn-xs btn-danger" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>修改</a> ';
+                    '<a class="btn btn-xs btn-info" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-refresh"></i>修改</a> ';
         }
     }];
     function dataQueryParams(params) {
@@ -94,7 +94,7 @@ ReadWei - 分类管理
 
     function editItem(id) {
         var title = "修改商品分类";
-        var url = "#springUrl('/product/category/edit.html')";
+        var url = "#springUrl('/product/category/edit/view.html')";
 
         layer.open({
             type: 2,
@@ -105,7 +105,7 @@ ReadWei - 分类管理
             fix: false,
             maxmin: true,
             content: url,
-            success:function () {
+            success:function (layero, index) {
                 $.ajax({
                     type: "GET",
                     url: "#springUrl('/product/category/info.html')",
@@ -113,10 +113,27 @@ ReadWei - 分类管理
                     datatype: "text",
                     success: function (data) {
                         var d = JSON.parse(data);
-                        console.log(d);
+                        var id = layer.getChildFrame('#id', index).val(d.id);
+                        var name = layer.getChildFrame('#name', index).val(d.name);
                     }
                 });
             }
+        });
+    }
+
+    function addItem() {
+        var title = "添加商品分类";
+        var url = "#springUrl('/product/category/add/view.html')";
+
+        layer.open({
+            type: 2,
+            title: title,
+            shadeClose: true,
+            shade: 0.8,
+            area: ['550px', '430px'],
+            fix: false,
+            maxmin: true,
+            content: url
         });
     }
 </script>

@@ -8,18 +8,21 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 商品主图
+ * 宝贝图片表
  * </p>
  *
  * @author xingwu
- * @since 2017-03-17
+ * @since 2017-03-21
  */
 @TableName("product_image")
 public class ProductImage implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-	private Integer id;
+    /**
+     * 主键
+     */
+	private Long id;
 	@TableField("p_id")
 	private Integer pId;
 	@TableField("image_url")
@@ -30,11 +33,11 @@ public class ProductImage implements Serializable {
 	private Date modifyTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

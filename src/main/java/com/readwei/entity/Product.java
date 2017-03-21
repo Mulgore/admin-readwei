@@ -7,17 +7,20 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 商品表
+ * 宝贝表
  * </p>
  *
  * @author xingwu
- * @since 2017-03-17
+ * @since 2017-03-21
  */
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-	private Integer id;
+    /**
+     * 主键
+     */
+	private Long id;
     /**
      * 商品名称
      */
@@ -89,31 +92,25 @@ public class Product implements Serializable {
 	@TableField("modify_time")
 	private Date modifyTime;
 
-	/**
-	 * 销售价格
-	 */
-	@TableField(exist = false)
-	private Double prices;
-
-	/**
-	 * 类目名称
-	 */
 	@TableField(exist = false)
 	private String cName;
 
-	public Double getPrices() { return prices; }
-
-	public void setPrices(Double prices) { this.prices = prices; }
+	@TableField(exist = false)
+	private Double prices;
 
 	public String getcName() { return cName; }
 
 	public void setcName(String cName) { this.cName = cName; }
 
-	public Integer getId() {
+	public Double getPrices() { return prices; }
+
+	public void setPrices(Double prices) { this.prices = prices; }
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

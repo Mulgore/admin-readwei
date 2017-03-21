@@ -129,7 +129,7 @@ public class ProductCategoryController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/view", method = RequestMethod.GET)
     public String categoryEditView() {
         return "product/category/edit";
     }

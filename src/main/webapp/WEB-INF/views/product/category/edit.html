@@ -8,10 +8,10 @@
 <body class="white-bg">
 <div class="ibox-content" style="width: 430px;">
     <form id="myForm" class="form-horizontal" autocomplete="off" data-validator-option="{theme:'default'}">
-        <input type="hidden" name="id" value="">
+        <input type="hidden" id="id" name="id" >
         <div class="form-group"><label class="col-sm-2 control-label">分类名称 *</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="name" placeholder="请输入分类名称" data-rule="分类:required;">
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入分类名称" data-rule="分类:required;">
             </div>
         </div>
         <div class="hr-line-dashed"></div>
@@ -37,13 +37,13 @@
                 success: function(data){
                     var d = JSON.parse(data);
                     if(d.success && d.data){
-                        layer.alert("分类添加成功！！！")
+                        alert("分类添加成功！！！")
                         window.parent.location.reload();
                         //当你在iframe页面关闭自身时
                         //var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
                         //parent.layer.close(index); //再执行关闭
                     } else {
-                        layer.alert(d.message)
+                        alert(d.message)
                         //失败，提交表单成功后，释放hold，如果不释放hold，就变成了只能提交一次的表单
                         me.holdSubmit(false);
                     }

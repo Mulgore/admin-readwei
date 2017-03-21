@@ -8,11 +8,11 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 订单表
+ * 商品订单表
  * </p>
  *
  * @author xingwu
- * @since 2017-03-19
+ * @since 2017-03-21
  */
 @TableName("product_order")
 public class ProductOrder implements Serializable {

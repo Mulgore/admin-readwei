@@ -7,11 +7,11 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 物流表
+ * 快递表
  * </p>
  *
  * @author xingwu
- * @since 2017-03-19
+ * @since 2017-03-21
  */
 public class Express implements Serializable {
 

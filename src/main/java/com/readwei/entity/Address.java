@@ -7,17 +7,20 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 收货地址表
+ * 收件地址
  * </p>
  *
  * @author xingwu
- * @since 2017-03-19
+ * @since 2017-03-21
  */
 public class Address implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-	private Integer id;
+    /**
+     * 主键
+     */
+	private Long id;
     /**
      * 状态 0 未启用 1 默认
      */
@@ -55,11 +58,11 @@ public class Address implements Serializable {
 	private Date modifyTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

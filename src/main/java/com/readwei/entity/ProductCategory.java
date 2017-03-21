@@ -8,18 +8,21 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ * 分类表
  * </p>
  *
  * @author xingwu
- * @since 2017-03-17
+ * @since 2017-03-21
  */
 @TableName("product_category")
 public class ProductCategory implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-	private Integer id;
+    /**
+     * 主键
+     */
+	private Long id;
     /**
      * 分类名
      */
@@ -34,11 +37,11 @@ public class ProductCategory implements Serializable {
 	private Date modifyTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
