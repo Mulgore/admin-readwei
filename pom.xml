@@ -157,7 +157,7 @@
     </profiles>
 
     <build>
-        <finalName>readWei</finalName>
+        <finalName>root</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -169,6 +169,7 @@
                 <directory>src/main/resources</directory>
             </resource>
         </resources>
+        <outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -195,6 +196,25 @@
                     <httpConnector>
                         <port>8088</port>
                     </httpConnector>
+                </configuration>
+            </plugin>
+            <!-- jrebel插件，自动生成rebel.xml -->
+            <plugin>
+                <groupId>org.zeroturnaround</groupId>
+                <artifactId>jrebel-maven-plugin</artifactId>
+                <version>1.1.6</version>
+                <executions>
+                    <execution>
+                        <id>generate-rebel-xml</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <rebelXmlDirectory>${basedir}/src/main/webapp/WEB-INF/classes</rebelXmlDirectory>
+                    <!-- 指定生成的jrebel.xml放在哪里， 要求放在web应用的 classpath下 -->
                 </configuration>
             </plugin>
             <!-- tomcat 插件，mvn tomcat:run -->
