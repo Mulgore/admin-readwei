@@ -7,15 +7,20 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.readwei.common.utils.MathExtend;
 import com.readwei.controller.sys.BaseController;
 import com.readwei.entity.Product;
+import com.readwei.entity.ProductCategory;
+import com.readwei.entity.ProductImage;
 import com.readwei.service.IProductCategoryService;
+import com.readwei.service.IProductImageService;
 import com.readwei.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -35,6 +40,8 @@ public class ProductGoodsController extends BaseController {
     private IProductService productService;
     @Autowired
     private IProductCategoryService productCategoryService;
+    @Autowired
+    private IProductImageService productImageService;
 
     /**
      * 宝贝列表页面
@@ -59,14 +66,58 @@ public class ProductGoodsController extends BaseController {
         page.setOrderByField("create_time");
         page.setAsc(false);
         page = productService.selectPage(page, wrapper);
-//        String[] arr =new String[]{"1","2"};
-//        for(String a: arr){ // 迭代遍历
-//            System.out.println(a.toString());
-//        }
         for (Product pro : page.getRecords()) { // 迭代遍历
             pro.setcName(productCategoryService.selectById(pro.getCategoryId()).getName());
             pro.setPrices(MathExtend.divide(pro.getPrice(), 100, 2));
         }
         return jsonPage(page);
+    }
+
+    /**
+     * 添加宝贝页面
+     *
+     * @return
+     */
+    @Permission("5002")
+    @RequestMapping(value = "add/view", method = RequestMethod.GET)
+    public String goodsAddView(Model model) {
+        EntityWrapper<ProductCategory> wrapper = new EntityWrapper<ProductCategory>();
+        ProductCategory category = new ProductCategory();
+        category.setPid(0);
+        wrapper.setEntity(category);
+       model.addAttribute(productCategoryService.selectList(wrapper));
+        return "product/goods/add";
+    }
+
+    /**
+     * 保存宝贝实现
+     *
+     * @param product 宝贝信息
+     * @return
+     */
+    @Permission("5002")
+    @RequestMapping(value = "add/do", method = RequestMethod.POST)
+    @ResponseBody
+    public String goodsSave(Product product) {
+        boolean rlt = false;
+        product.setCreateTime(new Date());
+        product.setModifyTime(new Date());
+        rlt = productService.insert(product);
+        if (!rlt) {
+            return callbackFail("商品保存存失败！！！");
+        }
+        EntityWrapper<Product> wrapper = new EntityWrapper<Product>();
+        wrapper.setEntity(product);
+        Product checkProduct = productService.selectOne(wrapper);
+        String[] imgUrls = this.request.getParameterValues("imgUrl");
+        ProductImage productImage = new ProductImage();
+        productImage.setPId(checkProduct.getId());
+        for (String url : imgUrls) {
+            productImage.setCreateTime(new Date());
+            productImage.setModifyTime(new Date());
+            productImage.setImageUrl(url);
+            rlt = productImageService.insert(productImage);
+        }
+        return callbackSuccess(rlt);
     }
 }

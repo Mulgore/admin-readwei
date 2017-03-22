@@ -35,11 +35,6 @@ public class Product implements Serializable {
 	@TableField("category_id")
 	private Integer categoryId;
     /**
-     * 类目id
-     */
-	@TableField("image_id")
-	private Integer imageId;
-    /**
      * 销售价格
      */
 	private Integer price;
@@ -136,14 +131,6 @@ public class Product implements Serializable {
 
 	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
-	}
-
-	public Integer getImageId() {
-		return imageId;
-	}
-
-	public void setImageId(Integer imageId) {
-		this.imageId = imageId;
 	}
 
 	public Integer getPrice() {

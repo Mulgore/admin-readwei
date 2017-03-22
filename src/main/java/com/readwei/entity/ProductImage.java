@@ -24,7 +24,7 @@ public class ProductImage implements Serializable {
      */
 	private Long id;
 	@TableField("p_id")
-	private Integer pId;
+	private Long pId;
 	@TableField("image_url")
 	private String imageUrl;
 	@TableField("create_time")
@@ -41,11 +41,11 @@ public class ProductImage implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getPId() {
+	public Long getPId() {
 		return pId;
 	}
 
-	public void setPId(Integer pId) {
+	public void setPId(Long pId) {
 		this.pId = pId;
 	}
 

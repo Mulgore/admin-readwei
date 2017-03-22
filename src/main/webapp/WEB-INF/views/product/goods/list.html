@@ -17,7 +17,7 @@ ReadWei - 宝贝管理
 				<button type="button" class="btn btn-info">搜索</button>
 			</span>
         </div>
-        <button class="btn btn-primary" onclick="editUser(null)" type="button">
+        <button class="btn btn-primary" onclick="addItem()" type="button">
             <i class="fa fa-pencil"></i>&nbsp;添加宝贝
         </button>
     </div>
@@ -73,6 +73,22 @@ ReadWei - 宝贝管理
             _size: params.limit,  //页面大小
             _index: params.offset, //页码
         };
+    }
+
+    function addItem() {
+//        var title = "添加宝贝";
+        var url = "#springUrl('/product/goods/add/view.html')";
+//        layer.open({
+//            type: 2,
+//            title: title,
+//            shadeClose: true,
+//            shade: 0.8,
+//            area: ['550px', '430px'],
+//            fix: false,
+//            maxmin: true,
+//            content: url
+//        });
+        window.location.href = url;
     }
 </script>
 #end
