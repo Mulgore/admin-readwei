@@ -50,7 +50,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
-            <version>2.0.2</version>
+            <version>2.0.5</version>
         </dependency>
 
         <!-- velocity begin -->
@@ -140,21 +140,21 @@
         <!-- test end -->
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>jdk16</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <jdk>1.6</jdk>
-            </activation>
-            <properties>
-                <maven.compiler.source>1.6</maven.compiler.source>
-                <maven.compiler.target>1.6</maven.compiler.target>
-                <maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
-                <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-            </properties>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+    <!--<profile>-->
+    <!--<id>jdk16</id>-->
+    <!--<activation>-->
+    <!--<activeByDefault>true</activeByDefault>-->
+    <!--<jdk>1.7</jdk>-->
+    <!--</activation>-->
+    <!--<properties>-->
+    <!--<maven.compiler.source>1.6</maven.compiler.source>-->
+    <!--<maven.compiler.target>1.6</maven.compiler.target>-->
+    <!--<maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>-->
+    <!--<maven.compiler.encoding>UTF-8</maven.compiler.encoding>-->
+    <!--</properties>-->
+    <!--</profile>-->
+    <!--</profiles>-->
 
     <build>
         <finalName>root</finalName>
