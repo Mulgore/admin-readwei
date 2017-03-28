@@ -4,8 +4,8 @@ import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.readwei.controller.sys.BaseController;
-import com.readwei.entity.ProductOrder;
-import com.readwei.service.IProductOrderService;
+import com.readwei.entity.RwProductOrder;
+import com.readwei.service.IRwProductOrderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,7 +25,7 @@ import javax.annotation.Resource;
 public class ProductOrderController extends BaseController{
 
     @Resource
-    private IProductOrderService  productOrderService;
+    private IRwProductOrderService productOrderService;
 
     @Permission("6001")
     @RequestMapping("/list")
@@ -37,9 +37,9 @@ public class ProductOrderController extends BaseController{
     @RequestMapping("/getList")
     @ResponseBody
     public String getList(){
-        Page<ProductOrder> page = getPage();
-        EntityWrapper<ProductOrder> wrapper = new EntityWrapper<ProductOrder>();
-        ProductOrder order = new ProductOrder();
+        Page<RwProductOrder> page = getPage();
+        EntityWrapper<RwProductOrder> wrapper = new EntityWrapper<RwProductOrder>();
+        RwProductOrder order = new RwProductOrder();
         wrapper.setEntity(order);
         page.setOrderByField("create_time");
         page.setAsc(false);

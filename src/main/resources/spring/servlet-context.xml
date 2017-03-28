@@ -66,7 +66,7 @@
 			<mvc:mapping path="/**" />
 			<bean class="com.baomidou.kisso.web.interceptor.SSOPermissionInterceptor">
 				<property name="authorization">
-					<bean class="com.readwei.service.impl.PermissionServiceImpl"/>
+					<bean class="com.readwei.service.impl.RwPermissionServiceImpl"/>
 				</property>
 				<property name="illegalUrl" value="/error/illegalAccess.html"/>
 			</bean>

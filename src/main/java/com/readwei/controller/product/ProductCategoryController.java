@@ -4,10 +4,10 @@ import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.readwei.controller.sys.BaseController;
-import com.readwei.entity.Product;
-import com.readwei.entity.ProductCategory;
-import com.readwei.service.IProductCategoryService;
-import com.readwei.service.IProductService;
+import com.readwei.entity.RwProduct;
+import com.readwei.entity.RwProductCategory;
+import com.readwei.service.IRwProductCategoryService;
+import com.readwei.service.IRwProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,9 +30,9 @@ import java.util.Date;
 public class ProductCategoryController extends BaseController {
 
     @Autowired
-    private IProductCategoryService productCategoryService;
+    private IRwProductCategoryService productCategoryService;
     @Autowired
-    private IProductService productService;
+    private IRwProductService productService;
 
     /**
      * 分类列表页面
@@ -51,10 +51,10 @@ public class ProductCategoryController extends BaseController {
     @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
     public String categoryGetList() {
-        Page<ProductCategory> page = getPage(); // 设置商品分类的分页
-        EntityWrapper<ProductCategory> wrapper = new EntityWrapper<ProductCategory>(); //设置商品分类的Wrapper
-        ProductCategory category = new ProductCategory(); // 创建一个商品分类的对象
-        category.setPid(0); // 设置商品分类的Pid为0(顶级)
+        Page<RwProductCategory> page = getPage(); // 设置商品分类的分页
+        EntityWrapper<RwProductCategory> wrapper = new EntityWrapper<RwProductCategory>(); //设置商品分类的Wrapper
+        RwProductCategory category = new RwProductCategory(); // 创建一个商品分类的对象
+        category.setPid(0L); // 设置商品分类的Pid为0(顶级)
         wrapper.setEntity(category); // 把商品分类对象赋值给Wrpper
         page.setOrderByField("create_time"); // 设置根据create_time字段排序
         page.setAsc(false);// 设置是否正序排序(flase 否，true 是)
@@ -81,9 +81,9 @@ public class ProductCategoryController extends BaseController {
     @Permission("5002")
     @RequestMapping(value = "/save/do", method = RequestMethod.POST)
     @ResponseBody
-    public String categorySave(ProductCategory category) {
+    public String categorySave(RwProductCategory category) {
         boolean rlt = false;
-        category.setPid(0);
+        category.setPid(0L);
         category.setCreateTime(new Date());
         category.setModifyTime(new Date());
         rlt = productCategoryService.insert(category);
@@ -104,13 +104,13 @@ public class ProductCategoryController extends BaseController {
     @ResponseBody
     public String categoryDel(Integer id) {
         boolean rlt = false;
-        ProductCategory category = productCategoryService.selectById(id); // 判断分类石否存在
+        RwProductCategory category = productCategoryService.selectById(id); // 判断分类石否存在
         if (category == null) {
             return callbackFail("商品分类不存在！！！");
         }
-        EntityWrapper<Product> wrapper = new EntityWrapper<Product>();
-        Product product = new Product();
-        product.setCategoryId(id);
+        EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
+        RwProduct product = new RwProduct();
+        product.setCategoryId(id*1l);
         wrapper.setEntity(product);
         int count = productService.selectCount(wrapper); // 判断商品分类是否在使用
         if (count > 0) {
@@ -156,7 +156,7 @@ public class ProductCategoryController extends BaseController {
     @Permission("5002")
     @RequestMapping(value = "/edit/do", method = RequestMethod.POST)
     @ResponseBody
-    public String categoryEditDo(ProductCategory category) {
+    public String categoryEditDo(RwProductCategory category) {
         boolean rlt = false;
         category.setModifyTime(new Date());
         rlt = productCategoryService.updateById(category);

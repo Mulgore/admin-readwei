@@ -149,7 +149,7 @@ public class AutoGeneratorHelper {
 		mpg.execute();
 
 		// 打印注入设置
-		System.err.println(mpg.getCfg().getMap().get("abc"));
+//		System.err.println(mpg.getCfg().getMap().get("abc"));
 	}
 
 }

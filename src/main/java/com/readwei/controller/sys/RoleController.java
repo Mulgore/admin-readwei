@@ -2,12 +2,13 @@ package com.readwei.controller.sys;
 
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.readwei.entity.Role;
-import com.readwei.entity.RolePermission;
-import com.readwei.service.IPermissionService;
-import com.readwei.service.IRolePermissionService;
-import com.readwei.service.IRoleService;
-import com.readwei.service.IUserRoleService;
+import com.readwei.entity.RwRole;
+import com.readwei.entity.RwRolePermission;
+import com.readwei.entity.RwPermission;
+import com.readwei.service.IRwPermissionService;
+import com.readwei.service.IRwRolePermissionService;
+import com.readwei.service.IRwRoleService;
+import com.readwei.service.IRwUserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,16 +32,16 @@ import java.util.Map;
 public class RoleController extends BaseController {
 
     @Autowired
-    private IRoleService roleService;
+    private IRwRoleService roleService;
 
     @Autowired
-    private IPermissionService permissionService;
+    private IRwPermissionService permissionService;
 
     @Autowired
-    private IRolePermissionService rolePermissionService;
+    private IRwRolePermissionService rolePermissionService;
 
     @Autowired
-    private IUserRoleService userRoleService;
+    private IRwUserRoleService userRoleService;
 
 
     @Permission("2002")
@@ -54,7 +55,7 @@ public class RoleController extends BaseController {
     @Permission("2002")
     @RequestMapping("/getRoleList")
     public String getUserList() {
-        Page<Role> page = getPage();
+        Page<RwRole> page = getPage();
         return jsonPage(roleService.selectPage(page, null));
     }
 
@@ -84,7 +85,7 @@ public class RoleController extends BaseController {
     @ResponseBody
     @Permission("2002")
     @RequestMapping("/editRole")
-    public String editRole(Role role) {
+    public String editRole(RwRole role) {
         boolean rlt = false;
         if (role != null) {
             if (role.getId() != null) {
@@ -120,9 +121,9 @@ public class RoleController extends BaseController {
     @RequestMapping("/right")
     @ResponseBody
     public String right(Long roleId) {
-        Page<com.readwei.entity.Permission> page = getPage();
-        Page<com.readwei.entity.Permission> list = permissionService.selectPage(page, null);
-        for (com.readwei.entity.Permission perm : list.getRecords()) {
+        Page<RwPermission> page = getPage();
+        Page<RwPermission> list = permissionService.selectPage(page, null);
+        for (RwPermission perm : list.getRecords()) {
             boolean exist = rolePermissionService.existRolePermission(perm.getId(), roleId);
             perm.setEnable(exist);
         }
@@ -140,7 +141,7 @@ public class RoleController extends BaseController {
     @RequestMapping("/add")
     @ResponseBody
     public String addRolePerm(Long roleId, Long permId) {
-        RolePermission perm = new RolePermission();
+        RwRolePermission perm = new RwRolePermission();
         perm.setRid(roleId);
         perm.setPid(permId);
         boolean rlt = rolePermissionService.insert(perm);

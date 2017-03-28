@@ -3,14 +3,15 @@ package com.readwei.controller.sys;
 
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.readwei.entity.SysLog;
-import com.readwei.service.ISysLogService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.readwei.entity.RwSysLog;
+import com.readwei.service.IRwSysLogService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -25,8 +26,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/log")
 public class LogController extends BaseController {
 
-	@Autowired
-	private ISysLogService sysLogService;
+	@Resource
+	private IRwSysLogService sysLogService;
 
 	@Permission("4001")
 	@RequestMapping("/list")
@@ -38,7 +39,7 @@ public class LogController extends BaseController {
 	@Permission("4001")
 	@RequestMapping("/getLogList")
 	public String getUserList() {
-		Page<SysLog> page = getPage();
+		Page<RwSysLog> page = getPage();
 		return jsonPage(sysLogService.selectPage(page, null));
 	}
 

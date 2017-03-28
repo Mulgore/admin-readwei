@@ -5,9 +5,9 @@ import com.baomidou.kisso.annotation.Action;
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.kisso.common.encrypt.SaltEncoder;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.readwei.entity.User;
-import com.readwei.service.IRoleService;
-import com.readwei.service.IUserService;
+import com.readwei.entity.RwUser;
+import com.readwei.service.IRwRoleService;
+import com.readwei.service.IRwUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,10 +32,10 @@ import java.util.Date;
 public class UserController extends BaseController {
 
 	@Autowired
-	private IUserService userService;
+	private IRwUserService userService;
 
 	@Autowired
-	private IRoleService roleService;
+	private IRwRoleService roleService;
 
 	@Permission("2001")
 	@RequestMapping("/list")
@@ -56,7 +56,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	@Permission("2001")
 	@RequestMapping("/editUser")
-	public String editUser( User user ) {
+	public String editUser( RwUser user ) {
 		boolean rlt = false;
 		if ( user != null ) {
 			user.setPassword(SaltEncoder.md5SaltEncode(user.getLoginName(), user.getPassword()));
@@ -75,7 +75,7 @@ public class UserController extends BaseController {
 	@Permission("2001")
 	@RequestMapping("/getUserList")
 	public String getUserList() {
-		Page<User> page = getPage();
+		Page<RwUser> page = getPage();
 		return jsonPage(userService.selectPage(page, null));
 	}
 
@@ -90,7 +90,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	@Permission("2001")
 	@RequestMapping("/{userId}")
-	public User getUser(@PathVariable Long userId) {
+	public RwUser getUser(@PathVariable Long userId) {
 		return userService.selectById(userId);
 	}
 

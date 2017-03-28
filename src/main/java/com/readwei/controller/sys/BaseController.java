@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.framework.controller.SuperController;
 import com.baomidou.framework.mail.MailHelper;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.readwei.service.IPermissionService;
-import com.readwei.service.IUserService;
+import com.readwei.service.IRwPermissionService;
+import com.readwei.service.IRwUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,10 +27,10 @@ public class BaseController extends SuperController implements HandlerIntercepto
 	protected MailHelper mailHelper;
 
 	@Autowired
-	protected IUserService userService;
+	protected IRwUserService userService;
 
 	@Autowired
-	private IPermissionService permissionService;
+	private IRwPermissionService permissionService;
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)

@@ -3,7 +3,7 @@ package com.readwei.common;
 import com.baomidou.framework.spring.SpringContextHolder;
 import com.baomidou.kisso.SSOHelper;
 import com.baomidou.kisso.Token;
-import com.readwei.service.IPermissionService;
+import com.readwei.service.IRwPermissionService;
 import org.apache.velocity.tools.config.DefaultKey;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +21,7 @@ public class SSOPermissionTool {
 			return false;
 		}
 		//数据库判断按钮权限是否合法，生产环境此处建议加缓存判断逻辑。
-		IPermissionService psi = SpringContextHolder.getBean(IPermissionService.class);
+		IRwPermissionService psi = SpringContextHolder.getBean(IRwPermissionService.class);
 		return psi.isActionable(token, permission);
 	}
 	

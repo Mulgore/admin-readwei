@@ -13,8 +13,8 @@ import com.baomidou.kisso.common.util.RandomUtil;
 import com.baomidou.kisso.web.waf.request.WafRequestWrapper;
 import com.readwei.common.MyCaptcha;
 import com.readwei.common.enums.UserType;
-import com.readwei.entity.User;
-import com.readwei.service.IUserService;
+import com.readwei.entity.RwUser;
+import com.readwei.service.IRwUserService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,7 +40,7 @@ public class AccountController extends SuperController {
 	private static final String LOCKSCREEN_USER_FLAG = "LockscreenUserFlag";
 	
 	@Autowired
-	protected IUserService userService;
+	protected IRwUserService userService;
 
 	/**
 	 * 登录
@@ -69,7 +69,7 @@ public class AccountController extends SuperController {
 				 * 进入后台
 				 * </p>
 				 */
-				User user = userService.selectByLoginName(loginName);
+				RwUser user = userService.selectByLoginName(loginName);
 				if (user != null && SaltEncoder.md5SaltValid(loginName, user.getPassword(), password)) {
 					SSOToken st = new SSOToken(request);
 					st.setId(user.getId());
@@ -99,9 +99,9 @@ public class AccountController extends SuperController {
 	@Login(action = Action.Skip)
 	@Permission(action = Action.Skip)
 	@RequestMapping("/register")
-	public String register(Model model, User user) {
+	public String register(Model model, RwUser user) {
 		if (isPost()) {
-			User existUser = userService.selectByLoginName(user.getLoginName());
+			RwUser existUser = userService.selectByLoginName(user.getLoginName());
 			if (existUser == null) {
 				/* 演示不验证表单，用户名作为密码盐值 */
 				user.setPassword(SaltEncoder.md5SaltEncode(user.getLoginName(), user.getPassword()));
@@ -159,7 +159,7 @@ public class AccountController extends SuperController {
 			/*
 			 * 锁定页面登录
 			 */
-			User user = userService.selectByLoginName(loginName);
+			RwUser user = userService.selectByLoginName(loginName);
 			if (user != null && SaltEncoder.md5SaltValid(loginName, user.getPassword(), password)) {
 				/*
 				 * 登录成功，进入后台

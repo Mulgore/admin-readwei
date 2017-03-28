@@ -22,7 +22,7 @@
 	<!-- 扫描切面包路径 -->
 	<bean id="logAspect" class="com.baomidou.framework.aop.LogAspect">
 		<property name="logPoint">
-			<bean class="com.readwei.service.impl.SysLogServiceImpl" />
+			<bean class="com.readwei.service.impl.RwSysLogServiceImpl" />
 		</property>
 	</bean>
 	<aop:config>

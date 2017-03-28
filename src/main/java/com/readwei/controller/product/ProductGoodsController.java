@@ -1,17 +1,16 @@
 package com.readwei.controller.product;
 
-import com.alibaba.druid.sql.visitor.functions.Char;
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.readwei.common.utils.MathExtend;
 import com.readwei.controller.sys.BaseController;
-import com.readwei.entity.Product;
-import com.readwei.entity.ProductCategory;
-import com.readwei.entity.ProductImage;
-import com.readwei.service.IProductCategoryService;
-import com.readwei.service.IProductImageService;
-import com.readwei.service.IProductService;
+import com.readwei.entity.RwProduct;
+import com.readwei.entity.RwProductCategory;
+import com.readwei.entity.RwProductImage;
+import com.readwei.service.IRwProductCategoryService;
+import com.readwei.service.IRwProductImageService;
+import com.readwei.service.IRwProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,9 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 
 /**
@@ -37,11 +34,11 @@ import java.util.List;
 public class ProductGoodsController extends BaseController {
 
     @Autowired
-    private IProductService productService;
+    private IRwProductService productService;
     @Autowired
-    private IProductCategoryService productCategoryService;
+    private IRwProductCategoryService productCategoryService;
     @Autowired
-    private IProductImageService productImageService;
+    private IRwProductImageService productImageService;
 
     /**
      * 宝贝列表页面
@@ -59,14 +56,14 @@ public class ProductGoodsController extends BaseController {
     @RequestMapping("/getList")
     @ResponseBody
     public String goodsGetList() {
-        Page<Product> page = getPage();
-        EntityWrapper<Product> wrapper = new EntityWrapper<Product>();
-        Product product = new Product();
+        Page<RwProduct> page = getPage();
+        EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
+        RwProduct product = new RwProduct();
         wrapper.setEntity(product);
         page.setOrderByField("create_time");
         page.setAsc(false);
         page = productService.selectPage(page, wrapper);
-        for (Product pro : page.getRecords()) { // 迭代遍历
+        for (RwProduct pro : page.getRecords()) { // 迭代遍历
             pro.setcName(productCategoryService.selectById(pro.getCategoryId()).getName());
             pro.setPrices(MathExtend.divide(pro.getPrice(), 100, 2));
         }
@@ -81,9 +78,9 @@ public class ProductGoodsController extends BaseController {
     @Permission("5002")
     @RequestMapping(value = "add/view", method = RequestMethod.GET)
     public String goodsAddView(Model model) {
-        EntityWrapper<ProductCategory> wrapper = new EntityWrapper<ProductCategory>();
-        ProductCategory category = new ProductCategory();
-        category.setPid(0);
+        EntityWrapper<RwProductCategory> wrapper = new EntityWrapper<RwProductCategory>();
+        RwProductCategory category = new RwProductCategory();
+        category.setPid(0l);
         wrapper.setEntity(category);
        model.addAttribute(productCategoryService.selectList(wrapper));
         return "product/goods/add";
@@ -98,7 +95,7 @@ public class ProductGoodsController extends BaseController {
     @Permission("5002")
     @RequestMapping(value = "add/do", method = RequestMethod.POST)
     @ResponseBody
-    public String goodsSave(Product product) {
+    public String goodsSave(RwProduct product) {
         boolean rlt = false;
         product.setCreateTime(new Date());
         product.setModifyTime(new Date());
@@ -106,11 +103,11 @@ public class ProductGoodsController extends BaseController {
         if (!rlt) {
             return callbackFail("商品保存存失败！！！");
         }
-        EntityWrapper<Product> wrapper = new EntityWrapper<Product>();
+        EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
         wrapper.setEntity(product);
-        Product checkProduct = productService.selectOne(wrapper);
+        RwProduct checkProduct = productService.selectOne(wrapper);
         String[] imgUrls = this.request.getParameterValues("imgUrl");
-        ProductImage productImage = new ProductImage();
+        RwProductImage productImage = new RwProductImage();
         productImage.setPId(checkProduct.getId());
         for (String url : imgUrls) {
             productImage.setCreateTime(new Date());

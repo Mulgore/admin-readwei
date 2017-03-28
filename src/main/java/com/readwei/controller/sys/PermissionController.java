@@ -1,11 +1,12 @@
 package com.readwei.controller.sys;
 
 
+import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.readwei.entity.Permission;
-import com.readwei.service.IPermissionService;
-import com.readwei.service.IRolePermissionService;
+import com.readwei.entity.RwPermission;
+import com.readwei.service.IRwPermissionService;
+import com.readwei.service.IRwRolePermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,29 +29,29 @@ import javax.annotation.Resource;
 public class PermissionController extends BaseController {
 
     @Resource
-    private IPermissionService permissionService;
+    private IRwPermissionService permissionService;
 
     @Autowired
-    private IRolePermissionService rolePermissionService;
+    private IRwRolePermissionService rolePermissionService;
 
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/list")
     public String list(Model model) {
         return "/permission/list";
     }
 
     @ResponseBody
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/getPermissionList")
     public String getPermissionList() {
-        Page<Permission> page = getPage();
+        Page<RwPermission> page = getPage();
         page.setOrderByField("pid");
         page.setAsc(true);
         return jsonPage(permissionService.selectPage(page, null));
     }
 
     @ResponseBody
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/delete/{permId}")
     public String delete(@PathVariable Long permId) {
         boolean exist = rolePermissionService.existRolePermission(permId);
@@ -65,7 +66,7 @@ public class PermissionController extends BaseController {
      *
      * @return
      */
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/add")
     public String addPermission() {
         return "/permission/save";
@@ -76,13 +77,13 @@ public class PermissionController extends BaseController {
      *
      * @return
      */
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/add/do")
     @ResponseBody
-    public String savePermission(Permission permission) {
+    public String savePermission(RwPermission permission) {
         boolean rlt = false;
-        EntityWrapper<Permission> wrapper = new EntityWrapper<Permission>();
-        Permission perm = new Permission();
+        EntityWrapper<RwPermission> wrapper = new EntityWrapper<RwPermission>();
+        RwPermission perm = new RwPermission();
         perm.setPid(0L);
         wrapper.setEntity(perm);
         Integer perTotal = permissionService.selectCount(wrapper);
@@ -115,7 +116,7 @@ public class PermissionController extends BaseController {
      *
      * @return
      */
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/child/add")
     public String addChildPermission(Model model, Integer permId) {
         model.addAttribute("permInfo", permissionService.selectById(permId));
@@ -127,23 +128,23 @@ public class PermissionController extends BaseController {
      *
      * @return
      */
-    @com.baomidou.kisso.annotation.Permission("2003")
+    @Permission("2003")
     @RequestMapping("/child/add/do")
     @ResponseBody
-    public String saveChildPermission(Permission permission) {
+    public String saveChildPermission(RwPermission permission) {
         boolean rlt = false;
-        EntityWrapper<Permission> wrapper = new EntityWrapper<Permission>();
-        Permission perm = new Permission();
+        EntityWrapper<RwPermission> wrapper = new EntityWrapper<RwPermission>();
+        RwPermission perm = new RwPermission();
         wrapper.setEntity(perm);
         perm.setPermCode(permission.getPermCode());
-        Permission check = permissionService.selectOne(wrapper);
+        RwPermission check = permissionService.selectOne(wrapper);
         if (check != null) {
             return callbackFail("权限编码已存在！！！");
         }
         perm.setId(permission.getPid());
         Integer perTotal = permissionService.selectCount(wrapper)+1;
         permission.setState(0);
-        Permission per = permissionService.selectById((permission.getPid() * 10) + perTotal);
+        RwPermission per = permissionService.selectById((permission.getPid() * 10) + perTotal);
         if (per != null) {
             perTotal = perTotal + 1;
         }
