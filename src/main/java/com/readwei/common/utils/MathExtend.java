@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 /**
+ *  除法运算，四舍五入
  * Created by xingwu on 2017/3/17.
  */
 public class MathExtend {

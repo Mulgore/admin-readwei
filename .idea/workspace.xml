@@ -2,221 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31149098-ee4b-4752-8495-133ccc9058a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwAddressMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwExpressMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwProductCategoryMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwProductImageMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwProductMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwProductOrderMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwAddressService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwExpressService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwProductCategoryService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwProductImageService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwProductOrderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwProductService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwAddressServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwExpressServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwMemberServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwPermissionServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwProductCategoryServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwProductImageServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwProductOrderServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwProductServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwRolePermissionServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwRoleServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwSysLogServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwUserRoleServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwUserServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwPermissionMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwRoleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwRolePermissionMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwSysLogMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwUserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwUserRoleMapper.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/AddressMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/ExpressMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/ProductCategoryMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/ProductImageMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/ProductMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/ProductOrderMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IAddressService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IExpressService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IProductCategoryService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IProductImageService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IProductOrderService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IProductService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/AddressServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/ExpressServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/MemberServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/PermissionServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/ProductCategoryServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/ProductImageServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/ProductOrderServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/ProductServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RolePermissionServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RoleServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/SysLogServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/UserRoleServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/UserServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/RolePermissionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysLogMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserRoleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/address/AddressController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/express/ExpressController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/member/MemberController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/product/ProductCategoryController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/product/ProductGoodsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/Address.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/Express.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/Member.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/Permission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/ProductCategory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/ProductImage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/ProductOrder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/Role.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/RolePermission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/SysLog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/entity/UserRole.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/AddressMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/ExpressMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/MemberMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/PermissionMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/ProductCategoryMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/ProductImageMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/ProductMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/ProductOrderMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/RoleMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/RolePermissionMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/SysLogMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/UserMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/mapper/UserRoleMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IAddressService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IExpressService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IMemberService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IPermissionService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IProductCategoryService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IProductImageService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IProductOrderService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IRolePermissionService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IRoleService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/ISysLogService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IUserRoleService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/IUserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/AddressServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/ExpressServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/MemberServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/PermissionServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/ProductCategoryServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/ProductImageServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/ProductOrderServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/ProductServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/RolePermissionServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/RoleServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/SysLogServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/UserRoleServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/service/impl/UserServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/AddressMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/ExpressMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/MemberMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/PermissionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/ProductCategoryMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/ProductImageMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/ProductMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/ProductOrderMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/RoleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/RolePermissionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/SysLogMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/UserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mapper/UserRoleMapper.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/Address.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwAddress.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/Express.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwExpress.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/Member.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwMember.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/Permission.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwPermission.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwProduct.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/ProductCategory.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwProductCategory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/ProductImage.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwProductImage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/ProductOrder.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwProductOrder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwRole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RolePermission.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwRolePermission.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/SysLog.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwSysLog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/entity/UserRole.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwUserRole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/MemberMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwMemberMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/PermissionMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwPermissionMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwRoleMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RolePermissionMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwRolePermissionMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/SysLogMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwSysLogMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwUserMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/UserRoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/mapper/RwUserRoleMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IMemberService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwMemberService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IPermissionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwPermissionService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRolePermissionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwRolePermissionService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRoleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwRoleService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/ISysLogService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwSysLogService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IUserRoleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwUserRoleService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/service/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/service/IRwUserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/AddressMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwAddressMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExpressMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwExpressMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/MemberMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwMemberMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwProductCategoryMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductImageMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwProductImageMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwProductMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductOrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwProductOrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/AutoGeneratorHelper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/AutoGeneratorHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/MyCaptcha$1.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/MyCaptcha$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/MyCaptcha.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/MyCaptcha.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/SSOPermissionTool.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/SSOPermissionTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/enums/OptionType.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/enums/OptionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/enums/PermissionType.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/enums/PermissionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/enums/UserType.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/enums/UserType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/ClipboardUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/DateUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/TypeUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/utils/MathExtend.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/common/utils/MathExtend.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/order/ProductOrderController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/order/ProductOrderController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/AccountController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/BaseController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/LogController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/LogController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/PermissionController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/PermissionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/RoleController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/UploadController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/UploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/UserController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/sys/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root.jar" afterPath="$PROJECT_DIR$/target/root.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/address/AddressController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/readwei/controller/address/AddressController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/common/AutoGeneratorHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/common/AutoGeneratorHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/common/SSOPermissionTool.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/common/SSOPermissionTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/express/ExpressController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/express/ExpressController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/order/ProductOrderController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/order/ProductOrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/product/ProductCategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/product/ProductCategoryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/product/ProductGoodsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/product/ProductGoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/BaseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/LogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/LogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/PermissionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/PermissionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/RoleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/RoleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/servlet-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/servlet-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-framework.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-framework.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/ehcache.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/ehcache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/jdbc.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/quartz.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/quartz.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/sso.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/sso.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/velocity.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/velocity.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-datasource.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-datasource.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-ehcache.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-ehcache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-mail.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-mail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-tx.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/app-tx.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/servlet-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/servlet-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/spring-framework.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/spring-framework.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/xml/logback.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/xml/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/xml/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/xml/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/MathExtend.java" afterPath="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/MathExtend.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
@@ -232,7 +24,45 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AddressController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/controller/address/AddressController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/utils/DateUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClipboardUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/utils/ClipboardUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -252,10 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order/list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/category/add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/permission/list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/role/list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/category/edit.html" />
@@ -296,13 +122,17 @@
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-framework.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwSysLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwPermissionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/address/AddressController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/express/ExpressController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/member/MemberController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/order/ProductOrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/product/ProductCategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/product/ProductGoodsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/readwei/entity/RwProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/DateUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/TypeUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/MathExtend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/readwei/common/utils/ClipboardUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/readwei/controller/address/AddressController.java" />
       </list>
     </option>
   </component>
@@ -393,206 +223,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="member" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="express" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="readwei" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="address" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1125,12 +755,12 @@
       <workItem from="1490163074017" duration="3038000" />
       <workItem from="1490607997238" duration="548000" />
       <workItem from="1490621738481" duration="43000" />
-      <workItem from="1490686402183" duration="4026000" />
+      <workItem from="1490686402183" duration="5258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62789000" />
+    <option name="totallyTimeSpent" value="64021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="6" />
@@ -1160,7 +790,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22649573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1236,198 +866,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwAddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwUserRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwSysLogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwPermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwRolePermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwRolePermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwUserRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/support/BaseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwExpressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwAddressServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/IRwUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/IRwUserRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwUserRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/IRwRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/RwRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/IRwPermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/IRwRolePermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="44" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/IRwRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/service/impl/IRwSysLogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/PermissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="85" column="15" lean-forward="false" selection-start-line="85" selection-start-column="15" selection-end-line="85" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1521,7 +959,7 @@
         <state relative-caret-position="176">
           <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1562,8 +1000,8 @@
         <state relative-caret-position="1088">
           <caret line="81" column="32" lean-forward="false" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
           <folding>
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="false" />
+            <element signature="e#1287#1288#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1669,20 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/controller/address/AddressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/controller/sys/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1696,6 +1120,213 @@
         <state relative-caret-position="432">
           <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/SSOPermissionTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/MyCaptcha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/HttpHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5.jar!/com/baomidou/framework/oauth2/apis/GitHubApi.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.4/commons-lang-2.4.jar!/org/apache/commons/lang/time/DateUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6214">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5.jar!/com/baomidou/framework/common/util/BeanUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5.jar!/com/baomidou/framework/common/util/DateUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/util/BeanUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="112" column="59" lean-forward="true" selection-start-line="112" selection-start-column="59" selection-end-line="112" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.4/commons-lang-2.4-sources.jar!/org/apache/commons/lang/time/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24539">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/util/CollectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1723">
+          <caret line="89" column="24" lean-forward="true" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1851">
+          <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/oauth2/apis/GitHubApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/ShortUrlHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/RelativeDateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/Pinyin4jHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/TaskScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/common/SwfToolsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/kisso/3.6.11/kisso-3.6.11-sources.jar!/com/baomidou/kisso/common/IpHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="82" column="25" lean-forward="false" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/lib/tools.jar!/com/sun/tools/internal/xjc/reader/TypeUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/utils/MathExtend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/utils/TypeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/awt/datatransfer/Clipboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/controller/address/AddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/utils/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/readwei/common/utils/ClipboardUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
