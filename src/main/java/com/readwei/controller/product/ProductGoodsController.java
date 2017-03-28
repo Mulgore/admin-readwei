@@ -44,7 +44,7 @@ public class ProductGoodsController extends BaseController {
      * 宝贝列表页面
      */
     @Permission("5002")
-    @RequestMapping("/list")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String goodsView(Model model) {
         return "product/goods/list";
     }
@@ -53,7 +53,7 @@ public class ProductGoodsController extends BaseController {
      * 宝贝列表
      */
     @Permission("5002")
-    @RequestMapping("/getList")
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
     public String goodsGetList() {
         Page<RwProduct> page = getPage();
@@ -93,7 +93,7 @@ public class ProductGoodsController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "add/do", method = RequestMethod.POST)
+    @RequestMapping(value = "add/do", method = RequestMethod.PUT)
     @ResponseBody
     public String goodsSave(RwProduct product) {
         boolean rlt = false;
