@@ -82,7 +82,7 @@ public class ProductGoodsController extends BaseController {
         RwProductCategory category = new RwProductCategory();
         category.setPid(0l);
         wrapper.setEntity(category);
-       model.addAttribute(productCategoryService.selectList(wrapper));
+       model.addAttribute("category", productCategoryService.selectList(wrapper));
         return "product/goods/add";
     }
 
