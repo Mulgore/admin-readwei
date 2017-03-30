@@ -76,7 +76,7 @@ public class ProductGoodsController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "add/view", method = RequestMethod.GET)
+    @RequestMapping(value = "/add/view", method = RequestMethod.GET)
     public String goodsAddView(Model model) {
         EntityWrapper<RwProductCategory> wrapper = new EntityWrapper<RwProductCategory>();
         RwProductCategory category = new RwProductCategory();
@@ -93,12 +93,14 @@ public class ProductGoodsController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "add/do", method = RequestMethod.PUT)
+    @RequestMapping(value = "/add/do")
     @ResponseBody
-    public String goodsSave(RwProduct product) {
+    public String goodsSave(RwProduct product, Double prices) {
         boolean rlt = false;
         product.setCreateTime(new Date());
         product.setModifyTime(new Date());
+        product.setPrice((int)MathExtend.divide(prices,0.01,2));
+        product.setStatus(0);
         rlt = productService.insert(product);
         if (!rlt) {
             return callbackFail("商品保存存失败！！！");
@@ -110,10 +112,30 @@ public class ProductGoodsController extends BaseController {
         RwProductImage productImage = new RwProductImage();
         productImage.setPId(checkProduct.getId());
         for (String url : imgUrls) {
-            productImage.setCreateTime(new Date());
-            productImage.setModifyTime(new Date());
-            productImage.setImageUrl(url);
-            rlt = productImageService.insert(productImage);
+            if (url != null && url.equals(" ")) {
+                productImage.setCreateTime(new Date());
+                productImage.setModifyTime(new Date());
+                productImage.setImageUrl(url);
+                rlt = productImageService.insert(productImage);
+            }
+        }
+        return callbackSuccess(rlt);
+    }
+
+    /**
+     * 保存宝贝实现
+     *
+     * @param id 宝贝ID
+     * @return
+     */
+    @Permission("5002")
+    @RequestMapping(value = "/del")
+    @ResponseBody
+    public String goodsDel(Long id) {
+        boolean rlt = false;
+        rlt = productService.deleteById(id);
+        if (!rlt) {
+            return callbackFail("商品删除失败！！！");
         }
         return callbackSuccess(rlt);
     }

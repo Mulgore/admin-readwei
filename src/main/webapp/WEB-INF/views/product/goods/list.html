@@ -67,6 +67,13 @@ ReadWei - 宝贝管理
         formatter: function (value, row, index) {
             return formatDate(row.createTime);
         }
+    }, {
+        title: '操作',
+        formatter: function (value, row, index) {
+            var id = row.id;
+            return '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> '+
+                '<a class="btn btn-xs btn-info" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-refresh"></i>修改</a> ';
+        }
     }];
     function dataQueryParams(params) {
         return {
@@ -76,19 +83,33 @@ ReadWei - 宝贝管理
     }
 
     function addItem() {
-//        var title = "添加宝贝";
         var url = "#springUrl('/product/goods/add/view.html')";
-//        layer.open({
-//            type: 2,
-//            title: title,
-//            shadeClose: true,
-//            shade: 0.8,
-//            area: ['550px', '430px'],
-//            fix: false,
-//            maxmin: true,
-//            content: url
-//        });
         window.location.href = url;
+    }
+
+    function delItem(id) {
+        //询问框
+        layer.confirm('确定删除吗？', {
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $.ajax({
+                type: "POST",
+                url: "#springUrl('/product/goods/del.html')",
+                data: {id: id},
+                datatype: "text",
+                success: function (data) {
+                    var d = JSON.parse(data);
+                    if (d.success && d.data) {
+                        $('#dataTable').bootstrapTable('refresh', {url: dataUrl});
+                    }else {
+                        alert(d.message)
+                    }
+                    layer.closeAll();
+                }
+            });
+        }, function () {
+            return;
+        });
     }
 </script>
 #end
