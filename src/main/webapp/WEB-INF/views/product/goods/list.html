@@ -18,7 +18,7 @@ ReadWei - 宝贝管理
 			</span>
         </div>
         <button class="btn btn-primary" onclick="addItem()" type="button">
-            <i class="fa fa-pencil"></i>&nbsp;添加宝贝
+            <i class="fa fa-plus"></i>&nbsp;添加宝贝
         </button>
     </div>
 </div>
@@ -53,13 +53,41 @@ ReadWei - 宝贝管理
         field: 'amount',
         title: '库存',
         formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.amount + "本" + '</a>';
+            return '<a class="btn btn-xs btn-success">' + row.amount + "本" + '</a>';
         }
     }, {
         field: 'soldAmount',
         title: '销售库存',
         formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.soldAmount + "本" + '</a>';
+            return '<a class="btn btn-xs btn-warning">' + row.soldAmount + "本" + '</a>';
+        }
+    }, {
+        field: 'showCase',
+        title: '橱窗',
+        formatter: function (value, row, index) {
+            var status = row.showCase;
+            if (status == 1) {
+                return '<a class="btn btn-xs btn-info">是</a>';
+            } else {
+                return '<a class="btn btn-xs btn-warning">否</a>';
+            }
+        }
+    }, {
+        field: 'invoice',
+        title: '发票',
+        formatter: function (value, row, index) {
+            var status = row.invoice;
+            if (status == 1) {
+                return '<a class="btn btn-xs btn-success">是</a>';
+            } else {
+                return '<a class="btn btn-xs btn-warning">否</a>';
+            }
+        }
+    }, {
+        field: 'discount',
+        title: '折扣',
+        formatter: function (value, row, index) {
+            return '<a class="btn btn-xs btn-info">' + row.discount + '</a>';
         }
     }, {
         field: 'createTime',
@@ -68,10 +96,21 @@ ReadWei - 宝贝管理
             return formatDate(row.createTime);
         }
     }, {
+        field: 'status',
+        title: '上/下架',
+        formatter: function (value, row, index) {
+            var status = row.status;
+            if (status == 1) {
+                return '<a class="btn btn-xs btn-success">已上架</a>';
+            } else {
+                return '<a class="btn btn-xs btn-warning">未上架</a>';
+            }
+        }
+    }, {
         title: '操作',
         formatter: function (value, row, index) {
             var id = row.id;
-            return '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> '+
+            return '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> ' +
                 '<a class="btn btn-xs btn-info" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-refresh"></i>修改</a> ';
         }
     }];
@@ -101,7 +140,7 @@ ReadWei - 宝贝管理
                     var d = JSON.parse(data);
                     if (d.success && d.data) {
                         $('#dataTable').bootstrapTable('refresh', {url: dataUrl});
-                    }else {
+                    } else {
                         alert(d.message)
                     }
                     layer.closeAll();

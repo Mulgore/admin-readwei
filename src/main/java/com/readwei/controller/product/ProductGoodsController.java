@@ -82,7 +82,7 @@ public class ProductGoodsController extends BaseController {
         RwProductCategory category = new RwProductCategory();
         category.setPid(0l);
         wrapper.setEntity(category);
-       model.addAttribute("category", productCategoryService.selectList(wrapper));
+        model.addAttribute("category", productCategoryService.selectList(wrapper));
         return "product/goods/add";
     }
 
@@ -93,13 +93,13 @@ public class ProductGoodsController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/add/do")
+    @RequestMapping(value = "/add/do", method = RequestMethod.POST)
     @ResponseBody
     public String goodsSave(RwProduct product, Double prices) {
         boolean rlt = false;
         product.setCreateTime(new Date());
         product.setModifyTime(new Date());
-        product.setPrice((int)MathExtend.divide(prices,0.01,2));
+        product.setPrice((int) MathExtend.divide(prices, 0.01, 2));
         product.setStatus(0);
         rlt = productService.insert(product);
         if (!rlt) {
@@ -108,6 +108,9 @@ public class ProductGoodsController extends BaseController {
         EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
         wrapper.setEntity(product);
         RwProduct checkProduct = productService.selectOne(wrapper);
+        if (checkProduct == null) {
+            return callbackFail("检查商品为空！！！");
+        }
         String[] imgUrls = this.request.getParameterValues("imgUrl");
         RwProductImage productImage = new RwProductImage();
         productImage.setPId(checkProduct.getId());
@@ -129,7 +132,7 @@ public class ProductGoodsController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/del")
+    @RequestMapping(value = "/del", method = RequestMethod.DELETE)
     @ResponseBody
     public String goodsDel(Long id) {
         boolean rlt = false;
