@@ -13,6 +13,7 @@ ReadWei - 宝贝添加
     <form id="myForm" autocomplete="off"
           data-validator-option="{theme:'default'}"
           enctype="multipart/form-data" class="layui-form layui-form-pane">
+        <input type="hidden" name="id" value="$!{goods.id}" />
         <div class="layui-form-item">
             <label class="layui-form-label">宝贝名称：</label>
             <div class="layui-input-inline">
@@ -33,7 +34,7 @@ ReadWei - 宝贝添加
         <div class="layui-form-item">
             <label class="layui-form-label">价 格：</label>
             <div class="layui-input-inline">
-                <input type="text" name="prices" placeholder="￥" value="$!{prices}" class="layui-input" data-rule="价格:required;doubles;">
+                <input type="text" name="prices" placeholder="￥" value="$!{goods.prices}" class="layui-input" data-rule="价格:required;doubles;">
             </div>
         </div>
         <div class="layui-form-item">
@@ -97,10 +98,10 @@ ReadWei - 宝贝添加
         <div class="layui-form-item layui-form-text">
             <div class="layui-input-block">
                 <textarea name="summary" class="layui-textarea" placeholder="请输入商品简单描述" data-rule="描述:required;"
-                          style="resize: none;width: 800px;"></textarea>
+                          style="resize: none;width: 800px;">$!{goods.summary}</textarea>
             </div>
         </div>
-        <textarea id="description" name="description" placeholder="请输入商品详情页" style="display: none;"></textarea>
+        <textarea id="description" name="description" placeholder="请输入商品详情页" style="display: none;">$!{goods.description}</textarea>
         <div class="hr-line-dashed"></div>
         <div class="form-group">
             <div class="text-center">
@@ -141,7 +142,7 @@ ReadWei - 宝贝添加
                 success: function (data) {
                     var d = JSON.parse(data);
                     if (d.success && d.data) {
-                        alert("添加成功!!!")
+                        alert("商品修改或添加成功!!!")
                         window.parent.location.href = "#springUrl('/product/goods/list.html')";
                         //当你在iframe页面关闭自身时
                         //var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引

@@ -97,31 +97,61 @@ public class ProductGoodsController extends BaseController {
     @ResponseBody
     public String goodsSave(RwProduct product, Double prices) {
         boolean rlt = false;
-        product.setCreateTime(new Date());
+
         product.setModifyTime(new Date());
         product.setPrice((int) MathExtend.divide(prices, 0.01, 2));
         product.setStatus(0);
-        rlt = productService.insert(product);
-        if (!rlt) {
-            return callbackFail("商品保存存失败！！！");
-        }
-        EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
-        wrapper.setEntity(product);
-        RwProduct checkProduct = productService.selectOne(wrapper);
-        if (checkProduct == null) {
-            return callbackFail("检查商品为空！！！");
-        }
-        String[] imgUrls = this.request.getParameterValues("imgUrl");
-        RwProductImage productImage = new RwProductImage();
-        productImage.setPId(checkProduct.getId());
-        for (String url : imgUrls) {
-            if (url != null && url.equals(" ")) {
-                productImage.setCreateTime(new Date());
-                productImage.setModifyTime(new Date());
-                productImage.setImageUrl(url);
-                rlt = productImageService.insert(productImage);
+        if (product.getId() == null) {
+            product.setCreateTime(new Date());
+            rlt = productService.insert(product);
+            if (!rlt) {
+                return callbackFail("商品保存存失败！！！");
+            }
+            EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
+            wrapper.setEntity(product);
+            RwProduct checkProduct = productService.selectOne(wrapper);
+            if (checkProduct == null) {
+                return callbackFail("商品添加不完整，主图为添加失败！！！");
+            }
+            String[] imgUrls = this.request.getParameterValues("imgUrl");
+            RwProductImage productImage = new RwProductImage();
+            productImage.setPId(checkProduct.getId());
+            for (String url : imgUrls) {
+                if (url != null && url.equals(" ")) {
+                    productImage.setCreateTime(new Date());
+                    productImage.setModifyTime(new Date());
+                    productImage.setImageUrl(url);
+                    rlt = productImageService.insert(productImage);
+                    if (!rlt) {
+                        return callbackFail("商品主图保存失败！！！");
+                    }
+                }
             }
         }
+        if (product.getId() != null) {
+            rlt = productService.updateById(product);
+            if (!rlt) {
+                return callbackFail("商品保存存失败！！！");
+            }
+
+            String[] imgUrls = this.request.getParameterValues("imgUrl");
+            RwProductImage productImage = new RwProductImage();
+            productImage.setPId(product.getId());
+
+            for (String url : imgUrls) {
+                if (url != null && url.equals(" ")) {
+                    productImage.setCreateTime(new Date());
+                    productImage.setModifyTime(new Date());
+                    productImage.setImageUrl(url);
+                    rlt = productImageService.insertOrUpdate(productImage);
+                    if (!rlt) {
+                        return callbackFail("商品主图修改失败！！！");
+                    }
+                }
+            }
+        }
+
+
         return callbackSuccess(rlt);
     }
 
@@ -151,13 +181,15 @@ public class ProductGoodsController extends BaseController {
      */
     @Permission("5002")
     @RequestMapping(value = "/info", method = RequestMethod.GET)
-    public String goodsInfoView(Model model, Integer goodsId) {
+    public String goodsInfoView(Model model, Long goodsId) {
         EntityWrapper<RwProductCategory> wrapper = new EntityWrapper<RwProductCategory>();
         RwProductCategory category = new RwProductCategory();
         category.setPid(0l);
         wrapper.setEntity(category);
         model.addAttribute("category", productCategoryService.selectList(wrapper));
-        model.addAttribute("goods", productService.selectById(goodsId));
+        RwProduct product = productService.selectById(goodsId);
+        product.setPrices(MathExtend.divide(product.getPrice(), 100, 2));
+        model.addAttribute("goods", product);
         return "product/goods/add";
     }
 }

@@ -38,35 +38,56 @@ ReadWei - 宝贝管理
 <script type="text/javascript">
     var dataUrl = "#springUrl('/order/getList.html')";
     var dataColumns = [{
-        field: 'name',
+        field: 'orderId',
+        title: '商品订单'
+    }, {
+        field: 'status',
+        title: '订单状态',
+        formatter: function (value, row, index) {
+            var status = row.status;
+            if (status == 0) {
+                return '<a class="btn btn-xs btn-success">创建订单</a>';
+            } else if (status == 1) {
+                return '<a class="btn btn-xs btn-primary">未支付</a>';
+            } else if (status == 2) {
+                return '<a class="btn btn-xs btn-info">已支付</a>';
+            } else if (status == 3) {
+                return '<a class="btn btn-xs btn-warning">取消订单</a>';
+            }
+        }
+    }, {
+        field: 'memberName',
+        title: '会员名称'
+    }, {
+        field: 'productName',
         title: '商品名称'
     }, {
-        field: 'cName',
-        title: '类目名称'
+        field: 'expressId',
+        title: '物流单号ID'
     }, {
-        field: 'prices',
-        title: '价格',
-        formatter: function (value, row, index) {
-            return row.prices + " 元";
-        }
+        field: 'expressId',
+        title: '物流单号ID'
     }, {
-        field: 'amount',
-        title: '库存',
-        formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.amount + "本" + '</a>';
-        }
+        field: 'addressId',
+        title: '收获地址ID',
     }, {
-        field: 'soldAmount',
-        title: '销售库存',
-        formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.soldAmount + "本" + '</a>';
-        }
+        field: 'price',
+        title: '销售价格'
     }, {
         field: 'createTime',
         title: '创建时间',
         formatter: function (value, row, index) {
             return formatDate(row.createTime);
         }
+    }, {
+        field: 'modifyTime',
+        title: '修改时间',
+        formatter: function (value, row, index) {
+            return formatDate(row.modifyTime);
+        }
+    }, {
+        field: 'description',
+        title: '备注'
     }];
     function dataQueryParams(params) {
         return {

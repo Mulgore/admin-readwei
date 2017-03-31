@@ -70,6 +70,30 @@ public class RwProductOrder implements Serializable {
 	@TableField("modify_time")
 	private Date modifyTime;
 
+	@TableField(exist = false)
+	private String memberName;
+
+	@TableField(exist = false)
+	private String productName;
+
+	@TableField(exist = false)
+	private Double price;
+
+	public String getMemberName() { return memberName; }
+
+	public void setMemberName(String memberName) { this.memberName = memberName; }
+
+	public String getProductName() { return productName; }
+
+	public void setProductName(String productName) { this.productName = productName; }
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
 
 	public Long getId() {
 		return id;
