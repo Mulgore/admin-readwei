@@ -16,7 +16,8 @@ ReadWei - 宝贝添加
         <div class="layui-form-item">
             <label class="layui-form-label">宝贝名称：</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" name="name" placeholder="请输入商品名称" data-rule="商品名称:required;">
+                <input type="text" class="layui-input" value="$!{goods.name}" name="name" placeholder="请输入商品名称"
+                       data-rule="商品名称:required;">
             </div>
         </div>
         <div class="layui-form-item">
@@ -24,7 +25,7 @@ ReadWei - 宝贝添加
             <div class="layui-input-inline">
                 <select name="categoryId" class="layui-input" lay-ignore>
                     #foreach($!cate in $!category)
-                    <option value="$!{cate.id}">$!{cate.name}</option>
+                    <option value="$!{cate.id}" #if($!{goods.id} == $!{cate.id}) selected #end>$!{cate.name}</option>
                     #end
                 </select>
             </div>
@@ -32,26 +33,27 @@ ReadWei - 宝贝添加
         <div class="layui-form-item">
             <label class="layui-form-label">价 格：</label>
             <div class="layui-input-inline">
-                <input type="text" name="prices" placeholder="￥" class="layui-input" data-rule="价格:required;doubles;">
+                <input type="text" name="prices" placeholder="￥" value="$!{prices}" class="layui-input" data-rule="价格:required;doubles;">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">库 存：</label>
             <div class="layui-input-inline">
-                <input type="text" name="amount" placeholder="数量" class="layui-input" data-rule="库存:required;integer;">
+                <input type="text" name="amount" placeholder="数量" value="$!{goods.amount}" class="layui-input" data-rule="库存:required;integer;">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">折 扣：</label>
             <div class="layui-input-inline">
-                <input type="text" name="discount" placeholder="例如:八折输入:0.8" class="layui-input" data-rule="折扣:required;doubles;">
+                <input type="text" name="discount" value="$!{goods.discount}" placeholder="例如:八折输入:0.8" class="layui-input"
+                       data-rule="折扣:required;doubles;">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">服 务：</label>
             <div class="layui-input-inline">
-                <input type="checkbox" id="showCase" title="橱窗">
-                <input type="checkbox" id="invoice" title="发票">
+                <input type="checkbox" id="showCase" #if($!{goods.showCase} == 1) checked #end title="橱窗">
+                <input type="checkbox" id="invoice" #if($!{goods.invoice} == 1) checked #end title="发票">
             </div>
         </div>
         <div class="layui-form-item">
@@ -131,7 +133,7 @@ ReadWei - 宝贝添加
             }
             var me = this;
             // 提交表单之前，hold住表单，防止重复提交
-				me.holdSubmit();
+            me.holdSubmit();
             $.ajax({
                 url: "#springUrl('/product/goods/add/do.html')",
                 data: $(form).serialize(),
@@ -140,7 +142,7 @@ ReadWei - 宝贝添加
                     var d = JSON.parse(data);
                     if (d.success && d.data) {
                         alert("添加成功!!!")
-                        window.parent.location.href="#springUrl('/product/goods/list.html')";
+                        window.parent.location.href = "#springUrl('/product/goods/list.html')";
                         //当你在iframe页面关闭自身时
                         //var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
                         //parent.layer.close(index); //再执行关闭

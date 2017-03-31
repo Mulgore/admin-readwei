@@ -126,7 +126,7 @@ public class ProductGoodsController extends BaseController {
     }
 
     /**
-     * 保存宝贝实现
+     * 删除宝贝(物理删除)
      *
      * @param id 宝贝ID
      * @return
@@ -141,5 +141,23 @@ public class ProductGoodsController extends BaseController {
             return callbackFail("商品删除失败！！！");
         }
         return callbackSuccess(rlt);
+    }
+
+
+    /**
+     * 宝贝详情页面
+     *
+     * @return
+     */
+    @Permission("5002")
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public String goodsInfoView(Model model, Integer goodsId) {
+        EntityWrapper<RwProductCategory> wrapper = new EntityWrapper<RwProductCategory>();
+        RwProductCategory category = new RwProductCategory();
+        category.setPid(0l);
+        wrapper.setEntity(category);
+        model.addAttribute("category", productCategoryService.selectList(wrapper));
+        model.addAttribute("goods", productService.selectById(goodsId));
+        return "product/goods/add";
     }
 }

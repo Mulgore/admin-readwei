@@ -126,6 +126,11 @@ ReadWei - 宝贝管理
         window.location.href = url;
     }
 
+    function editItem(id) {
+        var url = "#springUrl('/product/goods/info.html')";
+        window.location.href = url+"?goodsId="+id;
+    }
+
     function delItem(id) {
         //询问框
         layer.confirm('确定删除吗？', {
