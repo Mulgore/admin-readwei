@@ -10,10 +10,10 @@
 	</appender>
 	<!-- Output to File -->
 	<appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>/Users/xingwu/logs/readwei.log</File>
+		<File>/Users/xingwu/logs/reawei.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>
-				/Users/xingwu/logs/readwei.%d{yyyy-MM-dd}.log
+				/Users/xingwu/logs/reawei.%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 			<!-- keep 1 days worth of history -->
 			<MaxHistory>10</MaxHistory>
@@ -29,5 +29,5 @@
 		<appender-ref ref="File" />
 	</root>
 	<logger name="org.springframework" level="ERROR" />
-	<logger name="com.readwei" level="DEBUG" />
+	<logger name="com.reawei" level="DEBUG" />
 </configuration>

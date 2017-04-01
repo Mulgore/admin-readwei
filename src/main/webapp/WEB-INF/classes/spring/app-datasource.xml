@@ -20,7 +20,7 @@
     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
    		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:xml/mybatis-config.xml" />
-		<property name="typeAliasesPackage" value="com.readwei.entity;com.readwei.entity.vo" />
+		<property name="typeAliasesPackage" value="com.reawei.entity;com.reawei.entity.vo" />
 		<property name="mapperLocations" value="classpath:mapper/*Mapper.xml" />
         <property name="plugins">
             <array>
@@ -34,7 +34,7 @@
     
     <!-- 加载 mapper.xml 接口 配置文件 -->
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.readwei.mapper" />
+		<property name="basePackage" value="com.reawei.mapper" />
 	</bean>
 
 </beans>

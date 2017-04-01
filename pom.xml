@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.reawei</groupId>
-    <artifactId>readwei</artifactId>
+    <artifactId>reawei</artifactId>
     <packaging>war</packaging>
     <version>1.0.0-SNAPSHOT</version>
-    <name>readwei Admin</name>
+    <name>reawei Admin</name>
 
     <properties>
         <servlet-api.version>2.5</servlet-api.version>
@@ -196,7 +196,7 @@
                     <webAppSourceDirectory>${project.basedir}/src/main/webapp</webAppSourceDirectory>
                     <scanIntervalSeconds>0</scanIntervalSeconds>
                     <httpConnector>
-                        <port>8088</port>
+                        <port>8080</port>
                     </httpConnector>
                 </configuration>
             </plugin>
