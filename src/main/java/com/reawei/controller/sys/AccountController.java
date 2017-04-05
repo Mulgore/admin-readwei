@@ -93,38 +93,38 @@ public class AccountController extends SuperController {
 		return "/login";
 	}
 
-	/**
-	 * 注册
-	 */
-	@Login(action = Action.Skip)
-	@Permission(action = Action.Skip)
-	@RequestMapping("/register")
-	public String register(Model model, RwUser user) {
-		if (isPost()) {
-			RwUser existUser = userService.selectByLoginName(user.getLoginName());
-			if (existUser == null) {
-				/* 演示不验证表单，用户名作为密码盐值 */
-				user.setPassword(SaltEncoder.md5SaltEncode(user.getLoginName(), user.getPassword()));
-				user.setType(UserType.MEMBER.key());
-				user.setCreateTime(new Date());
-				user.setLastTime(user.getCreateTime());
-				boolean rlt = userService.insert(user);
-				if (rlt) {
-					/*
-					 * 注册成功，自动登录进入后台
-					 */
-					SSOToken st = new SSOToken(request);
-					st.setId(user.getId());
-					st.setData(user.getLoginName());
-					SSOHelper.setSSOCookie(request, response, st, true);
-					return redirectTo("/index.html");
-				}
-			} else {
-				model.addAttribute("tipMsg", "注册用户名【" + user.getLoginName() + "】已存在！");
-			}
-		}
-		return "/register";
-	}
+//	/**
+//	 * 注册
+//	 */
+//	@Login(action = Action.Skip)
+//	@Permission(action = Action.Skip)
+//	@RequestMapping("/register")
+//	public String register(Model model, RwUser user) {
+//		if (isPost()) {
+//			RwUser existUser = userService.selectByLoginName(user.getLoginName());
+//			if (existUser == null) {
+//				/* 演示不验证表单，用户名作为密码盐值 */
+//				user.setPassword(SaltEncoder.md5SaltEncode(user.getLoginName(), user.getPassword()));
+//				user.setType(UserType.MEMBER.key());
+//				user.setCreateTime(new Date());
+//				user.setLastTime(user.getCreateTime());
+//				boolean rlt = userService.insert(user);
+//				if (rlt) {
+//					/*
+//					 * 注册成功，自动登录进入后台
+//					 */
+//					SSOToken st = new SSOToken(request);
+//					st.setId(user.getId());
+//					st.setData(user.getLoginName());
+//					SSOHelper.setSSOCookie(request, response, st, true);
+//					return redirectTo("/index.html");
+//				}
+//			} else {
+//				model.addAttribute("tipMsg", "注册用户名【" + user.getLoginName() + "】已存在！");
+//			}
+//		}
+//		return "/register";
+//	}
 
 	/**
 	 * 退出

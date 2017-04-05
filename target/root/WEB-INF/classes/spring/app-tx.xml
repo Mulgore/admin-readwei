@@ -10,7 +10,7 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
 
 	<!-- 扫描 service -->
-	<context:component-scan base-package="com.readwei.service" />
+	<context:component-scan base-package="com.reawei.service" />
 	
 	<!-- 使用annotation注解方式配置事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
@@ -33,7 +33,7 @@
 	
 	<!-- 配置AOP切面 -->
 	<aop:config>
-        <aop:pointcut id="transactionPointcut" expression="execution(* com.readwei.service.impl..*.*(..))"/>
+        <aop:pointcut id="transactionPointcut" expression="execution(* com.reawei.service.impl..*.*(..))"/>
         <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice"/>
     </aop:config>
 
