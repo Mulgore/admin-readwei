@@ -1,7 +1,9 @@
 com/reawei/mapper/RwUserMapper.class
 com/reawei/mapper/RwMemberMapper.class
+com/reawei/common/utils/EncryptUtil.class
 com/reawei/entity/RwUser.class
 com/reawei/entity/RwExpress.class
+com/reawei/service/impl/RwDocumentServiceImpl.class
 com/reawei/common/SSOPermissionTool.class
 com/reawei/common/utils/ClipboardUtil$1.class
 com/reawei/service/impl/RwProductServiceImpl.class
@@ -47,10 +49,12 @@ com/reawei/common/enums/PermissionType.class
 com/reawei/controller/order/ProductOrderController.class
 com/reawei/service/impl/RwSysLogServiceImpl.class
 com/reawei/controller/sys/IndexController.class
+com/reawei/mapper/RwDocumentMapper.class
 com/reawei/common/enums/UserType.class
 com/reawei/common/utils/StringReplaceUtil.class
 com/reawei/mapper/RwAddressMapper.class
 com/reawei/controller/product/ProductCategoryController.class
+com/reawei/common/Constant.class
 com/reawei/service/IRwRoleService.class
 com/reawei/controller/express/ExpressController.class
 com/reawei/controller/sys/RoleController.class
@@ -70,6 +74,7 @@ com/reawei/service/impl/RwExpressServiceImpl.class
 com/reawei/controller/product/ProductGoodsController.class
 com/reawei/entity/RwAddress.class
 com/reawei/service/IRwMemberService.class
+com/reawei/entity/RwDocument.class
 com/reawei/service/IRwProductOrderService.class
 com/reawei/mapper/RwExpressMapper.class
 com/reawei/controller/member/MemberController.class
@@ -86,5 +91,7 @@ com/reawei/controller/sys/PermissionController.class
 com/reawei/common/MyCaptcha.class
 com/reawei/service/impl/RwProductOrderServiceImpl.class
 com/reawei/service/IRwPermissionService.class
+com/reawei/controller/api/document/ApiDocumetController.class
 com/reawei/service/impl/RwAddressServiceImpl.class
 com/reawei/entity/RwMember.class
+com/reawei/service/IRwDocumentService.class

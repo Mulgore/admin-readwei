@@ -68,15 +68,15 @@ public class AutoGeneratorHelper {
 		});
 		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername("root");
-		dsc.setPassword("aa11*bb22!");
-		dsc.setUrl("jdbc:mysql://123.56.42.127:3306/readwei?characterEncoding=utf8");
+		dsc.setPassword("By*reawei");
+		dsc.setUrl("jdbc:mysql://123.206.231.180:3306/reawei?characterEncoding=utf8");
 		mpg.setDataSource(dsc);
 
 		// 策略配置
 		StrategyConfig strategy = new StrategyConfig();
 		strategy.setTablePrefix(new String[] { "tlog_", "tsys_" });// 此处可以修改为您的表前缀
 		strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-		strategy.setSuperServiceImplClass("com.readwei.service.support.BaseServiceImpl");
+		strategy.setSuperServiceImplClass("com.reawei.service.support.BaseServiceImpl");
 		// strategy.setInclude(new String[] { "user" }); // 需要生成的表
 		// strategy.setExclude(new String[]{"test"}); // 排除生成的表
 		// 自定义实体父类
@@ -101,7 +101,7 @@ public class AutoGeneratorHelper {
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.setParent("com.readwei");
+		pc.setParent("com.reawei");
 //		pc.setModuleName("readwei");
 		pc.setController("controller");
 		mpg.setPackageInfo(pc);

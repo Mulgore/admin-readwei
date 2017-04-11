@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -35,14 +36,14 @@ public class PermissionController extends BaseController {
     private IRwRolePermissionService rolePermissionService;
 
     @Permission("2003")
-    @RequestMapping("/list")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(Model model) {
         return "/permission/list";
     }
 
     @ResponseBody
     @Permission("2003")
-    @RequestMapping("/getPermissionList")
+    @RequestMapping(value = "/getPermissionList", method = RequestMethod.GET)
     public String getPermissionList() {
         Page<RwPermission> page = getPage();
         page.setOrderByField("pid");
@@ -52,7 +53,7 @@ public class PermissionController extends BaseController {
 
     @ResponseBody
     @Permission("2003")
-    @RequestMapping("/delete/{permId}")
+    @RequestMapping(value = "/delete/{permId}", method = RequestMethod.DELETE)
     public String delete(@PathVariable Long permId) {
         boolean exist = rolePermissionService.existRolePermission(permId);
         if (exist) {
@@ -67,7 +68,7 @@ public class PermissionController extends BaseController {
      * @return
      */
     @Permission("2003")
-    @RequestMapping("/add")
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPermission() {
         return "/permission/save";
     }
@@ -78,7 +79,7 @@ public class PermissionController extends BaseController {
      * @return
      */
     @Permission("2003")
-    @RequestMapping("/add/do")
+    @RequestMapping(value = "/add/do", method = RequestMethod.POST)
     @ResponseBody
     public String savePermission(RwPermission permission) {
         boolean rlt = false;
@@ -89,16 +90,16 @@ public class PermissionController extends BaseController {
         Integer perTotal = permissionService.selectCount(wrapper);
         permission.setPid(0L);
         if (perTotal >= 1000) {
-            permission.setPermCode(String.valueOf(perTotal+1));
+            permission.setPermCode(String.valueOf(perTotal + 1));
         }
         if (perTotal < 1000) {
-            permission.setPermCode(perTotal+1 + "0");
+            permission.setPermCode(perTotal + 1 + "0");
         }
         if (perTotal < 100) {
-            permission.setPermCode(perTotal+1 + "00");
+            permission.setPermCode(perTotal + 1 + "00");
         }
         if (perTotal < 10) {
-            permission.setPermCode(perTotal+1 + "000");
+            permission.setPermCode(perTotal + 1 + "000");
         }
         permission.setState(0);
         permission.setType(0);
@@ -117,7 +118,7 @@ public class PermissionController extends BaseController {
      * @return
      */
     @Permission("2003")
-    @RequestMapping("/child/add")
+    @RequestMapping(value = "/child/add", method = RequestMethod.GET)
     public String addChildPermission(Model model, Integer permId) {
         model.addAttribute("permInfo", permissionService.selectById(permId));
         return "/permission/child/save";
@@ -129,7 +130,7 @@ public class PermissionController extends BaseController {
      * @return
      */
     @Permission("2003")
-    @RequestMapping("/child/add/do")
+    @RequestMapping(value = "/child/add/do", method = RequestMethod.POST)
     @ResponseBody
     public String saveChildPermission(RwPermission permission) {
         boolean rlt = false;
@@ -142,7 +143,7 @@ public class PermissionController extends BaseController {
             return callbackFail("权限编码已存在！！！");
         }
         perm.setId(permission.getPid());
-        Integer perTotal = permissionService.selectCount(wrapper)+1;
+        Integer perTotal = permissionService.selectCount(wrapper) + 1;
         permission.setState(0);
         RwPermission per = permissionService.selectById((permission.getPid() * 10) + perTotal);
         if (per != null) {
