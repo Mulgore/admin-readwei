@@ -9,6 +9,7 @@ com/reawei/common/utils/ClipboardUtil$1.class
 com/reawei/service/impl/RwProductServiceImpl.class
 com/reawei/controller/address/AddressController.class
 com/reawei/mapper/RwRoleMapper.class
+com/reawei/controller/api/document/ApiDocumentsController.class
 com/reawei/common/utils/DateUtil.class
 com/reawei/service/impl/RwMemberServiceImpl.class
 com/reawei/service/IRwUserRoleService.class
@@ -91,7 +92,6 @@ com/reawei/controller/sys/PermissionController.class
 com/reawei/common/MyCaptcha.class
 com/reawei/service/impl/RwProductOrderServiceImpl.class
 com/reawei/service/IRwPermissionService.class
-com/reawei/controller/api/document/ApiDocumetController.class
 com/reawei/service/impl/RwAddressServiceImpl.class
 com/reawei/entity/RwMember.class
 com/reawei/service/IRwDocumentService.class

@@ -5,5 +5,5 @@ package com.reawei.common;
  */
 public class Constant {
 
-    public static final Integer PAGE_SIZE = 15;
+    public static final Integer PAGE_SIZE=15;
 }

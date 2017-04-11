@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31149098-ee4b-4752-8495-133ccc9058a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/common/utils/EncryptUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/controller/api/document/ApiDocumentsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/entity/RwDocument.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/mapper/RwDocumentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/service/IRwDocumentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/service/impl/RwDocumentServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RwDocumentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/PermissionController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/PermissionController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/com/reawei/controller/api/document/ApiDocumetController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test/Test.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/api/document/ApiDocumentsController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/api/document/ApiDocumentsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root.war" afterPath="$PROJECT_DIR$/target/root.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/com/reawei/controller/sys/PermissionController.class" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/com/reawei/controller/sys/PermissionController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readwei.iml" afterPath="$PROJECT_DIR$/readwei.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/reawei/common/AutoGeneratorHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/common/AutoGeneratorHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/reawei/controller/sys/PermissionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/controller/sys/PermissionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/rebel.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/rebel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/rebel.xml" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/rebel.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
@@ -41,11 +27,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiDocumentsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiDocumentsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/reawei/controller/api/document/ApiDocumentsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="204">
+              <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1124#1145#0" expanded="true" />
@@ -55,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -144,10 +130,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/service/impl/RwDocumentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/AutoGeneratorHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/utils/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/controller/api/document/ApiDocumetController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/controller/api/document/ApiDocumetsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/controller/api/document/ApiDocumentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java" />
       </list>
     </option>
   </component>
@@ -312,11 +298,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="document" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -961,12 +943,12 @@
       <workItem from="1491646446366" duration="594000" />
       <workItem from="1491786889649" duration="113000" />
       <workItem from="1491876131973" duration="1720000" />
-      <workItem from="1491891179087" duration="3558000" />
+      <workItem from="1491891179087" duration="3806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123756000" />
+    <option name="totallyTimeSpent" value="124004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="6" />
@@ -1431,23 +1413,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/reawei/controller/api/document/ApiDocumentsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1124#1145#0" expanded="true" />
             <element signature="e#1466#1482#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reawei/common/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

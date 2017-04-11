@@ -8,7 +8,6 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/mapper/RwSysLogMapper.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwRoleService.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/DateUtil.java
-/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/api/document/ApiDocumetController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/ClipboardUtil.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/sys/CacheController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwPermissionServiceImpl.java
@@ -80,6 +79,7 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwUserServiceImpl.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwRolePermissionService.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwExpressServiceImpl.java
+/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/api/document/ApiDocumentsController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/support/BaseServiceImpl.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/StringReplaceUtil.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/sys/AccountController.java
