@@ -46,7 +46,7 @@ public class MemberController extends BaseController {
      * @return
      */
     @Permission("7001")
-    @RequestMapping("/getList")
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
     public String getList() {
         Page<RwMember> page = getPage();

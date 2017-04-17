@@ -79,7 +79,7 @@ public class ProductCategoryController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/save/do", method = RequestMethod.PUT)
+    @RequestMapping(value = "/save/do", method = RequestMethod.POST)
     @ResponseBody
     public String categorySave(RwProductCategory category) {
         boolean rlt = false;
@@ -154,7 +154,7 @@ public class ProductCategoryController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/edit/do", method = RequestMethod.POST)
+    @RequestMapping(value = "/edit/do", method = RequestMethod.PUT)
     @ResponseBody
     public String categoryEditDo(RwProductCategory category) {
         boolean rlt = false;

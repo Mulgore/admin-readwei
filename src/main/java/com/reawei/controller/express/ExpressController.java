@@ -4,6 +4,7 @@ import com.baomidou.kisso.annotation.Permission;
 import com.reawei.controller.sys.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -19,15 +20,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ExpressController extends BaseController {
 
     @Permission("8001")
-    @RequestMapping("/list")
-    public String listView(){
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String listView() {
         return "/express/list";
     }
 
     @Permission("8001")
-    @RequestMapping("/getList")
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
-    public String getList(){
+    public String getList() {
         return jsonPage(null);
     }
 

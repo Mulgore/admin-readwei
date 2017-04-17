@@ -13,6 +13,7 @@ import com.reawei.service.IRwProductOrderService;
 import com.reawei.service.IRwProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -27,7 +28,7 @@ import javax.annotation.Resource;
  */
 @Controller
 @RequestMapping("/order")
-public class ProductOrderController extends BaseController{
+public class ProductOrderController extends BaseController {
 
     @Resource
     private IRwProductOrderService productOrderService;
@@ -37,15 +38,15 @@ public class ProductOrderController extends BaseController{
     private IRwProductService productService;
 
     @Permission("6001")
-    @RequestMapping("/list")
-    public String listView(){
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String listView() {
         return "order/list";
     }
 
     @Permission("6001")
-    @RequestMapping("/getList")
+    @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
-    public String getList(){
+    public String getList() {
         Page<RwProductOrder> page = getPage();
         EntityWrapper<RwProductOrder> wrapper = new EntityWrapper<RwProductOrder>();
         RwProductOrder order = new RwProductOrder();
@@ -53,20 +54,20 @@ public class ProductOrderController extends BaseController{
         page.setOrderByField("create_time");
         page.setAsc(false);
         page = productOrderService.selectPage(page, wrapper);
-        for (RwProductOrder or : page.getRecords()){
-           RwMember member = memberService.selectById(or.getMemberId());
-            if (member != null){
+        for (RwProductOrder or : page.getRecords()) {
+            RwMember member = memberService.selectById(or.getMemberId());
+            if (member != null) {
                 or.setMemberName(member.getName());
-            }else {
+            } else {
                 or.setMemberName("未知用户");
             }
             RwProduct product = productService.selectById(or.getProductId());
             if (product != null) {
                 or.setProductName(product.getName());
-            }else {
+            } else {
                 or.setProductName("未知商品");
             }
-            or.setPrice(MathExtend.divide(or.getAmount(),100,2));
+            or.setPrice(MathExtend.divide(or.getAmount(), 100, 2));
         }
         return jsonPage(page);
     }
