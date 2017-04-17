@@ -50,7 +50,7 @@ public class ProductGoodsController extends BaseController {
     }
 
     /**
-     * 宝贝列表
+     * 宝贝列表 查
      */
     @Permission("5002")
     @RequestMapping(value = "/getList", method = RequestMethod.GET)
@@ -71,7 +71,7 @@ public class ProductGoodsController extends BaseController {
     }
 
     /**
-     * 添加宝贝页面
+     * 添加宝贝页面 增
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class ProductGoodsController extends BaseController {
     /**
      * 保存宝贝实现
      *
-     * @param product 宝贝信息
+     * @param product 宝贝信息 增／修
      * @return
      */
     @Permission("5002")
@@ -156,7 +156,7 @@ public class ProductGoodsController extends BaseController {
     }
 
     /**
-     * 删除宝贝(物理删除)
+     * 删除宝贝(物理删除) 删
      *
      * @param id 宝贝ID
      * @return

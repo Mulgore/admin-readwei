@@ -32,7 +32,7 @@
             $.ajax({
                 url: "#springUrl('/product/category/save/do.html')",
                 data: $(form).serialize(),
-                type: "POST",
+                type: "PUT",
                 success: function(data){
                     var d = JSON.parse(data);
                     if(d.success && d.data){

@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 前端接口 文档
+ * 前端文档接口
  * Created by xingwu on 2017/4/11.
  */
 @Controller
