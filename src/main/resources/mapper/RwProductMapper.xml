@@ -6,5 +6,33 @@
     <sql id="Base_Column_List">
         id, name, status, category_id AS categoryId, price, amount, sold_amount AS soldAmount, summary, description, show_case AS showCase, invoice, refund, warranty, discount, create_time AS createTime, modify_time AS modifyTime
     </sql>
+    <sql id="pagination">
+        <if test="start!=null ">
+            <![CDATA[ limit #{start}, #{limit}]]>
+        </if>
+    </sql>
 
+    <select id="getProductQuery" parameterType="com.reawei.common.utils.Query" resultType="com.reawei.entity.RwProduct">
+        SELECT
+          <include refid="Base_Column_List" />
+        FROM rw_product
+          WHERE
+            1=1
+        <if test="orderBy!=null and orderBy.toOrderBy != null" >
+            order by ${orderBy.toOrderBy}
+        </if>
+        <include refid="pagination" />
+    </select>
+
+    <select id="countGetProductQuery" parameterType="com.reawei.common.utils.Query" resultType="java.lang.Integer">
+        SELECT
+        COUNT(<include refid="Base_Column_List" />)
+        FROM rw_product
+        WHERE
+        1=1
+        <if test="orderBy!=null and orderBy.toOrderBy != null" >
+            order by ${orderBy.toOrderBy}
+        </if>
+        <include refid="pagination" />
+    </select>
 </mapper>

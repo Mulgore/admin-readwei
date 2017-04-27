@@ -4,6 +4,8 @@ import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.reawei.common.utils.MathExtend;
+import com.reawei.common.utils.Query;
+import com.reawei.common.utils.Result;
 import com.reawei.controller.sys.BaseController;
 import com.reawei.entity.RwProduct;
 import com.reawei.entity.RwProductCategory;
@@ -11,6 +13,7 @@ import com.reawei.entity.RwProductImage;
 import com.reawei.service.IRwProductCategoryService;
 import com.reawei.service.IRwProductImageService;
 import com.reawei.service.IRwProductService;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -192,4 +196,5 @@ public class ProductGoodsController extends BaseController {
         model.addAttribute("goods", product);
         return "product/goods/add";
     }
+
 }
