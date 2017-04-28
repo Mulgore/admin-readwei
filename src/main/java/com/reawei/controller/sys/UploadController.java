@@ -1,35 +1,21 @@
 package com.reawei.controller.sys;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.framework.common.util.DateUtil;
 import com.baomidou.framework.upload.UploadFile;
 import com.baomidou.framework.upload.UploadMsg;
 import com.baomidou.framework.upload.UploadMultipartRequest;
 import com.baomidou.kisso.annotation.Action;
 import com.baomidou.kisso.annotation.Permission;
-import com.qcloud.PicCloud;
-import com.qcloud.UploadResult;
-import com.qcloud.cos.COSClient;
-import com.qcloud.cos.ClientConfig;
-import com.qcloud.cos.request.UploadFileRequest;
-import com.qcloud.cos.sign.Credentials;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Date;
 import java.util.Enumeration;
-import java.util.Map;
 
 /**
  * <p>
@@ -89,39 +75,6 @@ public class UploadController extends BaseController {
             logger.error("uploadFile error. ", e);
         }
         return toJson(msg);
-    }
-
-    /**
-     * <p>
-     * 上传文件<br>  该演示 demo 上传后的文件保存在当前项目的根目录下
-     * </p>
-     */
-    @ResponseBody
-    @Permission(action = Action.Skip)
-    @RequestMapping(value = "/file/cos", method = RequestMethod.POST)
-    public String fileCos(HttpServletRequest request) {
-        String path = file(request);
-        Map<String, Object> ret = (Map<String, Object>) JSONArray.parse(path);
-        // 设置要操作的bucket
-        String bucketName = "reawei";
-        // 初始化客户端配置
-        ClientConfig clientConfig = new ClientConfig();
-        // 设置bucket所在的区域，比如广州(gz), 天津(tj)
-        clientConfig.setRegion("sh");
-        // 初始化秘钥信息
-        Credentials cred = new Credentials(APP_ID, SECRET_ID, SECRET_KEY);
-        // 初始化cosClient
-        COSClient cosClient = new COSClient(clientConfig, cred);
-
-        // 1. 上传文件(默认不覆盖)
-        // 将本地的local_file_1.txt上传到bucket下的根分区下,并命名为sample_file.txt
-        // 默认不覆盖, 如果cos上已有文件, 则返回错误
-        String cosFilePath = "/sss.jpg";
-        String localFilePath = ret.get("url").toString();
-        UploadFileRequest uploadFileRequest = new UploadFileRequest(bucketName, cosFilePath, localFilePath);
-        uploadFileRequest.setEnableShaDigest(false);
-        String uploadFileRet = cosClient.uploadFile(uploadFileRequest);
-        return toJson(uploadFileRet);
     }
 
 

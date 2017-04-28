@@ -57,44 +57,44 @@ ReadWei - 宝贝添加
                 <input type="checkbox" id="invoice" #if($!{goods.invoice} == 1) checked #end title="发票">
             </div>
         </div>
-        <div class="layui-form-item">
-            <div class="layui-input-inline">
-                <div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">
-                    <img id="image_1" style="width: 200px;height: 200px;border-radius: 100%;">
-                    <input type="hidden" name="imgUrl"/>
-                    <div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">
-                        <input type="file" name="file" class="layui-upload-file">
-                    </div>
-                </div>
-            </div>
-            <div class="layui-input-inline">
-                <div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">
-                    <img id="image_2" style="width: 200px;height: 200px;border-radius: 100%;">
-                    <input type="hidden" name="imgUrl"/>
-                    <div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">
-                        <input type="file" name="file" class="layui-upload-file">
-                    </div>
-                </div>
-            </div>
-            <div class="layui-input-inline">
-                <div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">
-                    <img id="image_3" style="width: 200px;height: 200px;border-radius: 100%;">
-                    <input type="hidden" name="imgUrl"/>
-                    <div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">
-                        <input type="file" name="file" class="layui-upload-file">
-                    </div>
-                </div>
-            </div>
-            <div class="layui-input-inline">
-                <div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">
-                    <img id="image_4" style="width: 200px;height: 200px;border-radius: 100%;">
-                    <input type="hidden" name="imgUrl"/>
-                    <div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">
-                        <input type="file" name="file" class="layui-upload-file">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--<div class="layui-form-item">-->
+            <!--<div class="layui-input-inline">-->
+                <!--<div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">-->
+                    <!--<img id="image_1" style="width: 200px;height: 200px;border-radius: 100%;">-->
+                    <!--<input type="hidden" name="imgUrl"/>-->
+                    <!--<div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">-->
+                        <!--<input type="file" name="file" class="layui-upload-file">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="layui-input-inline">-->
+                <!--<div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">-->
+                    <!--<img id="image_2" style="width: 200px;height: 200px;border-radius: 100%;">-->
+                    <!--<input type="hidden" name="imgUrl"/>-->
+                    <!--<div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">-->
+                        <!--<input type="file" name="file" class="layui-upload-file">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="layui-input-inline">-->
+                <!--<div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">-->
+                    <!--<img id="image_3" style="width: 200px;height: 200px;border-radius: 100%;">-->
+                    <!--<input type="hidden" name="imgUrl"/>-->
+                    <!--<div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">-->
+                        <!--<input type="file" name="file" class="layui-upload-file">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="layui-input-inline">-->
+                <!--<div class="site-demo-upload" style="position: relative;width: 200px;height: 200px;">-->
+                    <!--<img id="image_4" style="width: 200px;height: 200px;border-radius: 100%;">-->
+                    <!--<input type="hidden" name="imgUrl"/>-->
+                    <!--<div class="site-demo-upbar" style="position: absolute;top: 50%;left: 50%;margin: -18px 0 0 -56px;">-->
+                        <!--<input type="file" name="file" class="layui-upload-file">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="layui-form-item layui-form-text">
             <div class="layui-input-block">
                 <textarea name="summary" class="layui-textarea" placeholder="请输入商品简单描述" data-rule="描述:required;"
@@ -118,6 +118,7 @@ ReadWei - 宝贝添加
 <script src="#springUrl('/static/plugins/nice-validator-1.0.10/dist/jquery.validator.js?local=zh-CN')"></script>
 <script src="#springUrl('/static/plugins/layui/layui.js')"></script>
 <script type="text/javascript">
+    document.domain = 'admin.reawei.com';
     $("#myForm").validator({
         valid: function (form) {
             var rlt1 = $('#showCase').is(':checked');
@@ -170,21 +171,15 @@ ReadWei - 宝贝添加
     });
     layui.use('upload', function () {
         layui.upload({
-            url: "#springUrl('/sys/upload/img')" //上传接口
-            , success: function (res) { //上传成功后的回调
-                console.log(res)
-            }
-        });
-
-        layui.upload({
-            url: '/test/upload.json'
-            , elem: '#test' //指定原始元素，默认直接查找class="layui-upload-file"
-            , method: 'get' //上传接口的http类型
+            url: 'http://web.file.myqcloud.com/files/v1/1253544233/reaweiimg/0/'
+            , method: 'post' //上传接口的http类型
             , success: function (res) {
                 LAY_demo_upload.src = res.url;
             }
         });
     });
+
+
 </script>
 #end
 #extends("/common/framework.html")

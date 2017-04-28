@@ -73,7 +73,7 @@ ReadWei - 分类管理
             btn: ['确定', '取消'] //按钮
         }, function () {
             $.ajax({
-                type: "DELETE",
+                type: "POST",
                 url: "#springUrl('/product/category/del.html')",
                 data: {id: id},
                 datatype: "text",

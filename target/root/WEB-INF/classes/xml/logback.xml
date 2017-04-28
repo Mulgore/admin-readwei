@@ -10,10 +10,10 @@
 	</appender>
 	<!-- Output to File -->
 	<appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>/Users/xingwu/logs/reawei.log</File>
+		<File>/data/admin/logs/reawei.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>
-				/Users/xingwu/logs/reawei.%d{yyyy-MM-dd}.log
+				/data/admin/logs/reawei.%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 			<!-- keep 1 days worth of history -->
 			<MaxHistory>10</MaxHistory>
