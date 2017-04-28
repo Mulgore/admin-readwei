@@ -1,0 +1,100 @@
+#override("title")
+ReadWei - 宝贝管理
+#end
+#override("css")
+<link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
+#end
+#override("breadcrumb")
+<li><a>订单管理</a></li>
+<li class="active"><strong>订单列表</strong></li>
+#end
+#override("content")
+<div class="row">
+    <div class="ibox-content text-right form-inline" style="background: #F3F3F4;">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+				<button type="button" class="btn btn-info">搜索</button>
+			</span>
+        </div>
+        <button class="btn btn-primary" onclick="editUser(null)" type="button">
+            <i class="fa fa-pencil"></i>&nbsp;添加宝贝
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table id="dataTable"></table>
+    </div>
+</div>
+#end
+#override("js")
+<script src="#springUrl('/static/js/plugins/bootstrap-table/bootstrap-table.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js')"></script>
+<script src="#springUrl('/static/plugins/layer-v3.0.3/layer/layer.js')"></script>
+<script src="#springUrl('/static/js/base_list.js')"></script>
+<script src="#springUrl('/static/js/common.js')"></script>
+<script type="text/javascript">
+    var dataUrl = "#springUrl('/order/getList.html')";
+    var dataColumns = [{
+        field: 'orderId',
+        title: '商品订单'
+    }, {
+        field: 'status',
+        title: '订单状态',
+        formatter: function (value, row, index) {
+            var status = row.status;
+            if (status == 0) {
+                return '<a class="btn btn-xs btn-success">创建订单</a>';
+            } else if (status == 1) {
+                return '<a class="btn btn-xs btn-primary">未支付</a>';
+            } else if (status == 2) {
+                return '<a class="btn btn-xs btn-info">已支付</a>';
+            } else if (status == 3) {
+                return '<a class="btn btn-xs btn-warning">取消订单</a>';
+            }
+        }
+    }, {
+        field: 'memberName',
+        title: '会员名称'
+    }, {
+        field: 'productName',
+        title: '商品名称'
+    }, {
+        field: 'expressId',
+        title: '物流单号ID'
+    }, {
+        field: 'expressId',
+        title: '物流单号ID'
+    }, {
+        field: 'addressId',
+        title: '收获地址ID',
+    }, {
+        field: 'price',
+        title: '销售价格'
+    }, {
+        field: 'createTime',
+        title: '创建时间',
+        formatter: function (value, row, index) {
+            return formatDate(row.createTime);
+        }
+    }, {
+        field: 'modifyTime',
+        title: '修改时间',
+        formatter: function (value, row, index) {
+            return formatDate(row.modifyTime);
+        }
+    }, {
+        field: 'description',
+        title: '备注'
+    }];
+    function dataQueryParams(params) {
+        return {
+            _size: params.limit,  //页面大小
+            _index: params.offset, //页码
+        };
+    }
+</script>
+#end
+#extends("/common/framework.html")

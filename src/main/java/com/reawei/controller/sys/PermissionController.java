@@ -53,7 +53,7 @@ public class PermissionController extends BaseController {
 
     @ResponseBody
     @Permission("2003")
-    @RequestMapping(value = "/delete/{permId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{permId}", method = RequestMethod.POST)
     public String delete(@PathVariable Long permId) {
         boolean exist = rolePermissionService.existRolePermission(permId);
         if (exist) {

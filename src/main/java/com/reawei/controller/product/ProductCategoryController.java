@@ -100,7 +100,7 @@ public class ProductCategoryController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/del", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/del", method = RequestMethod.POST)
     @ResponseBody
     public String categoryDel(Integer id) {
         boolean rlt = false;

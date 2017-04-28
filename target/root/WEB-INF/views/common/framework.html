@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	#parse("/common/header.html")
+	<link href="#springUrl('/static/js/plugins/gritter/jquery.gritter.css')" rel="stylesheet">
+	<link href="#springUrl('/static/css/plugins/toastr/toastr.min.css')" rel="stylesheet">
+	#block("css")#end
+</head>
+<body>
+<div id="wrapper">
+   #parse("/common/nav_left.html")
+   <!--右侧部分开始-->
+   <div id="page-wrapper" class="gray-bg dashbard-1">
+	   <div class="row border-bottom">
+	   <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+		   <div class="navbar-header">
+		       <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+		   </div>
+	       <ul class="nav navbar-top-links navbar-right">
+			   <li class="dropdown">
+				   <div class="dropdown profile-element"> <span style="display: inline-block;vertical-align: top;margin-top: 5px;">
+                    <img width="20px" alt="image" class="img-circle" src="#springUrl('/static/img/banner_small.jpg')" />
+                     </span>
+					   <a style="padding:0;min-height: auto;display: inline-block;" data-toggle="dropdown"
+						  class="dropdown-toggle" href="#">
+						   <span class="block m-t-xs"> <strong
+								   class="font-bold">$!{currentUser.loginName}</strong></span></a>
+					   <ul class="dropdown-menu animated fadeInRight m-t-xs">
+						   <li><a href="#springUrl('/perm/user/setAvatar.html')">修改头像</a></li>
+						   <li><a href="profile.html">个人资料</a></li>
+						   <li><a href="contacts.html">联系我们</a></li>
+						   <li><a href="mailbox.html">信箱</a></li>
+						   <li class="divider"></li>
+						   <li><a href="#springUrl('/account/logout.html')">安全退出</a>
+						   </li>
+					   </ul>
+				   </div>
+			   </li>
+			   #include('/common/dropdown.html')
+	           <li>
+	               <a href="#springUrl('/account/lockscreen.html')">
+	                   <i class="fa fa-sign-out"></i>退出
+	               </a>
+	           </li>
+	       </ul>
+	   </nav>
+	   </div>
+
+	<div class="row border-bottom white-bg dashboard-header">
+		<div class="col-lg-10">
+			<ol class="breadcrumb">
+				<li><a href="#springUrl('/index.html')">首页</a></li>
+				#block("breadcrumb")#end
+			</ol>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="wrapper wrapper-content">
+				#block("content")#end
+			</div>
+			<div class="footer">
+				<div class="pull-right">
+					<a target="_blank" href="admin.readwei.com">&copy;admin.readwei.com</a>
+					<a target="_blank" style="color: #676a6c;" onclick="cleanCache();">清缓存</a>
+				</div>
+			</div>
+		</div>
+	</div>
+   </div>
+   <!--右侧部分结束-->
+</div>
+<script src="#springUrl('/static/js/jquery-2.1.1.js')"></script>
+<script src="#springUrl('/static/js/common.js')"></script>
+<script src="#springUrl('/static/js/bootstrap.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/metisMenu/jquery.metisMenu.js')"></script>
+<script src="#springUrl('/static/js/plugins/slimscroll/jquery.slimscroll.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/gritter/jquery.gritter.min.js')"></script>
+<script src="#springUrl('/static/js/inspinia.js')"></script>
+<script src="#springUrl('/static/js/plugins/pace/pace.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/gritter/jquery.gritter.min.js')"></script>
+<script src="#springUrl('/static/js/plugins/toastr/toastr.min.js')"></script>
+<script type="text/javascript">
+
+    function cleanCache(){
+        $.ajax({
+            type: "GET",
+            url: "#springUrl('/sys/cache/clean')",
+            dataType: "json",
+            success: function (data) {
+                alertSuccess('清除完成');
+            }
+        });
+    }
+</script>
+#block("js")#end
+</body>
+</html>

@@ -1,0 +1,24 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <a href="#springUrl('/index.html')"><div class="dropdown" ><strong class="font-bold"><span style="font-size: 20px;color: white" class="nav-label">阅微管理后台</span></strong>
+                </div></a>
+            </li>
+            #foreach( $menu in $menuList )
+            <li #currentClass($menu.url, "class='active'")>
+                <a href="#">
+                	<i class="${menu.icon}"></i>
+                	<span class="nav-label">${menu.title}</span>
+                	<span class="fa arrow"></span>
+               	</a>
+                <ul class="nav nav-second-level">
+                    #foreach( $m in $menu.mvList)
+                    <li #currentClass($m.url, "class='active'")><a href="#springUrl(${m.url})">${m.title}</a></li>
+                    #end
+                </ul>
+            </li>
+            #end
+        </ul>
+    </div>
+</nav>

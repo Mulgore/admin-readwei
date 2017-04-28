@@ -111,26 +111,26 @@ public class ProductGoodsController extends BaseController {
             if (!rlt) {
                 return callbackFail("商品保存存失败！！！");
             }
-            EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
-            wrapper.setEntity(product);
-            RwProduct checkProduct = productService.selectOne(wrapper);
-            if (checkProduct == null) {
-                return callbackFail("商品添加不完整，主图为添加失败！！！");
-            }
-            String[] imgUrls = this.request.getParameterValues("imgUrl");
-            RwProductImage productImage = new RwProductImage();
-            productImage.setPId(checkProduct.getId());
-            for (String url : imgUrls) {
-                if (url != null && url.equals(" ")) {
-                    productImage.setCreateTime(new Date());
-                    productImage.setModifyTime(new Date());
-                    productImage.setImageUrl(url);
-                    rlt = productImageService.insert(productImage);
-                    if (!rlt) {
-                        return callbackFail("商品主图保存失败！！！");
-                    }
-                }
-            }
+//            EntityWrapper<RwProduct> wrapper = new EntityWrapper<RwProduct>();
+//            wrapper.setEntity(product);
+//            RwProduct checkProduct = productService.selectOne(wrapper);
+//            if (checkProduct == null) {
+//                return callbackFail("商品添加不完整，主图为添加失败！！！");
+//            }
+//            String[] imgUrls = this.request.getParameterValues("imgUrl");
+//            RwProductImage productImage = new RwProductImage();
+//            productImage.setPId(checkProduct.getId());
+//            for (String url : imgUrls) {
+//                if (url != null && url.equals(" ")) {
+//                    productImage.setCreateTime(new Date());
+//                    productImage.setModifyTime(new Date());
+//                    productImage.setImageUrl(url);
+//                    rlt = productImageService.insert(productImage);
+//                    if (!rlt) {
+//                        return callbackFail("商品主图保存失败！！！");
+//                    }
+//                }
+//            }
         }
         if (product.getId() != null) {
             rlt = productService.updateById(product);
@@ -138,24 +138,22 @@ public class ProductGoodsController extends BaseController {
                 return callbackFail("商品保存存失败！！！");
             }
 
-            String[] imgUrls = this.request.getParameterValues("imgUrl");
-            RwProductImage productImage = new RwProductImage();
-            productImage.setPId(product.getId());
-
-            for (String url : imgUrls) {
-                if (url != null && url.equals(" ")) {
-                    productImage.setCreateTime(new Date());
-                    productImage.setModifyTime(new Date());
-                    productImage.setImageUrl(url);
-                    rlt = productImageService.insertOrUpdate(productImage);
-                    if (!rlt) {
-                        return callbackFail("商品主图修改失败！！！");
-                    }
-                }
-            }
+//            String[] imgUrls = this.request.getParameterValues("imgUrl");
+//            RwProductImage productImage = new RwProductImage();
+//            productImage.setPId(product.getId());
+//
+//            for (String url : imgUrls) {
+//                if (url != null && url.equals(" ")) {
+//                    productImage.setCreateTime(new Date());
+//                    productImage.setModifyTime(new Date());
+//                    productImage.setImageUrl(url);
+//                    rlt = productImageService.insertOrUpdate(productImage);
+//                    if (!rlt) {
+//                        return callbackFail("商品主图修改失败！！！");
+//                    }
+//                }
+//            }
         }
-
-
         return callbackSuccess(rlt);
     }
 
@@ -166,7 +164,7 @@ public class ProductGoodsController extends BaseController {
      * @return
      */
     @Permission("5002")
-    @RequestMapping(value = "/del", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/del", method = RequestMethod.POST)
     @ResponseBody
     public String goodsDel(Long id) {
         boolean rlt = false;
