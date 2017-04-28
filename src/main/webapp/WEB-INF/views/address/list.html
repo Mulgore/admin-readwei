@@ -38,32 +38,29 @@ ReadWei - 宝贝管理
 <script type="text/javascript">
     var dataUrl = "#springUrl('/address/getList.html')";
     var dataColumns = [{
-        field: 'name',
-        title: '商品名称'
+        field: 'memberId',
+        title: '会员'
     }, {
-        field: 'cName',
-        title: '类目名称'
-    }, {
-        field: 'prices',
-        title: '价格',
+        field: 'mobile',
+        title: '电话',
         formatter: function (value, row, index) {
-            return row.prices + " 元";
+            return '<a class="btn btn-xs btn-info">'+row.mobile+'</a> '
         }
     }, {
-        field: 'amount',
-        title: '库存',
-        formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.amount + "本" + '</a>';
-        }
+        field: 'address',
+        title: '地址'
     }, {
-        field: 'soldAmount',
-        title: '销售库存',
-        formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.soldAmount + "本" + '</a>';
-        }
+        field: 'description',
+        title: '备注'
     }, {
         field: 'createTime',
         title: '创建时间',
+        formatter: function (value, row, index) {
+            return formatDate(row.createTime);
+        }
+    }, {
+        field: 'modifyTime',
+        title: '修改时间',
         formatter: function (value, row, index) {
             return formatDate(row.createTime);
         }

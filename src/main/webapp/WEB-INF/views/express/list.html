@@ -3,6 +3,7 @@ ReadWei - 宝贝管理
 #end
 #override("css")
 <link href="#springUrl('/static/css/plugins/bootstrap-table/bootstrap-table.min.css')" rel="stylesheet">
+<link href="#springUrl('/static/plugins/layui/css/layui.css')" rel="stylesheet">
 #end
 #override("breadcrumb")
 <li><a>物流管理</a></li>
@@ -17,9 +18,9 @@ ReadWei - 宝贝管理
 				<button type="button" class="btn btn-info">搜索</button>
 			</span>
         </div>
-        <button class="btn btn-primary" onclick="editUser(null)" type="button">
-            <i class="fa fa-pencil"></i>&nbsp;添加宝贝
-        </button>
+        <!--<button class="btn btn-primary" onclick="editUser(null)" type="button">-->
+        <!--<i class="fa fa-pencil"></i>&nbsp;添加宝贝-->
+        <!--</button>-->
     </div>
 </div>
 <div class="row">
@@ -38,34 +39,40 @@ ReadWei - 宝贝管理
 <script type="text/javascript">
     var dataUrl = "#springUrl('/express/getList.html')";
     var dataColumns = [{
-        field: 'name',
-        title: '商品名称'
-    }, {
-        field: 'cName',
-        title: '类目名称'
-    }, {
-        field: 'prices',
-        title: '价格',
+        title: '<input type="checkbox" id="j_cbAll" />',
         formatter: function (value, row, index) {
-            return row.prices + " 元";
+            var id = row.id;
+            return "<input type='checkbox' name='selectAll' value='" + row.id + "' />";
         }
     }, {
-        field: 'amount',
-        title: '库存',
+        field: 'memberId',
+        title: '会员ID'
+    }, {
+        field: 'orderId',
+        title: '订单号',
         formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.amount + "本" + '</a>';
+            return '<a class="btn btn-xs btn-success">' + row.orderId + '</a> '
         }
     }, {
-        field: 'soldAmount',
-        title: '销售库存',
+        field: 'expressNo',
+        title: '快递单号',
         formatter: function (value, row, index) {
-            return '<a class="btn btn-xs btn-danger">' + row.soldAmount + "本" + '</a>';
+            return '<a class="btn btn-xs btn-info">' + row.expressNo + '</a> '
         }
+    }, {
+        field: 'description',
+        title: '备注'
     }, {
         field: 'createTime',
         title: '创建时间',
         formatter: function (value, row, index) {
             return formatDate(row.createTime);
+        }
+    }, {
+        field: 'modifyTime',
+        title: '修改时间',
+        formatter: function (value, row, index) {
+            return formatDate(row.modifyTime);
         }
     }];
     function dataQueryParams(params) {
@@ -73,6 +80,26 @@ ReadWei - 宝贝管理
             _size: params.limit,  //页面大小
             _index: params.offset, //页码
         };
+    }
+    $(function () {
+        /**
+         * 1. 给标题栏的checkbox绑定事件
+         * 2. 获取标题栏的checkbox的值
+         * 3. 给标题栏下边的checkbox设置值
+         */
+        $("#j_cbAll").click(function () {
+            var isChecked = $("#j_cbAll").prop("checked");
+            $("#dataTable input").prop("checked", isChecked);
+        });
+    });
+
+    function editUser(){
+
+        var ids = "";
+        $('input[name="selectAll"]:checked').each(function () {
+            ids += $(this).val() + ",";
+        });
+        console.log(ids);
     }
 </script>
 #end

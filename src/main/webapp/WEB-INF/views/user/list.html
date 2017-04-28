@@ -46,15 +46,31 @@ ReadWei - 用户管理
         title: '邮箱'
     }, {
         field: 'type',
-        title: '用户类型'
+        title: '用户类型',
+        formatter: function (value, row, index) {
+            if (row.type == 0 ) {
+                return '<a class="btn btn-xs btn-primary">普通用户</a> '
+            }
+            if (row.type == 1) {
+                return '<a class="btn btn-xs btn-success">管理员</a> '
+            }
+        }
     }, {
         field: 'status',
-        title: '状态'
+        title: '状态',
+        formatter: function (value, row, index) {
+            if (row.status == 0 ) {
+                return '<a class="btn btn-xs btn-primary">禁用</a> '
+            }
+            if (row.status == 1) {
+                return '<a class="btn btn-xs btn-success">正常</a> '
+            }
+        }
     }, {
-        field: 'crTime',
+        field: 'createTime',
         title: '创建时间',
         formatter: function (value, row, index) {
-            return formatDate(row.crTime);
+            return formatDate(row.createTime);
         }
     }, {
         field: 'lastTime',
