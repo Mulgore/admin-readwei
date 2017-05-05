@@ -179,7 +179,7 @@
                     <webAppSourceDirectory>${project.basedir}/src/main/webapp</webAppSourceDirectory>
                     <scanIntervalSeconds>0</scanIntervalSeconds>
                     <httpConnector>
-                        <port>8080</port>
+                        <port>8081</port>
                     </httpConnector>
                 </configuration>
             </plugin>

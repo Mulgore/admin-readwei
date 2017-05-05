@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31149098-ee4b-4752-8495-133ccc9058a7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/rebel.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$1.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$2.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" />
@@ -108,9 +107,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/support/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/support/BaseServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root.war" afterPath="$PROJECT_DIR$/target/root.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deployser.sh" afterPath="$PROJECT_DIR$/deployser.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/jdbc.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/properties/jdbc.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
@@ -127,8 +127,18 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sso.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sso.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/properties/sso.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/xml/logback.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -218,11 +228,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/xml/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/controller/sys/UploadController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/properties/sso.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/xml/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
         <option value="$PROJECT_DIR$/deployser.sh" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1001,7 +1011,7 @@
             <option name="goals">
               <list>
                 <option value="jetty:run" />
-                <option value="-Djetty.port=8080" />
+                <option value="-Djetty.port=8081" />
               </list>
             </option>
             <option name="profilesMap">
@@ -1104,7 +1114,7 @@
       <workItem from="1493448966011" duration="3455000" />
       <workItem from="1493467675672" duration="524000" />
       <workItem from="1493471171977" duration="25000" />
-      <workItem from="1493963960097" duration="70000" />
+      <workItem from="1493963960097" duration="1765000" />
     </task>
     <servers />
   </component>
@@ -1141,7 +1151,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166371000" />
+    <option name="totallyTimeSpent" value="168066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="6" />
@@ -1293,7 +1303,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="138" column="6" lean-forward="false" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties/sso.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
