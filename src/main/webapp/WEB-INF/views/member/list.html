@@ -14,12 +14,16 @@ ReadWei - 宝贝管理
         <div class="input-group">
             <input type="text" class="form-control">
             <span class="input-group-btn">
-				<button type="button" class="btn btn-info">搜索</button>
+				<button type="button" onclick="sortItem()" class="btn btn-info"><i id="sort_ioc" class="fa fa-chevron-down"></i>&nbsp;排序</button>
+			</span>
+            <span class="input-group-btn">
+				<button type="button" onclick="search()" class="btn btn-info">搜索</button>
 			</span>
         </div>
         <button class="btn btn-primary" onclick="addItem(null)" type="button">
             <i class="fa fa-user"></i>&nbsp;添加会员
         </button>
+        <input type="hidden" id="sort" value="0">
     </div>
 </div>
 <div class="row">
@@ -93,7 +97,9 @@ ReadWei - 宝贝管理
         }
     }];
     function dataQueryParams(params) {
+        var sort = $("#sort").val();
         return {
+            sort:sort,
             _size: params.limit,  //页面大小
             _index: params.offset, //页码
         };
@@ -104,6 +110,29 @@ ReadWei - 宝贝管理
         window.location.href = url;
     }
 
+    function search() {
+        var table = $('#dataTable');
+        var params = {limit: 10, offset: 0}
+        table.bootstrapTable('refresh', {
+            queryParams: dataQueryParams(params)
+        });
+    }
+
+    function sortItem() {
+        var table = $('#dataTable');
+        var params = {limit: 10, offset: 0}
+        table.bootstrapTable('refresh', {
+            queryParams: dataQueryParams(params)
+        });
+        var sort = $("#sort").val();
+        if (sort == 0){
+            $("#sort").val(1);
+            $("#sort_ioc").attr("class","fa fa-chevron-down");
+        }else {
+            $("#sort").val(0)
+            $("#sort_ioc").attr("class","fa fa-chevron-up");
+        }
+    }
 </script>
 #end
 #extends("/common/framework.html")

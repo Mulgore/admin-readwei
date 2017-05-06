@@ -3,6 +3,7 @@ package com.reawei.controller.member;
 import com.baomidou.kisso.annotation.Permission;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.reawei.common.utils.DateUtil;
 import com.reawei.common.utils.StringReplaceUtil;
 import com.reawei.controller.sys.BaseController;
 import com.reawei.entity.RwMember;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * <p>
@@ -48,11 +50,17 @@ public class MemberController extends BaseController {
     @Permission("7001")
     @RequestMapping(value = "/getList", method = RequestMethod.GET)
     @ResponseBody
-    public String getList() {
+    public String getList(Integer sort) {
         Page<RwMember> page = getPage();
         EntityWrapper<RwMember> wrapper = new EntityWrapper<RwMember>();
         RwMember member = new RwMember();
         wrapper.setEntity(member);
+        if (sort == 1) {
+            page.setAsc(true);
+        }else {
+            page.setAsc(false);
+        }
+        page.setOrderByField("id");
         page = memberService.selectPage(page, wrapper);
         for (RwMember mem : page.getRecords()) {
             mem.setIdCard(StringReplaceUtil.idCardReplaceWithStar(mem.getIdCard()));
@@ -79,7 +87,12 @@ public class MemberController extends BaseController {
     @Permission("7001")
     @RequestMapping(value = "/save/do", method = RequestMethod.POST)
     @ResponseBody
-    public String saveMember() {
-        return callbackSuccess(true);
+    public String saveMember(RwMember member, String date) {
+        boolean rlt = false;
+        member.setCreateTime(new Date());
+        member.setModifyTime(new Date());
+        member.setBirthday(DateUtil.StrToDate(date));
+        rlt = memberService.insert(member);
+        return callbackSuccess(rlt);
     }
 }
