@@ -60,4 +60,26 @@ public class MemberController extends BaseController {
         return jsonPage(page);
     }
 
+    /**
+     * 添加会员页面
+     *
+     * @return
+     */
+    @Permission("7001")
+    @RequestMapping(value = "/add/view", method = RequestMethod.GET)
+    public String addMemberView() {
+        return "member/add";
+    }
+
+    /**
+     * 添加会员实现
+     *
+     * @return
+     */
+    @Permission("7001")
+    @RequestMapping(value = "/save/do", method = RequestMethod.POST)
+    @ResponseBody
+    public String saveMember() {
+        return callbackSuccess(true);
+    }
 }

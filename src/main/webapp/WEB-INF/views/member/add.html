@@ -1,46 +1,154 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Quartz Demo</title>
-    <link href="#springUrl('/static/css/bootstrap.min14ed.css?v=3.3.6')" rel="stylesheet">
-    <link href="#springUrl('/static/css/font-awesome.min93e3.css?v=4.4.0')" rel="stylesheet">
-    <link href="#springUrl('/static/css/plugins/iCheck/custom.css')" rel="stylesheet">
-    <link href="#springUrl('/static/css/animate.min.css')" rel="stylesheet">
-    <link href="#springUrl('/static/css/style.min862f.css?v=4.1.0')" rel="stylesheet">
-</head>
-<body class="gray-bg">
-<div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
+#override("title")
+ReadWei - 添加会员
+#end
+#override("css")
+<link href="#springUrl('/static/plugins/layui/css/layui.css')" rel="stylesheet">
+#end
+#override("breadcrumb")
+<li><a>会员管理</a></li>
+<li class="active"><strong>添加会员</strong></li>
+#end
+#override("content")
+<div class="ibox-content">
+    <form id="myForm" autocomplete="off"
+          data-validator-option="{theme:'default'}"
+          enctype="multipart/form-data" class="layui-form layui-form-pane">
+        <input type="hidden" name="id" value="$!{goods.id}"/>
+        <div class="layui-form-item">
+            <label class="layui-form-label">昵 称：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" value="$!{goods.name}" name="name" placeholder="昵 称"
+                       data-rule="昵称:required;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓 名：</label>
+            <div class="layui-input-inline">
+                <input type="text" name="prices" placeholder="真实姓名" value="$!{goods.prices}" class="layui-input"
+                       data-rule="真实姓名:required;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">年 龄：</label>
+            <div class="layui-input-inline">
+                <select name="categoryId" class="layui-input" lay-ignore>
+                    <option value="13">13 岁</option>
+                    <option value="14">14 岁</option>
+                    <option value="15">15 岁</option>
+                    <option value="16">16 岁</option>
+                    <option value="17">17 岁</option>
+                    <option value="18" selected>18 岁</option>
+                    <option value="19">19 岁</option>
+                    <option value="20">20 岁</option>
+                    <option value="21">21 岁</option>
+                    <option value="22">22 岁</option>
+                    <option value="23">23 岁</option>
+                    <option value="24">24 岁</option>
+                    <option value="25">25 岁</option>
+                    <option value="26">26 岁</option>
+                    <option value="27">27 岁</option>
+                    <option value="28">28 岁</option>
+                    <option value="29">29 岁</option>
+                    <option value="30">31 岁</option>
+                    <option value="30">32 岁</option>
+                    <option value="30">33 岁</option>
+                    <option value="30">34 岁</option>
+                    <option value="30">35 岁</option>
+                    <option value="30">36 岁</option>
+                    <option value="30">37 岁</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">性 别：</label>
+            <div class="layui-input-inline">
+                    <input type="radio" name="sex" value="男" title="男" checked="">
+                    <input type="radio" name="sex" value="女" title="女">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">出生年月：</label>
+            <div class="layui-input-inline">
+                <input type="text" name="date" id="date" placeholder="出生年月" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">身份证号：</label>
+            <div class="layui-input-inline">
+                <input type="text" name="discount" value="$!{goods.discount}" placeholder="身份证号" class="layui-input"
+                       data-rule="身份证号:required;IDCard;">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <div class="layui-input-block">
+                <textarea name="summary" class="layui-textarea" placeholder="请输入备注" style="resize: none;width: 800px;">$!{goods.summary}</textarea>
+            </div>
+        </div>
+        <div class="hr-line-dashed"></div>
         <div class="form-group">
-            <div class="col-sm-10">Quartz添加JOB功能测试</div>
-            <br>
-        </div>
-        <form action="#springUrl('/quartz/add.html')" method="post">
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <div class="input-group">
-                        <input type="text" name="jobName" class="form-control" placeholder="请输入您用来测试的Job名称">
-                       <span class="input-group-btn">
-                       <button type="submit" class="btn btn-primary">添加
-                       </button> </span>
-                    </div>
-                </div>
-                <br>
-            </div>
-        </form>
-        #if($!{tipMsg})
-        <div class="form-group"><br>
-            <div class="col-sm-10">
-                <div class="alert alert-success">$!{tipMsg}</div>
+            <div class="text-center">
+                <button class="layui-btn" type="submit">提 交</button>
             </div>
         </div>
-        #end
-    </div>
+    </form>
 </div>
-<script src="#springUrl('/static/js/jquery.min.js?v=2.1.4')"></script>
-<script src="#springUrl('/static/js/bootstrap.min.js?v=3.3.6')"></script>
-<script src="#springUrl('/static/js/content.min.js?v=1.0.0')"></script>
-<script src="#springUrl('/static/js/plugins/iCheck/icheck.min.js')"></script>
-</body>
-</html>
+#end
+#override("js")
+<script src="#springUrl('/static/plugins/layer-v3.0.3/layer/layer.js')"></script>
+<script src="#springUrl('/static/plugins/nice-validator-1.0.10/dist/jquery.validator.js?local=zh-CN')"></script>
+<script src="#springUrl('/static/plugins/layui/layui.js')"></script>
+<script type="text/javascript">
+    $("#myForm").validator({
+        valid: function (form) {
+            var me = this;
+            // 提交表单之前，hold住表单，防止重复提交
+            me.holdSubmit();
+            $.ajax({
+                url: "#springUrl('/member/save/do.html')",
+                data: $(form).serialize(),
+                type: "POST",
+                success: function (data) {
+                    var d = JSON.parse(data);
+                    if (d.success && d.data) {
+                        alert("会员修改或添加成功!!!")
+                        window.parent.location.href = "#springUrl('/member/list.html')";
+                        //当你在iframe页面关闭自身时
+                        //var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                        //parent.layer.close(index); //再执行关闭
+                    } else {
+                        alert(d.message);
+                        //失败，提交表单成功后，释放hold，如果不释放hold，就变成了只能提交一次的表单
+                        me.holdSubmit(false);
+                    }
+                }
+            });
+        }
+    });
+
+    layui.use(['layedit','laydate'], function () {
+        var layedit = layui.layedit,
+            laydate = layui.laydate;
+        layedit.set({
+            uploadImage: {
+                url: "#springUrl('/upload.html')", //接口url
+                type: '' //默认post
+            }
+        });
+        layedit.build('description'); //建立编辑器
+
+    });
+    layui.use('upload', function () {
+        layui.upload({
+            url: 'http://web.file.myqcloud.com/files/v1/1253544233/reaweiimg/0/'
+            , method: 'post' //上传接口的http类型
+            , success: function (res) {
+                LAY_demo_upload.src = res.url;
+            }
+        });
+    });
+
+
+</script>
+#end
+#extends("/common/framework.html")

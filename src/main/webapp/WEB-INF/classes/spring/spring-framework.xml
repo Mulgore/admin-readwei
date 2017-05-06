@@ -8,15 +8,13 @@
 
 	<!-- 加载配置文件 -->
 	<bean id="placeholder"
-		class="com.reawei.common.VelocityPropertyPlaceholderConfigurer">
+		class="com.baomidou.framework.velocity.VelocityPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:properties/jdbc.properties</value>
-			</list>
-		</property>
-		<property name="releaseLocations">
-			<list>
-				<value>classpath:properties/jdbc.properties</value>
+				<value>classpath:properties/sso.properties</value>
+				<value>classpath:properties/release/jdbc.properties</value>
+				<value>classpath:properties/release/sso.properties</value>
 			</list>
 		</property>
 	</bean>

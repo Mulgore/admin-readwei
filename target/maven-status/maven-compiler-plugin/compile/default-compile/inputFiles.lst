@@ -39,7 +39,6 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/RandomUtil.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwExpressService.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwSysLogService.java
-/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/VelocityPropertyPlaceholderConfigurer.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwAddress.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/enums/UserType.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/mapper/RwAddressMapper.java

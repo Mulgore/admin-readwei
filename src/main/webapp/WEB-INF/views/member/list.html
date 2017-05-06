@@ -17,8 +17,8 @@ ReadWei - 宝贝管理
 				<button type="button" class="btn btn-info">搜索</button>
 			</span>
         </div>
-        <button class="btn btn-primary" onclick="editUser(null)" type="button">
-            <i class="fa fa-pencil"></i>&nbsp;添加宝贝
+        <button class="btn btn-primary" onclick="addItem(null)" type="button">
+            <i class="fa fa-user"></i>&nbsp;添加会员
         </button>
     </div>
 </div>
@@ -98,6 +98,12 @@ ReadWei - 宝贝管理
             _index: params.offset, //页码
         };
     }
+
+    function addItem() {
+        var url = "#springUrl('/member/add/view.html')";
+        window.location.href = url;
+    }
+
 </script>
 #end
 #extends("/common/framework.html")
