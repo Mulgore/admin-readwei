@@ -55,10 +55,15 @@ public class MemberController extends BaseController {
         EntityWrapper<RwMember> wrapper = new EntityWrapper<RwMember>();
         RwMember member = new RwMember();
         wrapper.setEntity(member);
-        if (sort == 1) {
-            page.setAsc(true);
-        }else {
-            page.setAsc(false);
+        switch (sort) {
+            case 0:
+                page.setAsc(false);
+                break;
+            case 1:
+                page.setAsc(true);
+                break;
+            case 2:
+                page.setAsc(false);
         }
         page.setOrderByField("id");
         page = memberService.selectPage(page, wrapper);
