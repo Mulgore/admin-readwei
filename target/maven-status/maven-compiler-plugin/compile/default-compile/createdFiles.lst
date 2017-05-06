@@ -4,6 +4,7 @@ com/reawei/common/utils/EncryptUtil.class
 com/reawei/entity/RwUser.class
 com/reawei/entity/RwExpress.class
 com/reawei/service/impl/RwDocumentServiceImpl.class
+com/reawei/common/VelocityPropertyPlaceholderConfigurer$PropertyPlaceholderConfigurerResolver.class
 com/reawei/common/SSOPermissionTool.class
 com/reawei/common/utils/ClipboardUtil$1.class
 com/reawei/service/impl/RwProductServiceImpl.class
@@ -25,6 +26,7 @@ com/reawei/service/IRwProductCategoryService.class
 com/reawei/common/EhcacheHelper.class
 com/reawei/service/IRwAddressService.class
 com/reawei/service/IRwSysLogService.class
+com/reawei/common/VelocityPropertyPlaceholderConfigurer.class
 com/reawei/service/impl/RwRolePermissionServiceImpl.class
 com/reawei/common/AutoGeneratorHelper$2.class
 com/reawei/entity/RwRolePermission.class
@@ -39,6 +41,7 @@ com/reawei/controller/sys/MonitorController.class
 com/reawei/entity/RwRole.class
 com/reawei/entity/RwSysLog.class
 com/reawei/service/impl/RwProductCategoryServiceImpl.class
+com/reawei/common/VelocityPropertyPlaceholderConfigurer$1.class
 com/reawei/controller/sys/AccountController.class
 com/reawei/service/impl/RwProductImageServiceImpl.class
 com/reawei/service/impl/RwRoleServiceImpl.class
@@ -63,6 +66,7 @@ com/reawei/service/IRwRoleService.class
 com/reawei/controller/express/ExpressController.class
 com/reawei/controller/sys/RoleController.class
 com/reawei/common/utils/MathExtend.class
+com/reawei/common/VelocityPropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.class
 com/reawei/common/enums/OptionType.class
 com/reawei/common/utils/Query.class
 com/reawei/common/MyCaptcha$1.class

@@ -2,115 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31149098-ee4b-4752-8495-133ccc9058a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$1.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$2.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/AutoGeneratorHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/Constant.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/Constant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/EhcacheHelper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/EhcacheHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/HttpHelper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/HttpHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/MyCaptcha$1.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/MyCaptcha$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/MyCaptcha.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/MyCaptcha.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/SSOPermissionTool.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/SSOPermissionTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/enums/OptionType.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/enums/OptionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/enums/PermissionType.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/enums/PermissionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/enums/UserType.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/enums/UserType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/ClipboardUtil$1.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/ClipboardUtil$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/ClipboardUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/ClipboardUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/DateUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/DateUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/EncryptUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/EncryptUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/MD5Util.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/MD5Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/MathExtend.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/MathExtend.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/OrderBy.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/OrderBy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/OrderIdUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/OrderIdUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/Query.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/Query.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/RandomUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/RandomUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/Result.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/Result.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/StringReplaceUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/StringReplaceUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/TypeUtil.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/common/utils/TypeUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/address/AddressController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/address/AddressController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/api/document/ApiDocumentsController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/api/document/ApiDocumentsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/express/ExpressController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/express/ExpressController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/member/MemberController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/member/MemberController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/order/ProductOrderController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/order/ProductOrderController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/product/ProductCategoryController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/product/ProductCategoryController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/product/ProductGoodsController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/product/ProductGoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/AccountController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/BaseController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/BaseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/CacheController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/CacheController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/CaptchaController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/CaptchaController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/EchartsController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/EchartsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/IndexController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/LogController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/LogController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/MailController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/MailController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/MonitorController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/MonitorController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/PermissionController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/PermissionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/RoleController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/RoleController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/UploadController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/UploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/UserController.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/controller/sys/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwAddress.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwAddress.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwDocument.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwDocument.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwExpress.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwExpress.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwMember.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwMember.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwPermission.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwPermission.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProduct.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProduct.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProductCategory.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProductCategory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProductImage.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProductImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProductOrder.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwProductOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwRole.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwRole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwRolePermission.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwRolePermission.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwSysLog.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwSysLog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwUser.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwUserRole.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/RwUserRole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/vo/MenuVO.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/entity/vo/MenuVO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwAddressMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwAddressMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwDocumentMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwDocumentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwExpressMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwExpressMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwMemberMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwMemberMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwPermissionMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwPermissionMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductCategoryMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductCategoryMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductImageMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductImageMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductOrderMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwProductOrderMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwRoleMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwRoleMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwRolePermissionMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwRolePermissionMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwSysLogMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwSysLogMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwUserMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwUserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwUserRoleMapper.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/mapper/RwUserRoleMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwAddressService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwAddressService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwDocumentService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwDocumentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwExpressService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwExpressService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwMemberService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwMemberService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwPermissionService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwPermissionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductCategoryService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductCategoryService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductImageService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductImageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductOrderService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductOrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwProductService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwRolePermissionService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwRolePermissionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwRoleService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwRoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwSysLogService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwSysLogService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwUserRoleService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwUserRoleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwUserService.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/IRwUserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwAddressServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwAddressServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwDocumentServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwDocumentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwExpressServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwExpressServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwMemberServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwMemberServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwPermissionServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwPermissionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductCategoryServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductCategoryServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductImageServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductImageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductOrderServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductOrderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwProductServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwRolePermissionServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwRolePermissionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwRoleServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwRoleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwSysLogServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwSysLogServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwUserRoleServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwUserRoleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwUserServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/impl/RwUserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/support/BaseServiceImpl.class" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/reawei/service/support/BaseServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/reawei/common/VelocityPropertyPlaceholderConfigurer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/properties/release/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/properties/release/quartz.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/properties/release/sso.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/properties/release/velocity.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/xml/jetty-context.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy.sh" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root.war" afterPath="$PROJECT_DIR$/target/root.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/properties/sso.properties" afterPath="$PROJECT_DIR$/src/main/resources/properties/sso.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/sso.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/properties/sso.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/spring-framework.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/spring/spring-framework.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/properties/jdbc.properties" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/properties/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/properties/sso.properties" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/properties/sso.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/root/WEB-INF/classes/spring/spring-framework.xml" afterPath="$PROJECT_DIR$/target/root/WEB-INF/classes/spring/spring-framework.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
@@ -126,22 +35,32 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="sso.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/sso.properties">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="472">
+              <caret line="206" column="20" lean-forward="false" selection-start-line="206" selection-start-column="20" selection-end-line="206" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/xml/logback.xml">
+      <file leaf-file-name="sso.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/release/sso.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="32">
+              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sso.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/properties/sso.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,10 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/deploy.sh" />
-        <option value="$PROJECT_DIR$/src/main/java/com/reawei/controller/sys/LogController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/utils/MDTokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/utils/EncryptUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/entity/RwDocument.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/mapper/RwDocumentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/RwDocumentMapper.xml" />
@@ -228,11 +143,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/express/list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/xml/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/reawei/controller/sys/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/sso.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/xml/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" />
         <option value="$PROJECT_DIR$/deployser.sh" />
+        <option value="$PROJECT_DIR$/src/main/resources/properties/release/sso.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/servlet-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/reawei/common/VelocityPropertyPlaceholderConfigurer.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-framework.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/properties/sso.properties" />
       </list>
     </option>
   </component>
@@ -269,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -311,10 +229,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,11 +327,16 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reawei" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,18 +350,18 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/reawei/service/impl" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/reawei/service" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/reawei/mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.readwei.controller.product" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/xml" />
+      <recent name="$PROJECT_DIR$/src/main/resources/properties/release" />
+      <recent name="$PROJECT_DIR$/src/main/resources/properties" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/reawei/service/impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1114,7 +1033,8 @@
       <workItem from="1493448966011" duration="3455000" />
       <workItem from="1493467675672" duration="524000" />
       <workItem from="1493471171977" duration="25000" />
-      <workItem from="1493963960097" duration="1765000" />
+      <workItem from="1493963960097" duration="7184000" />
+      <workItem from="1494032824581" duration="70000" />
     </task>
     <servers />
   </component>
@@ -1151,7 +1071,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168066000" />
+    <option name="totallyTimeSpent" value="173555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="6" />
@@ -1170,8 +1090,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4009324" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34731933" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1180,7 +1101,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2875458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2912088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1189,7 +1110,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1212,7 +1132,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26369864" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4009324" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1220,11 +1140,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36130536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23903178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2875458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1269,8 +1189,14 @@
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/velocity/VelocityPropertyPlaceholderConfigurer.java</url>
+          <line>189</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="42" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1279,11 +1205,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/deployser.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,31 +1224,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
+    <entry file="file://$PROJECT_DIR$/deploy.sh" />
+    <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="138" column="6" lean-forward="false" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/sso.properties">
+    <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid3423.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6591">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/velocity.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/quartz.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1323,6 +1274,109 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/release/app.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/release/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/jetty-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE.jar!/org/springframework/core/io/support/PropertiesLoaderSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/reawei/common/VelocityPropertyPlaceholderConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1374">
+          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/spring-wind/1.1.5/spring-wind-1.1.5-sources.jar!/com/baomidou/framework/velocity/VelocityPropertyPlaceholderConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="142" column="41" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/servlet-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/velocity.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="120" lean-forward="true" selection-start-line="6" selection-start-column="120" selection-end-line="6" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="206" column="20" lean-forward="false" selection-start-line="206" selection-start-column="20" selection-end-line="206" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-framework.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/release/sso.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/sso.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>

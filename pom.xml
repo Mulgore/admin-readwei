@@ -170,6 +170,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.18.v20160721</version>
                 <configuration>
+                    <contextXml>${project.basedir}/src/main/resources/xml/jetty-context.xml</contextXml>
                     <webApp>
                         <contextPath>/</contextPath>
                         <descriptor>${basedir}/src/main/webapp/WEB-INF/web.xml</descriptor>
@@ -217,4 +218,5 @@
         </plugins>
 
     </build>
+
 </project>
