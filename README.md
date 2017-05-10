@@ -23,6 +23,9 @@
 14、日志组件 logback 动态环境配置支持
 15、 等..
 
+项目演示地址
+http://admin.reawei.cn
+
 项目准备工作
 
 JDK 和 maven 
