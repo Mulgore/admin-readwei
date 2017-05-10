@@ -13,7 +13,6 @@
 			<list>
 				<value>classpath:properties/jdbc.properties</value>
 				<value>classpath:properties/sso.properties</value>
-				<value>classpath:properties/release/jdbc.properties</value>
 				<value>classpath:properties/release/sso.properties</value>
 			</list>
 		</property>
