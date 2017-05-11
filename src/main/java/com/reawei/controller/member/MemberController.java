@@ -100,4 +100,31 @@ public class MemberController extends BaseController {
         rlt = memberService.insert(member);
         return callbackSuccess(rlt);
     }
+
+    /**
+     * 修改会员页面
+     *
+     * @return
+     */
+    @Permission("7001")
+    @RequestMapping(value = "/modify/view", method = RequestMethod.GET)
+    public String updateMemberView(RwMember member, String date) {
+       return "member/modify";
+    }
+
+    /**
+     * 添加会员实现
+     *
+     * @return
+     */
+    @Permission("7001")
+    @RequestMapping(value = "/modify/do", method = RequestMethod.POST)
+    @ResponseBody
+    public String modifyMember(RwMember member, String date) {
+        boolean rlt = false;
+        member.setModifyTime(new Date());
+        member.setBirthday(DateUtil.StrToDate(date));
+        rlt = memberService.updateById(member);
+        return callbackSuccess(rlt);
+    }
 }

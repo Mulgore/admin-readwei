@@ -16,6 +16,7 @@ com/reawei/common/utils/Result.class
 com/reawei/service/impl/RwMemberServiceImpl.class
 com/reawei/service/IRwUserRoleService.class
 com/reawei/mapper/RwSysLogMapper.class
+com/reawei/common/utils/WeatherUtil.class
 com/reawei/entity/RwProductImage.class
 com/reawei/mapper/RwProductImageMapper.class
 com/reawei/entity/RwProductCategory.class
@@ -38,6 +39,7 @@ com/reawei/controller/sys/UserController.class
 com/reawei/controller/sys/MonitorController.class
 com/reawei/entity/RwRole.class
 com/reawei/entity/RwSysLog.class
+com/reawei/common/utils/BaiduUtils.class
 com/reawei/service/impl/RwProductCategoryServiceImpl.class
 com/reawei/controller/sys/AccountController.class
 com/reawei/service/impl/RwProductImageServiceImpl.class
@@ -47,6 +49,7 @@ com/reawei/entity/vo/MenuVO.class
 com/reawei/controller/sys/MailController.class
 com/reawei/common/AutoGeneratorHelper$1.class
 com/reawei/entity/RwUserRole.class
+com/reawei/common/utils/BaiduMapUtil.class
 com/reawei/mapper/RwProductMapper.class
 com/reawei/common/enums/PermissionType.class
 com/reawei/common/utils/OrderBy.class
@@ -65,6 +68,7 @@ com/reawei/controller/sys/RoleController.class
 com/reawei/common/utils/MathExtend.class
 com/reawei/common/enums/OptionType.class
 com/reawei/common/utils/Query.class
+com/reawei/common/utils/HttpUtils.class
 com/reawei/common/MyCaptcha$1.class
 com/reawei/service/impl/RwUserServiceImpl.class
 com/reawei/controller/sys/BaseController.class

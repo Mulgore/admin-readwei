@@ -1,12 +1,17 @@
 package com.reawei.common.utils;
 
 
+import com.baomidou.kisso.common.IpHelper;
+import jdk.nashorn.internal.ir.RuntimeNode;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.servlet.http.HttpServletRequest;
+import java.io.*;
 import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -29,6 +34,7 @@ public class WeatherUtil {
 //    http://wthrcdn.etouch.cn/weather_mini?citykey=101010100
 //    通过城市id获得天气数据，json数据
 
+    final static String KEY = "b7909838d5354844825b15b68d5593c8";
     /**
      * 获取一周天气<br>
      * 方 法 名：getWeekWeatherMap <br>
@@ -210,31 +216,69 @@ public class WeatherUtil {
     }
 
     public static void main(String[] args) {
+//        try {
+//            //测试获取实时天气1(包含风况，湿度)
+//            Map<String, Object> map = getTodayWeather1("101010100");
+//            System.out.println(map.get("city") + "\t" + map.get("temp")
+//                    + "\t" + map.get("WD") + "\t" + map.get("WS")
+//                    + "\t" + map.get("SD") + "\t" + map.get("time"));
+//
+//            //测试获取实时天气2(包含天气，温度范围)
+//            Map<String, Object> map2 = getTodayWeather2("101010100");
+//            System.out.println(map2.get("city") + "\t" + map2.get("temp1")
+//                    + "\t" + map2.get("temp2") + "\t" + map2.get("weather")
+//                    + "\t" + map2.get("ptime"));
+//
+//            //测试获取一周天气
+//            List<Map<String, Object>> listData = getWeekWeatherMap("101010100");
+//            for (int j = 0; j < listData.size(); j++) {
+//                Map<String, Object> wMap = listData.get(j);
+//                System.out.println(wMap.get("city") + "\t" + wMap.get("date_y")
+//                        + "\t" + wMap.get("week") + "\t" + wMap.get("weather")
+//                        + "\t" + wMap.get("temp") + "\t" + wMap.get("wind")
+//                        + "\t" + wMap.get("fl"));
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        Map<String,Object> ret = weekWeadTher("121.48789949","31.24916171");
+        if (ret != null){
+            System.out.println(ret.get("today"));
+            System.out.println(ret.get("future"));
+        }
+
+    }
+
+    public static Map<String,Object> weekWeadTher(String lon, String lat) {
+        Map<String,Object> ret = new HashMap<>();
+        String url = "http://apis.haoservice.com/weather/geo?lon="+lon+"&lat="+lat+"8&key="+KEY;
         try {
-            //测试获取实时天气1(包含风况，湿度)
-            Map<String, Object> map = getTodayWeather1("101010100");
-            System.out.println(map.get("city") + "\t" + map.get("temp")
-                    + "\t" + map.get("WD") + "\t" + map.get("WS")
-                    + "\t" + map.get("SD") + "\t" + map.get("time"));
+            HttpClient client = new DefaultHttpClient();
+            HttpGet httpget = new HttpGet(url);
+            HttpResponse response = client.execute(httpget);
 
-            //测试获取实时天气2(包含天气，温度范围)
-            Map<String, Object> map2 = getTodayWeather2("101010100");
-            System.out.println(map2.get("city") + "\t" + map2.get("temp1")
-                    + "\t" + map2.get("temp2") + "\t" + map2.get("weather")
-                    + "\t" + map2.get("ptime"));
-
-            //测试获取一周天气
-            List<Map<String, Object>> listData = getWeekWeatherMap("101010100");
-            for (int j = 0; j < listData.size(); j++) {
-                Map<String, Object> wMap = listData.get(j);
-                System.out.println(wMap.get("city") + "\t" + wMap.get("date_y")
-                        + "\t" + wMap.get("week") + "\t" + wMap.get("weather")
-                        + "\t" + wMap.get("temp") + "\t" + wMap.get("wind")
-                        + "\t" + wMap.get("fl"));
+            InputStream is = response.getEntity().getContent();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            byte[] buf = new byte[1024];
+            int len = -1;
+            while ((len = is.read(buf)) != -1) {
+                baos.write(buf, 0, len);
             }
-
-        } catch (Exception e) {
+            String result =new  String(baos.toByteArray(),"UTF-8");
+            JSONObject jsonData = JSONObject.fromObject(result);
+            System.out.println(jsonData);
+            JSONObject results = JSONObject.fromObject(jsonData.getJSONObject("result"));
+            JSONObject today = JSONObject.fromObject(results.getJSONObject("today"));
+            JSONArray  future = results.getJSONArray("future");
+            ret.put("today",today);
+            ret.put("future",future);
+            return ret;
+        }catch (Exception e){
             e.printStackTrace();
         }
+        return null;
     }
+
+
 }

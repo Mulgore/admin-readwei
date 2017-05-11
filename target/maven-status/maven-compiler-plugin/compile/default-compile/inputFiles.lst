@@ -2,6 +2,7 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwProductOrder.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/mapper/RwSysLogMapper.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwPermissionServiceImpl.java
+/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/WeatherUtil.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwExpress.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwProductImageService.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/sys/BaseController.java
@@ -11,6 +12,7 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwPermissionService.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwMember.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwPermission.java
+/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/BaiduMapUtil.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwProductImage.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/EhcacheHelper.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwDocumentServiceImpl.java
@@ -18,6 +20,7 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/sys/EchartsController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/sys/CaptchaController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/entity/RwProductCategory.java
+/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/BaiduUtils.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwRoleServiceImpl.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/sys/MonitorController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/mapper/RwUserRoleMapper.java
@@ -56,6 +59,7 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/AutoGeneratorHelper.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/SSOPermissionTool.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/EncryptUtil.java
+/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/GetPlaceByIp.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwRolePermissionServiceImpl.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/controller/express/ExpressController.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/impl/RwProductServiceImpl.java
@@ -80,6 +84,7 @@
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/MathExtend.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/Result.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/service/IRwProductService.java
+/Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/HttpUtils.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/mapper/RwRoleMapper.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/common/utils/OrderIdUtil.java
 /Users/xingwu/workspace/admin-readwei/src/main/java/com/reawei/mapper/RwMemberMapper.java

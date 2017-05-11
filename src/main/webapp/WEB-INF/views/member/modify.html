@@ -10,19 +10,19 @@ ReadWei - 添加会员
 #end
 #override("content")
 <div class="ibox-content">
-    <form id="myForm" autocomplete="off" data-validator-option="{theme:'default'}"
-          enctype="multipart/form-data" class="layui-form layui-form-pane">
+    <form id="myForm" autocomplete="off" data-validator-option="{theme:'default'}" enctype="multipart/form-data" class="layui-form layui-form-pane">
+        <input type="hidden" name="id" value="$!{member.id}"/>
         <div class="layui-form-item">
             <label class="layui-form-label">昵 称：</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" name="nickname" placeholder="昵 称"
+                <input type="text" class="layui-input" value="$!{member.nickname}" name="nickname" placeholder="昵 称"
                        data-rule="昵称:required;nickname;">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">姓 名：</label>
             <div class="layui-input-inline">
-                <input type="text" name="name" placeholder="真实姓名"  class="layui-input"
+                <input type="text" name="name" placeholder="真实姓名" value="$!{member.name}" class="layui-input"
                        data-rule="真实姓名:required;">
             </div>
         </div>
@@ -61,26 +61,26 @@ ReadWei - 添加会员
         <div class="layui-form-item">
             <label class="layui-form-label">性 别：</label>
             <div class="layui-input-inline">
-                    <input type="radio" name="sex" value="0" title="男" checked>
+                    <input type="radio" name="sex" value="0" title="男" #if($!{member.sex} == 0) checked #end>
                     <input type="radio" name="sex" value="1" title="女" #if($!{member.sex} == 1) checked #end>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">出生年月：</label>
             <div class="layui-input-inline">
-                <input type="text" name="date" id="date" placeholder="出生年月" autocomplete="off"  class="layui-input" onclick="layui.laydate({elem: this})">
+                <input type="text" name="date" id="date" placeholder="出生年月" autocomplete="off" value="$!{member.birthday}" class="layui-input" onclick="layui.laydate({elem: this})">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">身份证号：</label>
             <div class="layui-input-inline">
-                <input type="text" name="IdCard"  placeholder="身份证号" class="layui-input"
+                <input type="text" name="IdCard" value="$!{goods.discount}" placeholder="身份证号" class="layui-input"
                        data-rule="身份证号:required;IDCard;">
             </div>
         </div>
         <div class="layui-form-item layui-form-text">
             <div class="layui-input-block">
-                <textarea name="description" class="layui-textarea" placeholder="请输入备注" style="resize: none;width: 800px;"></textarea>
+                <textarea name="description" class="layui-textarea" placeholder="请输入备注" style="resize: none;width: 800px;">$!{member.description}</textarea>
             </div>
         </div>
         <div class="hr-line-dashed"></div>
@@ -103,13 +103,13 @@ ReadWei - 添加会员
             // 提交表单之前，hold住表单，防止重复提交
             me.holdSubmit();
             $.ajax({
-                url: "#springUrl('/member/save/do.html')",
+                url: "#springUrl('/member/modify/do.html')",
                 data: $(form).serialize(),
                 type: "POST",
                 success: function (data) {
                     var d = JSON.parse(data);
                     if (d.success && d.data) {
-                        alert("会员添加成功!!!")
+                        alert("会员修改成功!!!")
                         window.parent.location.href = "#springUrl('/member/list.html')";
                         //当你在iframe页面关闭自身时
                         //var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
