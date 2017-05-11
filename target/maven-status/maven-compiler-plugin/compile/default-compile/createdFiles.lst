@@ -32,6 +32,7 @@ com/reawei/entity/RwRolePermission.class
 com/reawei/controller/sys/LogController.class
 com/reawei/mapper/RwRolePermissionMapper.class
 com/reawei/service/IRwRolePermissionService.class
+com/reawei/common/utils/GetPlaceByIp.class
 com/reawei/common/AutoGeneratorHelper.class
 com/reawei/controller/sys/UploadController.class
 com/reawei/service/impl/RwPermissionServiceImpl.class
