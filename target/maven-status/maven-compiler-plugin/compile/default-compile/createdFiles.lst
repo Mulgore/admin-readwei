@@ -42,6 +42,7 @@ com/reawei/entity/RwRole.class
 com/reawei/entity/RwSysLog.class
 com/reawei/common/utils/BaiduUtils.class
 com/reawei/service/impl/RwProductCategoryServiceImpl.class
+com/reawei/service/IRwEhCacheService.class
 com/reawei/controller/sys/AccountController.class
 com/reawei/service/impl/RwProductImageServiceImpl.class
 com/reawei/service/impl/RwRoleServiceImpl.class
@@ -50,6 +51,7 @@ com/reawei/entity/vo/MenuVO.class
 com/reawei/controller/sys/MailController.class
 com/reawei/common/AutoGeneratorHelper$1.class
 com/reawei/entity/RwUserRole.class
+com/reawei/service/impl/RwEhCacheServiceImpl.class
 com/reawei/common/utils/BaiduMapUtil.class
 com/reawei/mapper/RwProductMapper.class
 com/reawei/common/enums/PermissionType.class
