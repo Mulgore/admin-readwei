@@ -1,6 +1,5 @@
 package com.reawei.common.utils;
 
-
 import com.baomidou.kisso.common.IpHelper;
 import jdk.nashorn.internal.ir.RuntimeNode;
 import net.sf.json.JSONArray;
@@ -12,6 +11,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.net.HttpURLConnection;
 import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -35,6 +35,8 @@ public class WeatherUtil {
 //    通过城市id获得天气数据，json数据
 
     final static String KEY = "b7909838d5354844825b15b68d5593c8";
+    final static String BAIDU_AK = "E4805d16520de693a3fe707cdc962045";
+
     /**
      * 获取一周天气<br>
      * 方 法 名：getWeekWeatherMap <br>
@@ -215,44 +217,53 @@ public class WeatherUtil {
         return weekStr;
     }
 
-    public static void main(String[] args) {
-//        try {
-//            //测试获取实时天气1(包含风况，湿度)
-//            Map<String, Object> map = getTodayWeather1("101010100");
-//            System.out.println(map.get("city") + "\t" + map.get("temp")
-//                    + "\t" + map.get("WD") + "\t" + map.get("WS")
-//                    + "\t" + map.get("SD") + "\t" + map.get("time"));
+//    public static void main(String[] args) {
+////        try {
+////            //测试获取实时天气1(包含风况，湿度)
+////            Map<String, Object> map = getTodayWeather1("101010100");
+////            System.out.println(map.get("city") + "\t" + map.get("temp")
+////                    + "\t" + map.get("WD") + "\t" + map.get("WS")
+////                    + "\t" + map.get("SD") + "\t" + map.get("time"));
+////
+////            //测试获取实时天气2(包含天气，温度范围)
+////            Map<String, Object> map2 = getTodayWeather2("101010100");
+////            System.out.println(map2.get("city") + "\t" + map2.get("temp1")
+////                    + "\t" + map2.get("temp2") + "\t" + map2.get("weather")
+////                    + "\t" + map2.get("ptime"));
+////
+////            //测试获取一周天气
+////            List<Map<String, Object>> listData = getWeekWeatherMap("101010100");
+////            for (int j = 0; j < listData.size(); j++) {
+////                Map<String, Object> wMap = listData.get(j);
+////                System.out.println(wMap.get("city") + "\t" + wMap.get("date_y")
+////                        + "\t" + wMap.get("week") + "\t" + wMap.get("weather")
+////                        + "\t" + wMap.get("temp") + "\t" + wMap.get("wind")
+////                        + "\t" + wMap.get("fl"));
+////            }
+////
+////        } catch (Exception e) {
+////            e.printStackTrace();
+////        }
+////        Map<String, Object> ret = weekWeadTher("121.48789949", "31.24916171");
+////        if (ret != null) {
+////            System.out.println(ret.get("today"));
+////            System.out.println(ret.get("future"));
+////        }
+////        Map<String, Object> rets = baiDuWeadther("121.48789949", "31.24916171");
+////        if (ret != null) {
+////            System.out.println(rets.get("future"));
 //
-//            //测试获取实时天气2(包含天气，温度范围)
-//            Map<String, Object> map2 = getTodayWeather2("101010100");
-//            System.out.println(map2.get("city") + "\t" + map2.get("temp1")
-//                    + "\t" + map2.get("temp2") + "\t" + map2.get("weather")
-//                    + "\t" + map2.get("ptime"));
+////        }
 //
-//            //测试获取一周天气
-//            List<Map<String, Object>> listData = getWeekWeatherMap("101010100");
-//            for (int j = 0; j < listData.size(); j++) {
-//                Map<String, Object> wMap = listData.get(j);
-//                System.out.println(wMap.get("city") + "\t" + wMap.get("date_y")
-//                        + "\t" + wMap.get("week") + "\t" + wMap.get("weather")
-//                        + "\t" + wMap.get("temp") + "\t" + wMap.get("wind")
-//                        + "\t" + wMap.get("fl"));
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-        Map<String,Object> ret = weekWeadTher("121.48789949","31.24916171");
-        if (ret != null){
-            System.out.println(ret.get("today"));
-            System.out.println(ret.get("future"));
-        }
+//        String httpUrl = "http://apis.baidu.com/showapi_open_bus/weather_showapi/point";
+//        String httpArg = "lng=116.2278&lat=40.242266&from=5&needMoreDay=0&needIndex=0&needAlarm=0&need3HourForcast=0";
+//        String jsonResult = request(httpUrl, httpArg);
+//        System.out.println(jsonResult);
+//    }
 
-    }
-
-    public static Map<String,Object> weekWeadTher(String lon, String lat) {
-        Map<String,Object> ret = new HashMap<>();
-        String url = "http://apis.haoservice.com/weather/geo?lon="+lon+"&lat="+lat+"8&key="+KEY;
+    public static Map<String, Object> weekWeadTher(String lon, String lat) {
+        Map<String, Object> ret = new HashMap<>();
+        String url = "http://apis.haoservice.com/weather/geo?lon=" + lon + "&lat=" + lat + "8&key=" + KEY;
         try {
             HttpClient client = new DefaultHttpClient();
             HttpGet httpget = new HttpGet(url);
@@ -265,20 +276,132 @@ public class WeatherUtil {
             while ((len = is.read(buf)) != -1) {
                 baos.write(buf, 0, len);
             }
-            String result =new  String(baos.toByteArray(),"UTF-8");
+            String result = new String(baos.toByteArray(), "UTF-8");
             JSONObject jsonData = JSONObject.fromObject(result);
             System.out.println(jsonData);
             JSONObject results = JSONObject.fromObject(jsonData.getJSONObject("result"));
             JSONObject today = JSONObject.fromObject(results.getJSONObject("today"));
-            JSONArray  future = results.getJSONArray("future");
-            ret.put("today",today);
-            ret.put("future",future);
+            JSONArray future = results.getJSONArray("future");
+            ret.put("today", today);
+            ret.put("future", future);
             return ret;
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
 
+    public static Map<String, Object> baiDuWeadther(String lon, String lat) {
+        Map<String, Object> ret = new HashMap<>();
+        String url = "http://wthrcdn.etouch.cn/weather_mini?city=北京";
+
+        //这里调用百度的ip定位api服务 详见 http://api.map.baidu.com/lbsapi/cloud/ip-location-api.htm
+        try {
+            HttpClient client = new DefaultHttpClient();
+            HttpGet httpget = new HttpGet(url);
+            HttpResponse response = client.execute(httpget);
+
+            InputStream is = response.getEntity().getContent();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            byte[] buf = new byte[1024];
+            int len = -1;
+            while ((len = is.read(buf)) != -1) {
+                baos.write(buf, 0, len);
+            }
+            String result = new String(baos.toByteArray(), "UTF-8");
+            JSONObject jsonData = JSONObject.fromObject(result);
+            System.out.println(jsonData);
+            JSONObject results = JSONObject.fromObject(jsonData.getJSONObject("result"));
+            JSONObject today = JSONObject.fromObject(results.getJSONObject("today"));
+            JSONArray future = results.getJSONArray("future");
+            ret.put("today", today);
+            ret.put("future", future);
+            return ret;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    /**
+     * @param httpUrl :请求接口
+     * @param httpArg :参数
+     * @return 返回结果
+     */
+    public static String request(String httpUrl, String httpArg) {
+        BufferedReader reader = null;
+        String result = null;
+        StringBuffer sbf = new StringBuffer();
+        httpUrl = httpUrl + "?" + httpArg;
+
+        try {
+            URL url = new URL(httpUrl);
+            HttpURLConnection connection = (HttpURLConnection) url
+                    .openConnection();
+            connection.setRequestMethod("GET");
+            // 填入apikey到HTTP header
+            connection.setRequestProperty("apikey", "bff17a806a4ccc1b2dbce1936c602855");
+            connection.connect();
+            InputStream is = connection.getInputStream();
+            reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            String strRead = null;
+            while ((strRead = reader.readLine()) != null) {
+                sbf.append(strRead);
+                sbf.append("\r\n");
+            }
+            reader.close();
+            result = sbf.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public static Map<String, Object> showapiWeather(String ipAddress) throws Exception {
+        Map<String, Object> ret = new HashMap<>();
+        URL u = new URL("http://route.showapi.com/9-4?showapi_appid=38118&ip="+ipAddress+"&needMoreDay=1&needIndex=0&needHourData=0&need3HourForcast=0&needAlarm=0&showapi_sign=64be7a86ca6740c9b8e340441883d150");
+        InputStream in = u.openStream();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        try {
+            byte buf[] = new byte[1024];
+            int read = 0;
+            while ((read = in.read(buf)) > 0) {
+                out.write(buf, 0, read);
+            }
+        } finally {
+            if (in != null) {
+                in.close();
+            }
+        }
+        byte b[] = out.toByteArray();
+        String results = new String(b, "utf-8");
+        JSONObject result = JSONObject.fromObject(results);
+        Object a = result.get("showapi_res_code");
+        if ("0".equals(result.get("showapi_res_code").toString())) {
+            System.out.println(results);
+            JSONObject body = JSONObject.fromObject(result.get("showapi_res_body"));
+            ret.put("city",JSONObject.fromObject(body.get("cityInfo")).get("c3").toString());
+            for (int i = 1; i < 8; i++) {
+                ret.put("f"+i,JSONObject.fromObject(body.get("f"+i)));
+            }
+        }
+        return ret;
+    }
+
+    public static void main(String[] args) {
+        try {
+            Map<String,Object> ret = showapiWeather(null);
+            System.out.println(ret.get("city"));
+            for (int i=1; i<8; i++) {
+                System.out.println(JSONObject.fromObject(ret.get("f"+i)).get("day_air_temperature").toString());
+                System.out.println(JSONObject.fromObject(ret.get("f"+i)).get("night_air_temperature").toString());
+                System.out.println(JSONObject.fromObject(ret.get("f"+i)).get("day").toString());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
 }

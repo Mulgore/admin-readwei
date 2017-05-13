@@ -38,4 +38,9 @@
 		timeToIdleSeconds="600" timeToLiveSeconds="600" overflowToDisk="false"
 		statistics="true">
 	</cache>
+
+	<cache name="showWeatherCache" maxEntriesLocalHeap="2000" eternal="false"
+		   timeToIdleSeconds="3600000" timeToLiveSeconds="3600000" overflowToDisk="false"
+		   statistics="true">
+	</cache>
 </ehcache>
