@@ -392,7 +392,7 @@ public class WeatherUtil {
 
     public static void main(String[] args) {
         try {
-            Map<String,Object> ret = showapiWeather(null);
+            Map<String,Object> ret = showapiWeather("");
             System.out.println(ret.get("city"));
             for (int i=1; i<8; i++) {
                 System.out.println(JSONObject.fromObject(ret.get("f"+i)).get("day_air_temperature").toString());
