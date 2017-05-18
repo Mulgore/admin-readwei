@@ -4,7 +4,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, nickname, status, age, sex, birthday, IdCard, description, description_auth AS descriptionAuth, create_time AS createTime, modify_time AS modifyTime
+        id, name, nickname, status, age, sex, birthday, IdCard, description, create_time AS createTime, modify_time AS modifyTime
     </sql>
 
 </mapper>

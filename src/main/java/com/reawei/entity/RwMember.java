@@ -55,11 +55,6 @@ public class RwMember implements Serializable {
      */
 	private String description;
     /**
-     * 认证审核备注
-     */
-	@TableField("description_auth")
-	private String descriptionAuth;
-    /**
      * 创建时间
      */
 	@TableField("create_time")
@@ -141,14 +136,6 @@ public class RwMember implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public String getDescriptionAuth() {
-		return descriptionAuth;
-	}
-
-	public void setDescriptionAuth(String descriptionAuth) {
-		this.descriptionAuth = descriptionAuth;
 	}
 
 	public Date getCreateTime() {
