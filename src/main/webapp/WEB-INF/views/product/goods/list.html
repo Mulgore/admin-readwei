@@ -110,8 +110,8 @@ ReadWei - 宝贝管理
         title: '操作',
         formatter: function (value, row, index) {
             var id = row.id;
-            return '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> ' +
-                '<a class="btn btn-xs btn-info" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-refresh"></i>修改</a> ';
+            return '<a class="btn btn-xs btn-info" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-refresh"></i>修改</a> ' +
+                '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> ';
         }
     }];
     function dataQueryParams(params) {

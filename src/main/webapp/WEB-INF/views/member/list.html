@@ -14,7 +14,8 @@ ReadWei - 宝贝管理
         <div class="input-group">
             <input type="text" class="form-control">
             <span class="input-group-btn">
-				<button type="button" onclick="sortItem()" class="btn btn-info"><i id="sort_ioc" class="fa fa-chevron-down"></i>&nbsp;排序</button>
+				<button type="button" onclick="sortItem()" class="btn btn-info"><i id="sort_ioc"
+                                                                                   class="fa fa-chevron-down"></i>&nbsp;排序</button>
 			</span>
             <span class="input-group-btn">
 				<button type="button" onclick="search()" class="btn btn-info">搜索</button>
@@ -95,12 +96,19 @@ ReadWei - 宝贝管理
         formatter: function (value, row, index) {
             return formatDate(row.modifyTime);
         }
+    }, {
+        title: '操作',
+        formatter: function (value, row, index) {
+            var id = row.id;
+            return '<a class="btn btn-xs btn-info" onclick="editItem(' + "'" + id + "'" + ')"><i class="fa fa-refresh"></i>修改</a> ' +
+                '<a class="btn btn-xs btn-danger" onclick="delItem(' + "'" + id + "'" + ')"><i class="fa fa-remove"></i>删除</a> ';
+        }
     }];
     function dataQueryParams(params) {
         var sort = $("#sort").val();
 
         return {
-            sort:sort,
+            sort: sort,
             _size: params.limit,  //页面大小
             _index: params.offset, //页码
         };
@@ -123,21 +131,50 @@ ReadWei - 宝贝管理
         var table = $('#dataTable');
         var params = {limit: 10, offset: 0}
         var sort = $("#sort").val();
-        if(sort == 2){
+        if (sort == 2) {
             sort = 0;
         }
-        if (sort == 0){
+        if (sort == 0) {
             $("#sort").val(1);
-            $("#sort_ioc").attr("class","fa fa-chevron-up");
+            $("#sort_ioc").attr("class", "fa fa-chevron-up");
         }
-        if (sort == 1){
+        if (sort == 1) {
             $("#sort").val(0)
-            $("#sort_ioc").attr("class","fa fa-chevron-down");
+            $("#sort_ioc").attr("class", "fa fa-chevron-down");
         }
         table.bootstrapTable('refresh', {
             queryParams: dataQueryParams(params)
         });
+    }
 
+    function editItem(id) {
+        var url = "#springUrl('/member/modify/view.html')";
+        window.location.href = url+"?memberId="+id;
+    }
+
+    function delItem(id) {
+        //询问框
+        layer.confirm('确定删除吗？', {
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $.ajax({
+                type: 'POST',
+                url: "#springUrl('/member/del.html')",
+                data: {id: id},
+                datatype: "text",
+                success: function (data) {
+                    var d = JSON.parse(data);
+                    if (d.success && d.data) {
+                        $('#dataTable').bootstrapTable('refresh', {url: dataUrl});
+                    } else {
+                        alert(d.message)
+                    }
+                    layer.closeAll();
+                }
+            });
+        }, function () {
+            return;
+        });
     }
 </script>
 #end

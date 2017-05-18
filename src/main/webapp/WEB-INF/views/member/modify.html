@@ -11,18 +11,18 @@ ReadWei - 添加会员
 #override("content")
 <div class="ibox-content">
     <form id="myForm" autocomplete="off" data-validator-option="{theme:'default'}" enctype="multipart/form-data" class="layui-form layui-form-pane">
-        <input type="hidden" name="id" value="$!{member.id}"/>
+        <input type="hidden" name="id" value="$!{memberInfo.id}"/>
         <div class="layui-form-item">
             <label class="layui-form-label">昵 称：</label>
             <div class="layui-input-inline">
-                <input type="text" class="layui-input" value="$!{member.nickname}" name="nickname" placeholder="昵 称"
+                <input type="text" class="layui-input" value="$!{memberInfo.nickname}" name="nickname" placeholder="昵 称"
                        data-rule="昵称:required;nickname;">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">姓 名：</label>
             <div class="layui-input-inline">
-                <input type="text" name="name" placeholder="真实姓名" value="$!{member.name}" class="layui-input"
+                <input type="text" name="name" placeholder="真实姓名" value="$!{memberInfo.name}" class="layui-input"
                        data-rule="真实姓名:required;">
             </div>
         </div>
@@ -30,30 +30,30 @@ ReadWei - 添加会员
             <label class="layui-form-label">年 龄：</label>
             <div class="layui-input-inline">
                 <select name="age" class="layui-input" lay-ignore>
-                    <option value="13">13 岁</option>
-                    <option value="14">14 岁</option>
-                    <option value="15">15 岁</option>
-                    <option value="16">16 岁</option>
-                    <option value="17">17 岁</option>
-                    <option value="18" selected>18 岁</option>
-                    <option value="19">19 岁</option>
-                    <option value="20">20 岁</option>
-                    <option value="21">21 岁</option>
-                    <option value="22">22 岁</option>
-                    <option value="23">23 岁</option>
-                    <option value="24">24 岁</option>
-                    <option value="25">25 岁</option>
-                    <option value="26">26 岁</option>
-                    <option value="27">27 岁</option>
-                    <option value="28">28 岁</option>
-                    <option value="29">29 岁</option>
-                    <option value="30">31 岁</option>
-                    <option value="30">32 岁</option>
-                    <option value="30">33 岁</option>
-                    <option value="30">34 岁</option>
-                    <option value="30">35 岁</option>
-                    <option value="30">36 岁</option>
-                    <option value="30">37 岁</option>
+                    <option value="13" #if($!{memberInfo.age} == 13) selected #end>13 岁</option>
+                    <option value="14" #if($!{memberInfo.age} == 14) selected #end>14 岁</option>
+                    <option value="15" #if($!{memberInfo.age} == 15) selected #end>15 岁</option>
+                    <option value="16" #if($!{memberInfo.age} == 16) selected #end>16 岁</option>
+                    <option value="17" #if($!{memberInfo.age} == 17) selected #end>17 岁</option>
+                    <option value="18" #if($!{memberInfo.age} == 18) selected #end>18 岁</option>
+                    <option value="19" #if($!{memberInfo.age} == 19) selected #end>19 岁</option>
+                    <option value="20" #if($!{memberInfo.age} == 20) selected #end>20 岁</option>
+                    <option value="21" #if($!{memberInfo.age} == 21) selected #end>21 岁</option>
+                    <option value="22" #if($!{memberInfo.age} == 22) selected #end>22 岁</option>
+                    <option value="23" #if($!{memberInfo.age} == 23) selected #end>23 岁</option>
+                    <option value="24" #if($!{memberInfo.age} == 24) selected #end>24 岁</option>
+                    <option value="25" #if($!{memberInfo.age} == 25) selected #end>25 岁</option>
+                    <option value="26" #if($!{memberInfo.age} == 26) selected #end>26 岁</option>
+                    <option value="27" #if($!{memberInfo.age} == 27) selected #end>27 岁</option>
+                    <option value="28" #if($!{memberInfo.age} == 28) selected #end>28 岁</option>
+                    <option value="29" #if($!{memberInfo.age} == 29) selected #end>29 岁</option>
+                    <option value="30" #if($!{memberInfo.age} == 30) selected #end>31 岁</option>
+                    <option value="31" #if($!{memberInfo.age} == 31) selected #end>32 岁</option>
+                    <option value="32" #if($!{memberInfo.age} == 32) selected #end>33 岁</option>
+                    <option value="33" #if($!{memberInfo.age} == 33) selected #end>34 岁</option>
+                    <option value="34" #if($!{memberInfo.age} == 34) selected #end>35 岁</option>
+                    <option value="35" #if($!{memberInfo.age} == 35) selected #end>36 岁</option>
+                    <option value="36" #if($!{memberInfo.age} == 35) selected #end>37 岁</option>
 
                 </select>
             </div>
@@ -61,26 +61,26 @@ ReadWei - 添加会员
         <div class="layui-form-item">
             <label class="layui-form-label">性 别：</label>
             <div class="layui-input-inline">
-                    <input type="radio" name="sex" value="0" title="男" #if($!{member.sex} == 0) checked #end>
-                    <input type="radio" name="sex" value="1" title="女" #if($!{member.sex} == 1) checked #end>
+                    <input type="radio" name="sex" value="0" title="男" #if($!{memberInfo.sex} == 0) checked #end>
+                    <input type="radio" name="sex" value="1" title="女" #if($!{memberInfo.sex} == 1) checked #end>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">出生年月：</label>
             <div class="layui-input-inline">
-                <input type="text" name="date" id="date" placeholder="出生年月" autocomplete="off" value="$!{member.birthday}" class="layui-input" onclick="layui.laydate({elem: this})">
+                <input type="text" name="date" id="date" placeholder="出生年月" autocomplete="off" value="$!{birthday}" class="layui-input" onclick="layui.laydate({elem: this})">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">身份证号：</label>
             <div class="layui-input-inline">
-                <input type="text" name="IdCard" value="$!{goods.discount}" placeholder="身份证号" class="layui-input"
+                <input type="text" name="IdCard" value="$!{memberInfo.IdCard}" placeholder="身份证号" class="layui-input"
                        data-rule="身份证号:required;IDCard;">
             </div>
         </div>
         <div class="layui-form-item layui-form-text">
             <div class="layui-input-block">
-                <textarea name="description" class="layui-textarea" placeholder="请输入备注" style="resize: none;width: 800px;">$!{member.description}</textarea>
+                <textarea name="description" class="layui-textarea" placeholder="请输入备注" style="resize: none;width: 800px;">$!{memberInfo.description}</textarea>
             </div>
         </div>
         <div class="hr-line-dashed"></div>

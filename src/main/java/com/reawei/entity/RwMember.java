@@ -1,7 +1,7 @@
 package com.reawei.entity;
 
-import com.baomidou.mybatisplus.annotations.TableField;
 import java.util.Date;
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author xingwu
- * @since 2017-03-28
+ * @since 2017-05-18
  */
 @TableName("rw_member")
 public class RwMember implements Serializable {
@@ -30,6 +30,10 @@ public class RwMember implements Serializable {
      * 昵称
      */
 	private String nickname;
+    /**
+     * 0: 未认证 1:认证失败 2:重新认证 3:认证成功
+     */
+	private Integer status;
     /**
      * 年龄
      */
@@ -51,6 +55,11 @@ public class RwMember implements Serializable {
      */
 	private String description;
     /**
+     * 认证审核备注
+     */
+	@TableField("description_auth")
+	private String descriptionAuth;
+    /**
      * 创建时间
      */
 	@TableField("create_time")
@@ -70,7 +79,9 @@ public class RwMember implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() { return name; }
+	public String getName() {
+		return name;
+	}
 
 	public void setName(String name) {
 		this.name = name;
@@ -82,6 +93,14 @@ public class RwMember implements Serializable {
 
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	public Integer getAge() {
@@ -122,6 +141,14 @@ public class RwMember implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getDescriptionAuth() {
+		return descriptionAuth;
+	}
+
+	public void setDescriptionAuth(String descriptionAuth) {
+		this.descriptionAuth = descriptionAuth;
 	}
 
 	public Date getCreateTime() {

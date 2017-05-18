@@ -69,7 +69,7 @@ public class AutoGeneratorHelper {
 		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername("root");
 		dsc.setPassword("By*reawei");
-		dsc.setUrl("jdbc:mysql://123.206.231.180:3306/reawei?characterEncoding=utf8");
+		dsc.setUrl("jdbc:mysql://123.206.181.24:3306/reawei?characterEncoding=utf8");
 		mpg.setDataSource(dsc);
 
 		// 策略配置

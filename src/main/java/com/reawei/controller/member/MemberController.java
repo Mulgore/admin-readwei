@@ -9,6 +9,7 @@ import com.reawei.controller.sys.BaseController;
 import com.reawei.entity.RwMember;
 import com.reawei.service.IRwMemberService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -102,18 +103,23 @@ public class MemberController extends BaseController {
     }
 
     /**
-     * 修改会员页面
+     * 修改修改页面
      *
      * @return
      */
     @Permission("7001")
     @RequestMapping(value = "/modify/view", method = RequestMethod.GET)
-    public String updateMemberView(RwMember member, String date) {
-       return "member/modify";
+    public String updateMemberView(Long memberId, Model model) {
+        RwMember member = memberService.selectById(memberId);
+        if (member != null) {
+            model.addAttribute("memberInfo", member);
+            model.addAttribute("birthday", DateUtil.DateToStr(member.getBirthday()));
+        }
+        return "member/modify";
     }
 
     /**
-     * 添加会员实现
+     * 添加修改实现
      *
      * @return
      */
@@ -122,9 +128,27 @@ public class MemberController extends BaseController {
     @ResponseBody
     public String modifyMember(RwMember member, String date) {
         boolean rlt = false;
-        member.setModifyTime(new Date());
-        member.setBirthday(DateUtil.StrToDate(date));
-        rlt = memberService.updateById(member);
+        if (member.getId() != null) {
+            member.setModifyTime(new Date());
+            member.setBirthday(DateUtil.StrToDate(date));
+            rlt = memberService.updateById(member);
+        }
+        return callbackSuccess(rlt);
+    }
+
+    /**
+     * 添加修改实现
+     *
+     * @return
+     */
+    @Permission("7001")
+    @RequestMapping(value = "/del", method = RequestMethod.POST)
+    @ResponseBody
+    public String modifyMember(Long id) {
+        boolean rlt = false;
+        if (id != null) {
+            rlt = memberService.deleteById(id);
+        }
         return callbackSuccess(rlt);
     }
 }
