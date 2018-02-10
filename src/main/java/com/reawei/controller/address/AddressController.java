@@ -49,6 +49,9 @@ public class AddressController extends BaseController {
         Page<RwAddress> page = getPage();
         EntityWrapper<RwAddress> wrapper = new EntityWrapper<>();
         RwAddress address = new RwAddress();
+
+
+        
         wrapper.setEntity(address);
         page = addressService.selectPage(page,wrapper);
         return jsonPage(page);
